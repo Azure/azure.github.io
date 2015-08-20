@@ -1,142 +1,76 @@
-﻿<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Open source cloud frameworks, SDKs and contribution guidelines - Microsoft Azure Open Source</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Learn about the open source frameworks and SDKs for Microsoft Azure including our Java, PHP, Node.js, Python and other libraries. We also provide information and guidelines for contributing to our open source projects on GitHub. All Azure open source projects have a flexible Apache 2.0 license.">
-    <meta name="author" content="Microsoft Azure SDK">
+---
+layout: default
+---
 
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+<div class="container">
 
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
-    <link href="css/azureopensource.css" rel="stylesheet">
+  <div class="hero-unit">
+    <h1>Hello, cloud developers!</h1>
 
-    <link rel="shortcut icon" href="//az83882.vo.msecnd.net/favicon.ico">
-  </head>
+    <p>The Microsoft Azure SDK team is busy coding away frameworks and experiences to help
+      make your projects successful.</p>
 
-  <body>
+    <p>We create SDKs that connect to Azure services through REST wrappers
+      and interfaces in the language of your choice - including .NET, Java, Node.js,
+      Python, and others.</p>
 
-    <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button><!-- style="padding:15px 15px 5px 15px;margin-top:-5px" -->
-          <a class="brand" href="//azure.microsoft.com/"><!-- img 
-              src="azure/windowsazurelogo.png" style="width:218px;height:35px;border:0px"
-              alt="Microsoft Azure" title="Windows Azure" / -->Microsoft Azure</a>
-          <div class="nav-collapse collapse">
-            <ul class="nav">
-              <li class="active"><a href="index.html">Open Source Home</a></li>
-              <li><a href="guidelines.html">Contribute</a></li>
-              <li class="dropdown">
-                <a href="projects.html" class="dropdown-toggle" data-toggle="dropdown">Projects <b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                  <li><a href="projects.html">All projects</a></li>
-                  <li class="nav-header">Software dev Kits</li>
-                  <li><a href="projects.html#dotnet">.NET SDK</a></li>
-                  <li><a href="projects.html#nodejs">Node.js SDK</a></li>
-                  <li><a href="projects.html#java">Java SDK</a></li>
-                  <li><a href="projects.html#php">PHP SDK</a></li>
-                  <li><a href="projects.html#python">Python SDK</a></li>
-                  <li><a href="projects.html#ruby">Ruby SDK</a></li>
-                  <li class="divider"></li>
-                  <li class="nav-header">Command line</li>
-                  <li><a href="projects.html#powershell">PowerShell</a></li>
-                  <li><a href="projects.html#cli">x-plat CLI</a></li>
-                  <li class="divider"></li>
-                  <li class="nav-header">More projects</li>
-                  <li><a href="projects.html#iisnode">iisnode</a></li>
-                  <li><a href="projects.html#azurewebapps">Web Apps</a></li>
-                    <li><a href="projects.html#teams">Other teams</a></li>
-                  <li class="divider"></li>
-                  <li class="nav-header">Azure.Microsoft.com</li>
-                  <li><a href="http://azure.microsoft.com/en-us/documentation/">Documentation Center</a></li>
-                  <li><a href="http://azure.microsoft.com/en-us/develop/reference/">REST Reference</a></li>
-                </ul>
-              </li>
-              <li><a href="contact.html">Contact</a></li>
-              <li><a href="thanks.html">Thanks</a></li>
-            </ul>
-          </div><!--/.nav-collapse -->
-        </div>
-      </div>
+    <p>We accept your open source contributions, license our work with Apache 2.0, and use
+      GitHub.</p>
+
+    <p><a href="/guidelines/" class="btn btn-primary">Learn how to contribute &raquo;</a></p>
+  </div>
+
+</div>
+
+<div class="social">
+  <div class="container">
+    <ul class="social-buttons">
+      <li>
+        <iframe src="https://mdo.github.io/github-buttons/github-btn.html?user=azure&type=follow"
+                allowtransparency="true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+      </li>
+      <li><a href="https://twitter.com/share" class="twitter-share-button"
+             data-text="Microsoft Azure open source rocks!" data-hashtags="opensource">Tweet</a>
+        <script>!function (d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (!d.getElementById(id)) {
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//platform.twitter.com/widgets.js";
+            fjs.parentNode.insertBefore(js, fjs);
+          }
+        }(document, "script", "twitter-wjs");</script>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="row">
+    <div class="span4">
+      <h2>Open Source</h2>
+
+      <p>Our frameworks &amp; libraries are developed in agile dev branches on GitHub.</p>
+
+      <p><a class="btn" href="http://github.com/azure">//github.com/Azure &raquo;</a></p>
     </div>
+    <div class="span4">
+      <h2>Frameworks &amp; Projects</h2>
 
-    <div class="container">
+      <p>We provide the low-level REST abstractions, sample code and documentation, and some higher-level functionality,
+        hand-built in your language of choice.</p>
 
-      <div class="hero-unit">
-        <h1>Hello, cloud developers!</h1>
-        <p>The Microsoft Azure SDK team is busy coding away frameworks and experiences to help 
-        make your projects successful.</p>
-          <p>We create SDKs that connect to Azure services through REST wrappers 
-          and interfaces in the language of your choice - including .NET, Java, Node.js, 
-          Python, and others.</p>
-          <p>We accept your open source contributions, license our work with Apache 2.0, and use 
-          GitHub.</p>
-        <p><a href="guidelines.html" class="btn btn-primary">Learn how to contribute &raquo;</a></p>
-      </div>
-
+      <p><a class="btn" href="/projects/">Our SDKs &amp; Projects &raquo;</a></p>
     </div>
+    <div class="span4">
+      <h2>Apache 2 License</h2>
 
-    <div class="social">
-        <div class="container">
-            <ul class="social-buttons">
-                <li><iframe src="https://mdo.github.io/github-buttons/github-btn.html?user=azure&type=follow" allowtransparency="true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe></li>
-                <li><a href="https://twitter.com/share" class="twitter-share-button" data-text="Microsoft Azure open source rocks!" data-hashtags="opensource">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></li>
-            </ul>
-        </div>
+      <p>We strive to release our work under the permissive and open Apache 2.0 license.</p>
+
+      <p><a class="btn" href="http://opensource.org/licenses/Apache-2.0">Read the Apache 2.0 License &raquo;</a></p>
     </div>
+  </div>
 
-    <div class="container">
-
-      <div class="row">
-        <div class="span4">
-          <h2>Open Source</h2>
-          <p>Our frameworks &amp; libraries are developed in agile dev branches on GitHub.</p>
-          <p><a class="btn" href="http://github.com/azure">//github.com/Azure &raquo;</a></p>
-        </div>
-        <div class="span4">
-          <h2>Frameworks &amp; Projects</h2>
-          <p>We provide the low-level REST abstractions, sample code and documentation, and some higher-level functionality, hand-built in your language of choice.</p>
-          <p><a class="btn" href="projects.html">Our SDKs &amp; Projects &raquo;</a></p>
-        </div>
-        <div class="span4">
-          <h2>Apache 2 License</h2>
-          <p>We strive to release our work under the permissive and open Apache 2.0 license.</p>
-          <p><a class="btn" href="http://opensource.org/licenses/Apache-2.0">Read the Apache 2.0 License &raquo;</a></p>
-       </div>
-      </div>
-
-      <hr>
-
-      <footer>
-        <p class="pull-right"><a href="#top">Back to top</a></p>
-        <div class="links">
-          <a href="//azure.microsoft.com/">Azure.Microsoft.com</a> |
-          <a href="http://blogs.msdn.com/b/windowsazure/">Azure Blog</a> |
-          <a href="https://twitter.com/Azure">@Azure</a> |
-          <a href="https://github.com/azure/">GitHub</a> |
-          <a href="thanks.html">Thank you to our contributors</a>
-        </div>
-
-        <p><small>
-            &copy; Microsoft | 
-            <a href="http://go.microsoft.com/fwlink/p/?linkid=131004&clcid=0x409">Privacy and Cookies</a> |
-            <a href="http://go.microsoft.com/fwlink/p/?linkid=222682&clcid=0x409">Trademarks</a>
-            </small></p>
-      </footer>
-
-    </div> <!-- /container -->
-
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-
-  </body>
-</html>
+  <hr>
+</div>

@@ -1,0 +1,14 @@
+# Site settings
+title: Open source cloud frameworks, SDKs and contribution guidelines - Microsoft Azure Open Source
+email: azsdkteam@microsoft.com
+description: > # Learn about the open source frameworks and SDKs for Microsoft Azure including our Java, PHP, Node.js,
+  Python and other libraries. We also provide information and guidelines for contributing to our open source projects on
+  GitHub. All Azure open source projects have a flexible Apache 2.0 or MIT license.
+url: "http://azure.github.io"
+
+# Build settings
+markdown: kramdown
+
+assets:
+  js_compressor:  uglifier
+  css_compressor: sass
