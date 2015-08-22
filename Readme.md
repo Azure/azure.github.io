@@ -1,4 +1,4 @@
-# Hello, cloud developers,
+# Hello cloud developers,
 
 This is the github.io source code page for [azure.github.io](http://azure.github.io). Please feel free to fork and
 submit a pull request if you want to correct or add some content.
