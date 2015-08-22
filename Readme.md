@@ -12,9 +12,9 @@ Cheers!
 
 ## Usage
 
-- To build the site run `rake build`.
-- To build, start and update the site upon changes run `rake serve`.
-- To publish the site run `rake publish`.
+- To build the site, run `rake build`.
+- To build, start and update the site upon changes, run `rake serve`.
+- To publish the site, run `rake publish`.
 
 ## Contributing
 
@@ -22,7 +22,7 @@ Cheers!
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+5. Create new Pull Request that targets the Jekyll branch. *The master branch is intended for generated html only, not contributions.*
 
 ## License and Copyright
 
