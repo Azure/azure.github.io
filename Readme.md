@@ -7,12 +7,16 @@ Cheers!
 
 ## Get Started
 
-- Install ruby on your system of choice.
-- Run `bundle install` from the root of the project.
+- Install Ruby and the Ruby DevKit on your system of choice.
+
+    **Note** If you're running Ruby on a Windows machine, make sure your DevKit path variables are setup using the Dev Kit [quickstart instructions](https://github.com/oneclick/rubyinstaller/wiki/development-kit#quick-start).
+- Run `bundle install` from the root of the project. Note: If you do not have Bundler installed, run `gem install bundler` beforehand.
 
 ## Usage
 
 - To build the site, run `rake build`.
+
+  **Note** Because there's a dependency on ImageMagick, if you're trying to do this on a Windows machine, you'll have to [install ImageMagick](http://www.imagemagick.org/script/binary-releases.php#windows) before the `rake build` operation will succeed.
 - To build, start and update the site upon changes, run `rake serve`.
 - To publish the site, run `rake publish`.
 
