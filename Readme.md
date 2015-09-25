@@ -23,6 +23,10 @@ Cheers!
 - To build the site, run `rake build`.
 
   **Note** Because there's a dependency on ImageMagick, if you're trying to do this on a Windows machine, you'll have to [install ImageMagick](http://www.imagemagick.org/script/binary-releases.php#windows) before the `rake build` operation will succeed.
+- If you're running Windows, you need to do the following changes before you can run 'rake serve':
+	- ```gem uni hitimes```
+	- **Remove ALL versions of hitimes**
+	- Run ```gem ins hitimes -v 1.2.2 --platform ruby```
 - To build, start and update the site upon changes, run `rake serve`.
 - To publish the site, run `rake publish`.
 
