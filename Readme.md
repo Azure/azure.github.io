@@ -11,6 +11,12 @@ Cheers!
 
     **Note** If you're running Ruby on a Windows machine, make sure your DevKit path variables are setup using the Dev Kit [quickstart instructions](https://github.com/oneclick/rubyinstaller/wiki/development-kit#quick-start).
 - Run `bundle install` from the root of the project. Note: If you do not have Bundler installed, run `gem install bundler` beforehand.
+- If you're on Windows, CoffeeScript will cause an error to be thrown when you start building the site. So, do the following steps beforehand:
+	- Add the following to your Gemfile:
+		```gem 'coffee-script-source', '1.8.0'
+	- then, run the following:
+		```bundle update coffee-script-source
+	- Restart the server, if needed.
 
 ## Usage
 
