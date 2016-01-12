@@ -1,0 +1,13 @@
+language: ruby
+cache: bundler
+rvm:
+- 2.1
+script: 
+  - '[ "${TRAVIS_PULL_REQUEST}" = "false" ] && rake publish || rake test'
+branches:
+  only:
+  - jekyll
+env:
+  global:
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+  - secure: tRd3NyctGOLnG3ECjWmhOXeMOffvzXQ8DR7Po9ixy8Z9PDctQhQLDSnwXY3MYONz3TiTR0uu9KSFXfYhVPX2Br1mE86RFTO7uZmS4kAOLBxyCfPSq5svZbVRk0CNj6+5zBOaSEHwwbGbnAZwhs/rp3bNEmyl1Pb4JluY7AxgdTw=
