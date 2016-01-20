@@ -5,3 +5,7 @@ jekyll/_site
 .DS_Store
 _site
 tmp
+node_modules
+css
+js
+images

@@ -9,6 +9,17 @@ url: "http://azure.github.io"
 # Build settings
 markdown: kramdown
 
-assets:
-  js_compressor:  uglifier
-  css_compressor: sass
+exclude:
+  - "node_modules"
+  - "Gemfile"
+  - "Gemfile.lock"
+  - "gulpfile.js"
+  - "package.json"
+  - "Rakefile"
+  - "README.md"
+  - "assets"
+
+include:
+  - .nojekyll
+
+github_username:  azuresdkci
