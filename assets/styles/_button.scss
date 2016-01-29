@@ -1,0 +1,13 @@
+.btn-az {
+  font-weight: 500;
+  color: $blue-bright;
+  border-color: $blue-bright;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: #fff;
+    background-color: $blue-bright;
+    border-color: $blue-bright;
+  }
+}

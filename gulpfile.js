@@ -60,7 +60,11 @@ gulp.task('rebuild', ['build'], browserSync.reload)
 gulp.task('serve', ['build'], function() {
   browserSync({
     server: {
-      baseDir: SITE_DIR
+      baseDir: SITE_DIR,
+      middleware: function (req, res, next) {
+        res.setHeader('Access-Control-Allow-Origin', '*');
+        next();
+      }
     }
   });
   gulp.watch(
