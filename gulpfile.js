@@ -45,7 +45,7 @@ gulp.task('assets:scripts', function(){
 });
 
 gulp.task('assets:images', function(){
-  gulp.src('./assets/images/*')
+  return gulp.src('./assets/images/*')
     .pipe(cache('images'))
     .pipe(image())
     .pipe(gulp.dest('./images'));

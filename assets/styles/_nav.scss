@@ -5,18 +5,22 @@
   padding-top: 0px;
   padding-bottom: 0px;
 
-  .navbar-brand{
-    color: $blue;
-  }
-  .active {
-    color: $blue;
-  }
   .nav-link {
     padding-top: 1.5rem;
+    padding-left: 1rem;
     color: #EEE
   }
 
   .az-logo {
     max-height: 4rem;
+  }
+
+  .az-icon {
+    max-height: 1.4rem;
+    margin-top: 1.3rem;
+  }
+
+  .az-icon-container {
+    min-height: 4rem;
   }
 }

@@ -4,23 +4,13 @@
   font-size: 85%;
   text-align: center;
   background-repeat: no-repeat;
-  min-height: 288px;
-
-  @include media-breakpoint-down(sm) {
-    background-color: #f7f7f7;
-  }
+  min-height: 200px;
+  background-color: #333;
 
   @include media-breakpoint-up(sm) {
     background-image: url('/images/hero-mtazure.png');
-  }
-
-  a {
-    font-weight: 500;
-    color: $gray;
-
-    &:hover {
-      color: $link-color;
-    }
+    background-position: 10px 0px;
+    background-size: 670px;
   }
 
   p {
@@ -32,6 +22,17 @@
 .footer-links {
   padding-left: 0;
   margin-bottom: 1rem;
+  color: rgba(255, 255, 255, 0.5);
+
+  a {
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 500;
+
+    &:hover {
+      color: rgba(255, 255, 255, 0.75);
+      text-decoration: none;
+    }
+  }
 
   li {
     display: inline-block;
@@ -40,4 +41,8 @@
       margin-left: 1rem;
     }
   }
+}
+
+.muted-footer-links {
+  @extend .footer-links;
 }

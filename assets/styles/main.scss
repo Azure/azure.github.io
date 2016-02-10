@@ -11,5 +11,7 @@ $blue-bright: #00abec;
 
 
 body {
-  padding-top: 3.3rem;
+  @include media-breakpoint-up(sm) {
+    padding-top: 3.3rem;
+  }
 }
