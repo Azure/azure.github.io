@@ -23,4 +23,28 @@
   .az-icon-container {
     min-height: 4rem;
   }
+
+  @include media-breakpoint-down(xs) {
+    .nav-item {
+      display: block;
+      float:none;
+      text-align: left;
+
+      + .nav-item {
+        margin-left: 0;
+      }
+
+      ul {
+        margin-left: 1rem;
+      }
+
+      .nav-link {
+        padding: 0;
+        margin-bottom: 1rem;
+      }
+    }
+    .navbar-toggleable-xs{
+      float:none !important;
+    }
+  }
 }
