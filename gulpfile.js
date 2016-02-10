@@ -12,7 +12,9 @@ argv = require('yargs').argv,
 sourcemaps = require('gulp-sourcemaps'),
 concat = require('gulp-concat'),
 browserSync = require('browser-sync'),
-image = require('gulp-image');
+image = require('gulp-image'),
+cache = require('gulp-cached'),
+remember = require('gulp-remember');
 
 var SITE_DIR='./_site';
 
@@ -44,6 +46,7 @@ gulp.task('assets:scripts', function(){
 
 gulp.task('assets:images', function(){
   gulp.src('./assets/images/*')
+    .pipe(cache('images'))
     .pipe(image())
     .pipe(gulp.dest('./images'));
 });
@@ -67,9 +70,13 @@ gulp.task('serve', ['build'], function() {
       }
     }
   });
-  gulp.watch(
-    ['./assets/**/*', './_posts/**/*', './_layouts/**/*', './_includes/**/*', './_pages/**/*', './*.html'],
-    ['rebuild']);
+  var watcher = gulp.watch(['./assets/**/*', './_posts/**/*', './_layouts/**/*', './_includes/**/*', './pages/**/*', './*.html'], ['rebuild']);
+  watcher.on('change', function(evt){
+    if(evt.type === 'deleted') {
+      delete cache.caches['images'][evt.path];
+      remember.forget('images', evt.path);
+    }
+  });
 });
 
 gulp.task('clean', function(){

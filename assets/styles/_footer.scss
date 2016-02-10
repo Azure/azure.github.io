@@ -3,7 +3,16 @@
   margin-top: 1rem;
   font-size: 85%;
   text-align: center;
-  background-color: #f7f7f7;
+  background-repeat: no-repeat;
+  min-height: 288px;
+
+  @include media-breakpoint-down(sm) {
+    background-color: #f7f7f7;
+  }
+
+  @include media-breakpoint-up(sm) {
+    background-image: url('/images/hero-mtazure.png');
+  }
 
   a {
     font-weight: 500;

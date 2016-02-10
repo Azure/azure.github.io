@@ -1,4 +1,4 @@
-.masthead {
+@mixin default-masthead($bg-image) {
   h1 {
     margin-top: .5rem;
     margin-bottom: 2rem;
@@ -11,7 +11,6 @@
     font-weight: 200;
   }
 
-  background-color: $blue-bright;
   margin-left: auto;
   margin-right: auto;
   min-height: 210px;
@@ -29,7 +28,7 @@
   .btn {
     margin-top: 1rem;
   }
-  
+
   .btn-az {
     font-weight: 500;
     color: #fff;
@@ -44,6 +43,21 @@
     }
   }
 
+  @include media-breakpoint-down(sm) {
+    background-color: $blue-bright;
+
+    .btn-az {
+
+      &:hover,
+      &:focus,
+      &:active {
+        color: $blue-bright;
+        background-color: #fff;
+        border-color: $blue-bright;
+      }
+    }
+  }
+
   @include media-breakpoint-up(sm) {
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -52,7 +66,7 @@
       width: auto;
     }
 
-    background-image: url('/images/hero-home.jpg');
+    background-image: url($bg-image);
   }
 
   @include media-breakpoint-up(md) {
@@ -77,4 +91,12 @@
       font-size: 1.25rem;
     }
   }
+}
+
+.masthead {
+  @include default-masthead('/images/hero-home.jpg')
+}
+
+.proj-masthead {
+  @include default-masthead('/images/hero-partners.png')
 }
