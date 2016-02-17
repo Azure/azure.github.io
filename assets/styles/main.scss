@@ -1,6 +1,8 @@
 
 $blue:      #0072c6;
 $blue-bright: #00abec;
+$gray: rgba(255, 255, 255, 0.75);
+$light-gray: rgba(255, 255, 255, 0.85);
 
 @import "bootstrap";
 @import "footer";
@@ -8,6 +10,8 @@ $blue-bright: #00abec;
 @import "featurette";
 @import "masthead";
 @import "button";
+@import "cursor";
+@import "code";
 
 
 body {

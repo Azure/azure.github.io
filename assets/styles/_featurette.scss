@@ -20,16 +20,29 @@
     text-align: center;
   }
 
+  h4 {
+    padding-bottom: 1rem;
+  }
+
   @include media-breakpoint-up(sm) {
-    text-align: left;
+    text-align: center;
   }
 
   @include media-breakpoint-up(md) {
-    .col-sm-6:first-child {
+    .col-md-4:first-child {
       padding-right: ($grid-gutter-width * 1.5);
     };
-    .col-sm-6:last-child {
+    .col-md-4:last-child {
       padding-left: ($grid-gutter-width * 1.5);
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    .col-md-4 {
+      pre {
+        overflow: visible;
+      }
+      padding-bottom: 2rem;
     }
   }
 }

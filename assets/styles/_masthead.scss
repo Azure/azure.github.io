@@ -1,4 +1,4 @@
-@mixin default-masthead($bg-image) {
+.defaultMasthead {
   h1 {
     margin-top: .5rem;
     margin-bottom: 2rem;
@@ -43,6 +43,15 @@
     }
   }
 
+  @include media-breakpoint-up(sm) {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    .btn {
+      width: auto;
+    }
+  }
+
   @include media-breakpoint-down(sm) {
     background-color: $blue-bright;
 
@@ -56,17 +65,6 @@
         border-color: $blue-bright;
       }
     }
-  }
-
-  @include media-breakpoint-up(sm) {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-
-    .btn {
-      width: auto;
-    }
-
-    background-image: url($bg-image);
   }
 
   @include media-breakpoint-up(md) {
@@ -94,9 +92,24 @@
 }
 
 .masthead {
-  @include default-masthead('/images/hero-home.jpg')
+  @extend .defaultMasthead;
+  background-image: url('/images/hero-home.jpg');
 }
 
-.proj-masthead {
-  @include default-masthead('/images/hero-partners.png')
+.apis-masthead {
+  @extend .defaultMasthead;
+  background-image: url('/images/hero-partners.png');
+}
+
+.clis-masthead {
+  @extend .defaultMasthead;
+  pre {
+    color: $light-gray;
+  }
+  background-color: #000;
+}
+
+.sdks-masthead {
+  @extend .defaultMasthead;
+  background-image: url('/images/hero-partners.png');
 }

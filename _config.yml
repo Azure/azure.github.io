@@ -8,6 +8,7 @@ url: "http://azure.github.io"
 
 # Build settings
 markdown: kramdown
+highlighter: rouge
 
 exclude:
   - "node_modules"

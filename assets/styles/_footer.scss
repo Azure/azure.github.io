@@ -7,7 +7,7 @@
   min-height: 200px;
   background-color: #333;
 
-  @include media-breakpoint-up(sm) {
+  @include media-breakpoint-up(md) {
     background-image: url('/images/hero-mtazure.png');
     background-position: 10px 0px;
     background-size: 670px;
