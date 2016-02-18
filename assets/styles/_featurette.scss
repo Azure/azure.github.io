@@ -39,9 +39,6 @@
 
   @include media-breakpoint-down(md) {
     .col-md-6, .col-md-4 {
-      pre {
-        overflow: visible;
-      }
       padding-bottom: 2rem;
     }
   }
@@ -57,6 +54,11 @@
 
 .internal-rule {
   margin: 2.5rem auto;
+
+  margin-right: 5rem;
+  margin-left: 5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 
   @include media-breakpoint-up(sm) {
     margin-right: 10rem;

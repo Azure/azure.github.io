@@ -24,6 +24,10 @@
     min-height: 4rem;
   }
 
+  .navbar-toggler-blue {
+    color: $blue-bright !important
+  }
+
   @include media-breakpoint-down(xs) {
     .nav-item {
       display: block;
