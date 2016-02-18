@@ -38,7 +38,7 @@
   }
 
   @include media-breakpoint-down(md) {
-    .col-md-4 {
+    .col-md-6, .col-md-4 {
       pre {
         overflow: visible;
       }
@@ -53,6 +53,15 @@
   font-weight: normal;
   color: #333;
   text-align: center;
+}
+
+.internal-rule {
+  margin: 2.5rem auto;
+
+  @include media-breakpoint-up(sm) {
+    margin-right: 10rem;
+    margin-left: 10rem;
+  }
 }
 
 .half-rule {
