@@ -18,38 +18,37 @@ permalink: /projects/sdks/
 </div>
 
 {% for language in site.data.languages %}
-
-<div class="featurette {% cycle 'odd', 'even' %}">
-  <h2 class="featurette-title">{{ language.name }}</h2>
-  <p class="lead">{{ language.lead }}</p>
-
-  <div class="card-columns">
-
-  {% for project in language.projects %}
-    <div class="card">
-      <h3 class="card-header"><a class="nav-link" href="{{ project.repo }}"><img src="/images/gh-mark-120px.png"/>{{ project.name }}</a></h3>
-      {% for blurb in project.blurbs %}
-        <div class="card-block">
-          <p class="card-text">{{ blurb }}</p>
-        </div>
-      {% endfor %}
-      {% if project.list-items %}
-        <ul class="list-group list-group-flush">
-          {% for item in project.list-items %}
-            {% case item.type %}
-            {% when 'link' %}
-              <li class="list-group-item"><a class="nav-link" href="{{ item.link }}">{{ item.content }}</a></li>
-            {% else %}
-              <li class="list-group-item">{{ item.content }}</li>
-            {% endcase %}
-          {% endfor %}
-        </ul>
-      {% endif %}
+  <div class="featurette {% cycle 'odd', 'even' %}">
+    <h2 class="featurette-title">{{ language.name }}</h2>
+    {% for lead in language.leads %}
+      <p class="lead">{{ lead }}</p>
+    {% endfor %}
+    <div class="container">
+      <div class="card-columns">
+        {% for project in language.projects %}
+          <div class="card">
+            <h3 class="card-header"><a class="nav-link" href="{{ project.repo }}">
+              <img src="/images/gh-mark-120px.png"/>{{ project.name }}</a></h3>
+              {% for blurb in project.blurbs %}
+                <div class="card-block">
+                  <p class="card-text">{{ blurb }}</p>
+                </div>
+              {% endfor %}
+              {% unless project.list-items.empty? %}
+                <ul class="list-group list-group-flush">
+                  {% for item in project.list-items %}
+                    {% case item.type %}
+                    {% when 'link' %}
+                      <li class="list-group-item"><a class="nav-link" href="{{ item.link }}">{{ item.content }}</a></li>
+                    {% else %}
+                      <li class="list-group-item">{{ item.content }}</li>
+                    {% endcase %}
+                  {% endfor %}
+                </ul>
+              {% endunless %}
+          </div>
+        {% endfor %}
+      </div>
     </div>
-  {% endfor %}
-
   </div>
-
-</div>
-
 {% endfor %}

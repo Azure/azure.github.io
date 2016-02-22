@@ -40,4 +40,16 @@
       color: rgba(0, 0, 0, 0.5);
     }
   }
+
+  .card-block, .card-text, .list-group-item {
+    a {
+      text-decoration: none;
+      display: inline-block;
+
+      color: $blue;
+      @include hover-focus {
+        color: $blue-bright;
+      }
+    }
+  }
 }
