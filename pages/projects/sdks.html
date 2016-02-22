@@ -7,25 +7,40 @@ permalink: /projects/sdks/
 
 <div class="sdks-masthead">
   <div class="container">
-    <h1>Azure Command Lines</h1>
-    <p class="lead">These products and tools are actively developed by the Microsoft Azure team in
+    <h1>Azure SDKs</h1>
+    <p class="lead">These software development kits (SDKs) are actively developed by the Microsoft Azure team in
       collaboration with our open source community and the .NET Foundation.</p>
 
     <p class="lead">Together we are dedicated to creating the best possible experience for
-      developers creating amazing experiences that are built on the world-class
+      developers who are creating amazing experiences built on the world-class
       infrastructure, platforms and frameworks that make up Microsoft Azure.</p>
   </div>
 </div>
 
-<div class="featurette">
-  <h2 class="featurette-title">.NET</h2>
-  <p class="lead">It is only natural for us to lead with .NET</p>
+{% for language in site.data.languages %}
 
-  <div class="container">
-    <div class="azure-sdk-for-net"></div>
-  </div>
-  <div class="container">
-    <div class="azure-storage-net"></div>
+<div class="featurette {% cycle 'odd', 'even' %}">
+  <h2 class="featurette-title">{{ language.name }}</h2>
+  <p class="lead">{{ language.lead }}</p>
+
+  <div class="card-columns">
+
+  {% for project in language.projects %}
+    <div class="card">
+      <h3 class="card-header">{{ project.name }}</h3>
+      {% for blurb in project.blurbs %}
+        <div class="card-block">
+          <p class="card-text">{{ blurb }}</p>
+        </div>
+      {% endfor %}
+      <div class="card-block">
+        <p class="card-text">{{ project.repo }}</p>
+      </div>
+    </div>
+  {% endfor %}
+
   </div>
 
 </div>
+
+{% endfor %}

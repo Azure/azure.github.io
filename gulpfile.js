@@ -70,7 +70,7 @@ gulp.task('serve', ['build'], function() {
       }
     }
   });
-  var watcher = gulp.watch(['./assets/**/*', './_posts/**/*', './_layouts/**/*', './_includes/**/*', './pages/**/*', './*.html'], ['rebuild']);
+  var watcher = gulp.watch(['./assets/**/*', './_posts/**/*', './_layouts/**/*', './_includes/**/*', './pages/**/*', './*.html', './_data/**/*'], ['rebuild']);
   watcher.on('change', function(evt){
     if(evt.type === 'deleted') {
       delete cache.caches['images'][evt.path];

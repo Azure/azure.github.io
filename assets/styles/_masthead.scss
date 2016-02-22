@@ -93,12 +93,16 @@
 
 .masthead {
   @extend .defaultMasthead;
-  background-image: url('/images/hero-home.jpg');
+  @include media-breakpoint-up(sm) {
+    background-image: url('/images/hero-home.jpg');
+  }
 }
 
 .apis-masthead {
   @extend .defaultMasthead;
-  background-image: url('/images/hero-partners.png');
+  @include media-breakpoint-up(sm) {
+    background-image: url('/images/hero-partners.png');
+  }
 }
 
 .clis-masthead {
@@ -111,5 +115,8 @@
 
 .sdks-masthead {
   @extend .defaultMasthead;
-  background-image: url('/images/hero-partners.png');
+  @include media-breakpoint-up(sm) {
+    background-image: url('/images/hero-partners.png');
+    background-position: 0px .7rem;
+  }
 }

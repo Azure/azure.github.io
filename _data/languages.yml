@@ -1,0 +1,77 @@
+- name: .NET
+  lead: It is only natural for us to lead with .NET. If you are a .NET developer, then these projects are where you will start to build great applications on Azure.
+  projects:
+    - name: Azure Management SDK
+      repo: https://github.com/azure/azure-sdk-for-net
+      docs: https://azure.microsoft.com/en-us/develop/net/
+      blurbs:
+        - The Azure Management SDK provides a set of libraries, which simplify the tasks of creating, updating, deleting and accessing Azure resources via Azure Resource Manager and Azure Service Management.
+    - name: AutoRest
+      repo: https://github.com/Azure/autorest
+      docs: https://github.com/Azure/autorest/blob/master/README.md
+      blurbs:
+        - The AutoRest tool generates client libraries for accessing RESTful web services. Input to AutoRest is a spec that describes the REST API using the Swagger format.
+        - AutoRest powers the code generation of the Azure management libraries in C#, Java, Node.js, Python, Ruby and Golang.
+    - name: DocumentDB
+      repo: https://github.com/Azure/azure-documentdb-dotnet
+      docs: https://azure.microsoft.com/en-us/develop/net/
+    - name: Storage
+      repo: https://github.com/Azure/azure-storage-net
+      blurbs:
+        - The Microsoft Azure Storage SDK for .NET allows you to build Azure applications that take advantage of scalable cloud computing resources.
+      getting-started: https://azure.microsoft.com/en-us/documentation/articles/storage-getting-started-guide/
+    - name: Mobile Apps Client
+      repo: https://github.com/Azure/azure-mobile-apps-net-client
+      docs: https://github.com/Azure/azure-mobile-apps-net-client/blob/master/README.md
+      blurbs:
+        - With Microsoft Azure Mobile Apps you can add a scalable backend to your connected client applications in minutes. To learn more, visit our <a href="http://azure.microsoft.com/en-us/develop/mobile">Developer Center</a>.
+    - name: ASP.NET Redis Providers
+      repo: https://github.com/Azure/aspnet-redis-providers
+      docs: https://azure.microsoft.com/en-us/documentation/articles/cache-asp.net-session-state-provider/
+      blurbs:
+        - Azure Redis Cache provides a session state provider that you can use to store your session state in a cache rather than in-memory or in a SQL Server database. To use the caching session state provider, first configure your cache, and then configure your ASP.NET application for cache using the Redis Cache Session State NuGet package.
+    - name: Connect the Dots
+      repo: https://github.com/Azure/connectthedots
+      docs: https://github.com/Azure/connectthedots/blob/master/readme.md
+      blurbs:
+        - ConnectTheDots.io is an open source project created by Microsoft to help you get tiny devices connected to Microsoft Azure, and to implement great IoT solutions taking advantage of Microsoft Azure advanced analytic services such as Azure Stream Analytics and Azure Machine Learning.
+    - name: DotNetty
+      repo: https://github.com/Azure/DotNetty
+      docs: https://github.com/Azure/DotNetty/blob/dev/README.md
+      blurbs:
+        - DotNetty is a port of Netty, asynchronous event-driven network application framework for rapid development of maintainable high performance protocol servers & clients.
+    - name: WebJobs
+      repo: https://github.com/Azure/azure-webjobs-sdk
+      docs: https://github.com/Azure/azure-webjobs-sdk/wiki
+      blurbs:
+        - The Azure WebJobs SDK is a framework that simplifies the task of writing background processing code that runs in Azure. The Azure WebJobs SDK includes a declarative binding and trigger system that works with Azure Storage Blobs, Queues and Tables as well as Service Bus. The binding system makes it incredibly easy to write code that reads or writes Azure Storage objects. The trigger system automatically invokes a function in your code whenever any new data is received in a queue or blob.
+- name: Java
+  lead: Get started with Azure quickly with a projects that help to take some of the complexity out of developing applicaitons built on Java within Azure.
+  projects:
+    - name: Azure Management SDK
+      repo: https://github.com/azure/azure-sdk-for-java
+      docs: http://azure.github.io/ref-docs/java
+- name: JavaScript and Node.js
+  lead: Is JavaScript your language of choice, then these project are for you. Azure's Node.js and Javascript libraries will help to make you more productive developing applicaitons on Azure.
+  projects:
+    - name: Azure Management SDK
+      repo: https://github.com/azure/azure-sdk-for-node
+      docs: http://azure.github.io/azure-sdk-for-node
+- name: Python
+  lead: If you are a pythonista, then these are the projects for you. These projects will help you unlock the power of Azure via Python powered applications and scripts.
+  projects:
+    - name: Azure Management SDK
+      repo: https://github.com/azure/azure-sdk-for-python
+      docs: http://azure.github.io/azure-sdk-for-node
+- name: Ruby
+  lead: When you see .rb in a project, does that get you hyped. If so, here are some projects that will help you to be more productive on Azure.
+  projects:
+    - name: Azure Management SDK
+      repo: https://github.com/azure/azure-sdk-for-ruby
+      docs: http://azure.github.io/azure-sdk-for-ruby
+- name: Golang
+  lead: Calling all gophers... This area is definitely for you. Here are some projects to help you to be successful on Azure.
+  projects:
+    - name: Azure Management SDK
+      repo: https://github.com/azure/azure-sdk-for-go
+      docs: http://azure.github.io/azure-sdk-for-go
