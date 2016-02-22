@@ -1,3 +1,7 @@
+.odd {
+  background-color: rgba(235, 247, 255, 0.5) !important;
+}
+
 .featurette {
   padding-top: 3rem;
   padding-bottom: 3rem;
@@ -18,6 +22,21 @@
     margin-left: auto;
     font-size: 1rem;
     text-align: center;
+  }
+
+  figure {
+    margin:0 auto;
+    display: inline-block;
+  }
+
+  pre {
+      margin:0 auto;
+      padding: 1rem;
+      display: inline-block;
+      background-color: #eee;
+      background-clip: border-box;
+      @include border-radius(5px);
+      margin-bottom: 1rem;
   }
 
   h4 {
@@ -52,6 +71,14 @@
   text-align: center;
 }
 
+.featurette-subtitle {
+  margin-bottom: 1rem;
+  font-size: 1.9rem;
+  font-weight: normal;
+  color: #333;
+  text-align: center;
+}
+
 .internal-rule {
   margin: 2.5rem auto;
 
@@ -75,11 +102,9 @@
     margin-left: 0;
   }
 }
-.featurette h4 {
+.featurette h5 {
   margin-top: 1rem;
-  margin-bottom: .5rem;
-  font-weight: normal;
-  color: #333;
+  padding-bottom: .8rem;
 }
 .featurette-img {
   display: block;
