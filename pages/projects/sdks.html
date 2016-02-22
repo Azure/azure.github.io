@@ -27,15 +27,24 @@ permalink: /projects/sdks/
 
   {% for project in language.projects %}
     <div class="card">
-      <h3 class="card-header">{{ project.name }}</h3>
+      <h3 class="card-header"><a class="nav-link" href="{{ project.repo }}"><img src="/images/gh-mark-120px.png"/>{{ project.name }}</a></h3>
       {% for blurb in project.blurbs %}
         <div class="card-block">
           <p class="card-text">{{ blurb }}</p>
         </div>
       {% endfor %}
-      <div class="card-block">
-        <p class="card-text">{{ project.repo }}</p>
-      </div>
+      {% if project.list-items %}
+        <ul class="list-group list-group-flush">
+          {% for item in project.list-items %}
+            {% case item.type %}
+            {% when 'link' %}
+              <li class="list-group-item"><a class="nav-link" href="{{ item.link }}">{{ item.content }}</a></li>
+            {% else %}
+              <li class="list-group-item">{{ item.content }}</li>
+            {% endcase %}
+          {% endfor %}
+        </ul>
+      {% endif %}
     </div>
   {% endfor %}
 
