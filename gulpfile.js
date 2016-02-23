@@ -23,8 +23,12 @@ gulp.task('assets:styles', function(){
   if(argv.prod){
     options.outputStyle = 'compressed';
   }
-  return gulp.src(['./assets/styles/*.scss', './node_modules/githubjs/src/github.css'])
-    .pipe(sourcemaps.init())
+  return gulp.src([
+    './assets/styles/*.scss',
+    './node_modules/githubjs/src/github.css',
+    './node_modules/swagger-ui/dist/css/style.css',
+    './node_modules/swagger-ui/dist/css/screen.css'
+  ]).pipe(sourcemaps.init())
     .pipe(sass(options).on('error', sass.logError))
     .pipe(concat('main.css'))
     .pipe(sourcemaps.write('.'))
@@ -34,8 +38,17 @@ gulp.task('assets:styles', function(){
 gulp.task('assets:scripts', function(){
   return gulp.src([
     './node_modules/underscore/underscore.js',
-    './node_modules/githubjs/src/github.js',
     './node_modules/bootstrap/dist/js/bootstrap.js',
+    './node_modules/swagger-ui/dist/lib/backbone-min.js',
+    './node_modules/swagger-ui/dist/lib/handlebars-2.0.0.js',
+    './node_modules/swagger-ui/dist/lib/highlight.7.3.pack.js',
+    './node_modules/swagger-ui/dist/lib/jquery.ba-bbq.min.js',
+    './node_modules/swagger-ui/dist/lib/jquery.slideto.min.js',
+    './node_modules/swagger-ui/dist/lib/jquery.wiggle.min.js',
+    './node_modules/swagger-ui/dist/lib/jsoneditor.min.js',
+    './node_modules/swagger-ui/dist/lib/marked.js',
+    './node_modules/swagger-ui/dist/lib/swagger-oauth.js',
+    './node_modules/swagger-ui/dist/swagger-ui.js',
     './assets/scripts/*.js'
   ]).pipe(sourcemaps.init())
     .pipe(concat('app.js'))
@@ -45,8 +58,15 @@ gulp.task('assets:scripts', function(){
 });
 
 gulp.task('assets:images', function(){
-  return gulp.src('./assets/images/*')
-    .pipe(cache('images'))
+  return gulp.src([
+    './assets/images/*',
+    './node_modules/swagger-ui/dist/images/collapse.gif',
+    './node_modules/swagger-ui/dist/images/expand.gif',
+    './node_modules/swagger-ui/dist/images/explorer_icons.png',
+    './node_modules/swagger-ui/dist/images/logo_small.png',
+    './node_modules/swagger-ui/dist/images/throbber.gif',
+    './node_modules/swagger-ui/dist/images/wordnik_api.png'
+  ]).pipe(cache('images'))
     .pipe(image())
     .pipe(gulp.dest('./images'));
 });

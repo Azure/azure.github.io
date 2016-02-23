@@ -7,24 +7,123 @@ permalink: /projects/apis/
 
 <div class="apis-masthead">
   <div class="container">
-    <h1>Azure Command Lines</h1>
-    <p class="lead">These products and tools are actively developed by the Microsoft Azure team in
-      collaboration with our open source community and the .NET Foundation.</p>
+    <h1>Azure REST APIs</h1>
+    <p class="lead">Azure Resource Manager REST APIs are the heart of interacting with Azure and form the connecting glue between your applications and Azure. They are described by specifications conforming to the <a href="https://openapis.org/specification">OpenAPI Specification (formally known as Swagger 2.0)</a>. The OpenAPI specification provides a standard, language-agnostic interface to REST APIs.</p>
 
-    <p class="lead">Together we are dedicated to creating the best possible experience for
-      developers creating amazing experiences that are built on the world-class
-      infrastructure, platforms and frameworks that make up Microsoft Azure.</p>
+    <p class="lead">The Open API Initiative is part of the Linux Foundation and run under an open governence structure. It is focused on creating, evolving and promotin a vendor neutral description format.</p>
   </div>
 </div>
 
-<div class="featurette">
-  <h2 class="featurette-title">.NET</h2>
-  <p class="lead">It is only natural for us to lead with .NET</p>
-
-  <div class="container">
-    <div class="azure-sdk-for-net"></div>
+<div class="clearfix">
+  <div class="col-md-3">
+    {% for category in site.data.apis %}
+      <ul class="api-category">
+        {% for service in category.services %}
+          <li>{{ service.name }}</li>
+          <ul class="api-service">
+            {% for api-version in service.api-versions %}
+              <li>{{ api-version.name }}</li>
+              <ul>
+                {% for spec in api-version.specs %}
+                  <li>{{ spec.name }}</li>
+                {% endfor %}
+              </ul>
+            {% endfor %}
+          </ul>
+        {% endfor %}
+      </ul>
+    {% endfor %}
   </div>
-  <div class="container">
-    <div class="azure-storage-net"></div>
+
+  <div class="col-md-9 swagger-section">
+    <div id='header'>
+      <div class="swagger-ui-wrap">
+        <a id="logo" href="http://swagger.io">swagger</a>
+        <form id='api_selector'>
+          <div class='input'><input placeholder="http://example.com/api" id="input_baseUrl" name="baseUrl" type="text"/></div>
+          <div class='input'><input placeholder="api_key" id="input_apiKey" name="apiKey" type="text"/></div>
+          <div class='input'><a id="explore" href="#" data-sw-translate>Explore</a></div>
+        </form>
+      </div>
+    </div>
+
+    <div id="message-bar" class="swagger-ui-wrap" data-sw-translate>&nbsp;</div>
+    <div id="swagger-ui-container" class="swagger-ui-wrap"></div>
   </div>
 </div>
+
+<script>
+$(document).ready(function() {
+  var url = window.location.search.match(/url=([^&]+)/);
+  if (url && url.length > 1) {
+    url = decodeURIComponent(url[1]);
+  } else {
+    url = "https://raw.githubusercontent.com/Azure/azure-rest-api-specs/master/arm-storage/2015-05-01-preview/swagger/storage.json";
+  }
+
+  // Pre load translate...
+  if(window.SwaggerTranslator) {
+    window.SwaggerTranslator.translate();
+  }
+  window.swaggerUi = new SwaggerUi({
+    url: url,
+    dom_id: "swagger-ui-container",
+    supportedSubmitMethods: ['get', 'post', 'put', 'delete', 'patch'],
+    onComplete: function(swaggerApi, swaggerUi){
+      if(typeof initOAuth == "function") {
+        initOAuth({
+          clientId: "your-client-id",
+          clientSecret: "your-client-secret-if-required",
+          realm: "your-realms",
+          appName: "your-app-name",
+          scopeSeparator: ",",
+          additionalQueryStringParams: {}
+        });
+      }
+
+      if(window.SwaggerTranslator) {
+        window.SwaggerTranslator.translate();
+      }
+
+      $('pre code').each(function(i, e) {
+        hljs.highlightBlock(e)
+      });
+
+      addApiKeyAuthorization();
+    },
+    onFailure: function(data) {
+      log("Unable to Load SwaggerUI");
+    },
+    docExpansion: "none",
+    jsonEditor: false,
+    apisSorter: "alpha",
+    defaultModelRendering: 'schema',
+    showRequestHeaders: true
+  });
+
+  function addApiKeyAuthorization(){
+    var key = encodeURIComponent($('#input_apiKey')[0].value);
+    if(key && key.trim() != "") {
+        var apiKeyAuth = new SwaggerClient.ApiKeyAuthorization("api_key", key, "query");
+        window.swaggerUi.api.clientAuthorizations.add("api_key", apiKeyAuth);
+        log("added key " + key);
+    }
+  }
+
+  $('#input_apiKey').change(addApiKeyAuthorization);
+
+  // if you have an apiKey you would like to pre-populate on the page for demonstration purposes...
+  /*
+    var apiKey = "myApiKeyXXXX123456789";
+    $('#input_apiKey').val(apiKey);
+  */
+
+  window.swaggerUi.load();
+
+  function log() {
+    if ('console' in window) {
+      console.log.apply(console, arguments);
+    }
+  }
+});
+</script>

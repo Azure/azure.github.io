@@ -1,0 +1,18 @@
+- name: Azure Resource Manager
+  services:
+    - name: Compute
+      api-versions:
+        - name: 2015-06-15
+          specs:
+            - name: compute.json
+              uri: https://raw.githubusercontent.com/Azure/azure-rest-api-specs/master/arm-compute/2015-06-15/swagger/compute.json
+    - name: Storage
+      api-versions:
+        - name: 2015-06-15
+          specs:
+            - name: storage.json
+              uri: https://raw.githubusercontent.com/Azure/azure-rest-api-specs/master/arm-storage/2015-06-15/swagger/storage.json
+        - name: 2015-05-01-preview
+          specs:
+            - name: storage.json
+              uri: https://raw.githubusercontent.com/Azure/azure-rest-api-specs/master/arm-storage/2015-05-01-preview/swagger/storage.json

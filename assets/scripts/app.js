@@ -22,7 +22,7 @@ $(document).ready(function() {
 
 });
 
-Github.gitApiUrl="http://localhost:4000/proxy/api.github.com/";
+// Github.gitApiUrl="http://localhost:4000/proxy/api.github.com/";
 
 
 // Github.orgProfile({

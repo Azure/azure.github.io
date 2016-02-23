@@ -101,7 +101,14 @@
 .apis-masthead {
   @extend .defaultMasthead;
   @include media-breakpoint-up(sm) {
-    background-image: url('/images/hero-partners.png');
+    background-image: url('/images/hero-devices.jpg');
+  }
+  a {
+    color: #fff;
+    text-decoration: none;
+    &:hover {
+      color: $gray;
+    }
   }
 }
 
