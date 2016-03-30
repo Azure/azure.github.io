@@ -3,7 +3,6 @@ require 'tmpdir'
 
 require 'bundler/setup'
 require 'jekyll'
-require 'html/proofer'
 
 GITHUB_REPONAME = 'Azure/azure.github.io.git'
 
@@ -24,7 +23,7 @@ end
 
 desc 'Generate azure.github.io files'
 task :build do
-  silent_interrupt { system 'gulp build' }
+  silent_interrupt { system 'npm install && gulp build' }
 end
 
 task :serve do
