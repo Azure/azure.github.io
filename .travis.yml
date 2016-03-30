@@ -2,13 +2,20 @@ language: ruby
 cache: bundler
 rvm:
 - 2.2
-script:
-  - 'npm install'
-  - '[ "${TRAVIS_PULL_REQUEST}" = "false" ] && bundle exec rake publish || bundle exec rake build'
-branches:
-  only:
-  - jekyll
+
 env:
+  - TRAVIS_NODE_VERSION="5"
   global:
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
   - secure: tRd3NyctGOLnG3ECjWmhOXeMOffvzXQ8DR7Po9ixy8Z9PDctQhQLDSnwXY3MYONz3TiTR0uu9KSFXfYhVPX2Br1mE86RFTO7uZmS4kAOLBxyCfPSq5svZbVRk0CNj6+5zBOaSEHwwbGbnAZwhs/rp3bNEmyl1Pb4JluY7AxgdTw=
+
+branches:
+  only:
+  - jekyll
+
+install:
+  - rm -rf ~/.nvm && git clone https://github.com/creationix/nvm.git ~/.nvm && (cd ~/.nvm && git checkout `git describe --abbrev=0 --tags`) && source ~/.nvm/nvm.sh && nvm install $TRAVIS_NODE_VERSION
+  - npm install
+
+script:
+  - '[ "${TRAVIS_PULL_REQUEST}" = "false" ] && bundle exec rake publish || bundle exec rake build'
