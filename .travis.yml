@@ -1,9 +1,9 @@
 language: ruby
 cache: bundler
 rvm:
-- 2.1
+- 2.3
 script: 
-  - '[ "${TRAVIS_PULL_REQUEST}" = "false" ] && rake publish || rake test'
+  - '[ "${TRAVIS_PULL_REQUEST}" = "false" ] && gulp build && rake publish || gulp build'
 branches:
   only:
   - jekyll
