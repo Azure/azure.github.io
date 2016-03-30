@@ -3,7 +3,7 @@ cache: bundler
 rvm:
 - 2.2
 script: 
-  - '[ "${TRAVIS_PULL_REQUEST}" = "false" ] && bundle exec rake publish || bundle exec gulp build'
+  - '[ "${TRAVIS_PULL_REQUEST}" = "false" ] && bundle exec rake publish || bundle exec rake build'
 branches:
   only:
   - jekyll
