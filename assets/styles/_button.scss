@@ -1,0 +1,19 @@
+.btn-az {
+  font-weight: 500;
+  color: $blue-bright;
+  border-color: $blue-bright;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: #fff;
+    background-color: $blue-bright;
+    border-color: $blue-bright;
+  }
+
+  img {
+    max-height: 20px;
+    margin-bottom: 5px;
+    margin-right: .5rem;
+  }
+}

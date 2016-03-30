@@ -1,0 +1,47 @@
+.az-footer {
+  padding: 4rem 0;
+  font-size: 85%;
+  text-align: center;
+  background-repeat: no-repeat;
+  min-height: 200px;
+  background-color: #333;
+
+  @include media-breakpoint-up(md) {
+    background-image: url('/images/hero-mtazure.png');
+    background-position: 10px 0px;
+    background-size: 670px;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+}
+
+.footer-links {
+  padding-left: 0;
+  margin-bottom: 1rem;
+  color: rgba(255, 255, 255, 0.5);
+
+  a {
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 500;
+
+    &:hover {
+      color: rgba(255, 255, 255, 0.75);
+      text-decoration: none;
+    }
+  }
+
+  li {
+    display: inline-block;
+
+    + li {
+      margin-left: 1rem;
+    }
+  }
+}
+
+.muted-footer-links {
+  @extend .footer-links;
+}

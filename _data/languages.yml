@@ -1,0 +1,419 @@
+########################################################################################################################
+###
+###  .NET Content
+###
+########################################################################################################################
+
+- name: .NET
+  leads:
+    - It is only natural for us to lead with .NET. If you are a .NET developer, then these projects are where you will start to build great applications on Azure.
+  projects:
+    - name: Azure Management SDK
+      repo: https://github.com/azure/azure-sdk-for-net
+      blurbs:
+        - The Azure Management SDK provides a set of libraries, which simplify the tasks of creating, updating, deleting and accessing Azure resources via Azure Resource Manager and Azure Service Management.
+      list-items:
+        - type: link
+          content: Docs
+          link: https://github.com/Azure/azure-sdk-for-net/blob/master/README.md
+    - name: Storage
+      repo: https://github.com/Azure/azure-storage-net
+      blurbs:
+        - The Microsoft Azure Storage SDK for .NET allows you to build Azure applications that take advantage of scalable cloud computing resources.
+        - This contains the open source subset of the .NET SDK. For documentation of the complete Azure SDK, please see the <a href="http://azure.microsoft.com/en-us/develop/net/">Microsoft Azure .NET Developer Center</a>.
+      list-items:
+        - type: link
+          content: Docs
+          link: https://azure.microsoft.com/en-us/develop/net/
+        - type: link
+          content: Getting started
+          link: https://azure.microsoft.com/en-us/documentation/articles/storage-getting-started-guide/
+    - name: Internet of Things (IoT) Hub
+      repo: https://github.com/Azure/azure-iot-sdks
+      blurbs:
+        - Contains both IoT device SDKs and IoT service SDKs. Device SDKs enable you connect client devices to Azure IoT Hub. Service SDKs enable you to manage your IoT Hub service instance.
+        - Visit <a href="http://azure.com/iotdev">http://azure.com/iotdev</a> to learn more about developing applications for Azure IoT.
+      list-items:
+        - type: link
+          content: Docs
+          link: https://github.com/Azure/azure-iot-sdks/blob/master/csharp/device/readme.md
+    - name: DocumentDB
+      repo: https://github.com/Azure/azure-documentdb-dotnet
+      blurbs:
+        - Samples and utilities relating to the Azure DocumentDB SDK
+      list-items:
+        - type: link
+          content: Docs
+          link: https://azure.microsoft.com/en-us/develop/net/
+    - name: Media services
+      repo: https://github.com/Azure/azure-sdk-for-media-services
+      blurbs:
+        - Azure Media Services allows you to build a media distribution solution that can stream audio and video to Windows, iOS, Android, and other devices and platforms.To learn more, visit our <a href="http://www.windowsazure.com/en-us/develop/media-services/">Developer Center</a>.
+      list-items:
+        - type: link
+          content: Docs
+          link: https://github.com/Azure/azure-sdk-for-media-services/blob/dev/Readme.md
+    - name: Mobile Apps Client
+      repo: https://github.com/Azure/azure-mobile-apps-net-client
+      blurbs:
+        - With Microsoft Azure Mobile Apps you can add a scalable backend to your connected client applications in minutes. To learn more, visit our <a href="http://azure.microsoft.com/en-us/develop/mobile">Developer Center</a>.
+      list-items:
+        - type: link
+          content: Docs
+          link: https://github.com/Azure/azure-mobile-apps-net-client/blob/master/README.md
+    - name: ASP.NET Redis Providers
+      repo: https://github.com/Azure/aspnet-redis-providers
+      blurbs:
+        - Azure Redis Cache provides a session state provider that you can use to store your session state in a cache rather than in-memory or in a SQL Server database. To use the caching session state provider, first configure your cache, and then configure your ASP.NET application for cache using the Redis Cache Session State NuGet package.
+      list-items:
+        - type: link
+          content: Docs
+          link: https://azure.microsoft.com/en-us/documentation/articles/cache-asp.net-session-state-provider/
+    - name: AutoRest
+      repo: https://github.com/Azure/autorest
+      blurbs:
+        - The AutoRest tool generates client libraries for accessing RESTful web services. Input to AutoRest is a spec that describes the REST API using the Swagger format.
+        - AutoRest powers the code generation of the Azure management libraries in C#, Java, Node.js, Python, Ruby and Golang.
+      list-items:
+        - type: link
+          content: Docs
+          link: https://github.com/Azure/autorest/blob/master/README.md
+    - name: Connect the Dots
+      repo: https://github.com/Azure/connectthedots
+      blurbs:
+        - ConnectTheDots.io is an open source project created by Microsoft to help you get tiny devices connected to Microsoft Azure, and to implement great IoT solutions taking advantage of Microsoft Azure advanced analytic services such as Azure Stream Analytics and Azure Machine Learning.
+      list-items:
+        - type: link
+          content: Docs
+          link: https://github.com/Azure/connectthedots/blob/master/readme.md
+    - name: DotNetty
+      repo: https://github.com/Azure/DotNetty
+      blurbs:
+        - DotNetty is a port of Netty, asynchronous event-driven network application framework for rapid development of maintainable high performance protocol servers & clients.
+      list-items:
+        - type: link
+          content: Docs
+          link: https://github.com/Azure/DotNetty/blob/dev/README.md
+    - name: WebJobs
+      repo: https://github.com/Azure/azure-webjobs-sdk
+      blurbs:
+        - The Azure WebJobs SDK is a framework that simplifies the task of writing background processing code that runs in Azure. The Azure WebJobs SDK includes a declarative binding and trigger system that works with Azure Storage Blobs, Queues and Tables as well as Service Bus. The binding system makes it incredibly easy to write code that reads or writes Azure Storage objects. The trigger system automatically invokes a function in your code whenever any new data is received in a queue or blob.
+        - The related repo <a href="https://github.com/Azure/azure-webjobs-sdk-extensions">azure-webjobs-sdk-extensions</a> demonstrates the extensibility model of the SDK and contains many useful trigger/binder extensions (e.g. WebHooks, SendGrid, Timer/Cron, Files), as well as samples showing how to use/create SDK extensions.
+      list-items:
+        - type: link
+          content: Docs
+          link: https://github.com/Azure/azure-webjobs-sdk/wiki
+    - name: AMQP 1.0 Client Library
+      repo: https://github.com/Azure/amqpnetlite
+      blurbs:
+        - AMQP.Net Lite is a lightweight AMQP 1.0 client library for the .Net Micro Framework, .Net Compact Framework, .Net Framework, and Windows Runtime platforms.
+      list-items:
+        - type: link
+          content: Docs
+          link: https://github.com/Azure/amqpnetlite/blob/master/README.md
+
+########################################################################################################################
+###
+###  Java Content
+###
+########################################################################################################################
+
+- name: Java
+  leads:
+    - Get started with Azure quickly with a projects that help to take some of the complexity out of developing applicaitons built on Java within Azure.
+  projects:
+    - name: Azure Management SDK
+      repo: https://github.com/azure/azure-sdk-for-java
+      blurbs:
+        - The Azure Management SDK provides a set of libraries, which simplify the tasks of creating, updating, deleting and accessing Azure resources via Azure Resource Manager and Azure Service Management.
+      list-items:
+        - type: link
+          content: Docs
+          link: https://azure.github.io/ref-docs/java
+    - name: Storage
+      repo: https://github.com/Azure/azure-storage-java
+      blurbs:
+        - This project provides a client library in Java that makes it easy to consume Microsoft Azure Storage services. For documentation please see the Microsoft Azure <a href="http://azure.microsoft.com/en-us/develop/java/">Java Developer Center</a>.
+      list-items:
+        - type: link
+          content: Docs
+          link: http://azure.github.io/azure-storage-java/
+    - name: Storage Android
+      repo: https://github.com/Azure/azure-storage-android
+      blurbs:
+        - This project provides a client library for Android that makes it easy to consume Microsoft Azure Storage services.
+      list-items:
+        - type: link
+          content: Docs
+          link: http://azure.github.io/azure-storage-android/
+    - name: Internet of Things (IoT) Hub
+      repo: https://github.com/Azure/azure-iot-sdks
+      blurbs:
+        - Contains both IoT device SDKs and IoT service SDKs. Device SDKs enable you connect client devices to Azure IoT Hub. Service SDKs enable you to manage your IoT Hub service instance.
+        - Visit <a href="http://azure.com/iotdev">http://azure.com/iotdev</a> to learn more about developing applications for Azure IoT.
+      list-items:
+        - type: link
+          content: Docs
+          link: https://github.com/Azure/azure-iot-sdks/blob/master/java/device/readme.md
+    - name: DocumentDB
+      repo: https://github.com/Azure/azure-documentdb-java
+      blurbs:
+        - This project provides a client library in Java that makes it easy to interact with Azure DocumentDB.
+      list-items:
+        - type: link
+          content: Docs
+          link: http://azure.github.io/azure-documentdb-java/
+    - name: DocumentDB Hadoop Connector
+      repo: https://github.com/Azure/azure-documentdb-hadoop
+      blurbs:
+        - Provides a client library in Java that allows Microsoft Azure DocumentDB to act as an input source or output sink for MapReduce, Hive and Pig jobs.
+      list-items:
+        - type: link
+          content: Docs
+          link: https://github.com/Azure/azure-documentdb-hadoop/blob/master/README.md
+    - name: Notification Hubs
+      repo: https://github.com/Azure/azure-notificationhubs-java-backend
+      blurbs:
+        - Java Back-end SDK for <a href="http://www.windowsazure.com/en-us/documentation/services/notification-hubs/">Microsoft Azure Notification Hubs</a>.
+        - Implements most of the Notification Hubs REST operations to perform Hub CRUDs, registration/installation management and send notification.
+      list-items:
+        - type: link
+          content: Docs
+          link: https://github.com/Azure/azure-notificationhubs-java-backend/blob/master/README.md
+    - name: AppServices Remote Debugging
+      repo: https://github.com/Azure/azure-websites-java-remote-debugging
+      blurbs:
+        - Remotely debug your Java applications running on Azure AppServices.
+      list-items:
+        - type: link
+          content: Docs
+          link: https://github.com/Azure/azure-websites-java-remote-debugging/blob/master/README.md
+
+
+########################################################################################################################
+###
+###  Node / JavaScript Content
+###
+########################################################################################################################
+
+- name: JavaScript and Node.js
+  leads:
+    - Is JavaScript your language of choice, then these project are for you. Azure's Node.js and Javascript libraries will help to make you more productive developing applicaitons on Azure.
+  projects:
+    - name: Azure Management SDK
+      repo: https://github.com/azure/azure-sdk-for-node
+      blurbs:
+        - The Azure Management SDK provides a set of libraries, which simplify the tasks of creating, updating, deleting and accessing Azure resources via Azure Resource Manager and Azure Service Management.
+      list-items:
+        - type: link
+          content: Docs
+          link: http://azure.github.io/azure-sdk-for-node
+    - name: Storage
+      repo: https://github.com/Azure/azure-storage-node
+      blurbs:
+        - Provides a Node.js package that makes it easy to consume and manage Microsoft Azure Storage Services.
+      list-items:
+        - type: link
+          content: Docs
+          link: http://azure.github.io/azure-storage-node/
+    - name: DocumentDB Node
+      repo: https://github.com/Azure/azure-documentdb-node
+      blurbs:
+        - Provides a node module that makes it easy to interact with Azure DocumentDB.
+      list-items:
+        - type: link
+          content: Docs
+          link: http://azure.github.io/azure-documentdb-node/
+    - name: DocumentDB JavaScript
+      repo: https://github.com/Azure/azure-documentdb-js
+      blurbs:
+        - DocumentDB is a purpose built NoSQL JSON document database designed for modern mobile and web applications. DocumentDB supports rich queries over JSON data as well as, transactional execution of JavaScript based application logic. DocumentDB is built with a deep commitment to the JSON data model enabling it to offer differentiated query and data processing capabilities that scale to meet the needs of the most demanding modern applications.
+      list-items:
+        - type: link
+          content: Docs
+          link: https://github.com/Azure/azure-documentdb-js/blob/master/README.md
+    - name: DocumentDB Server-Side JavaScript
+      repo: https://github.com/Azure/azure-documentdb-js-server
+      blurbs:
+        - DocumentDB’s language integrated, transactional execution of JavaScript supports stored procedures, triggers and user defined functions (UDFs) written natively in JavaScript. This allows developers to write application logic which can be shipped and executed directly on the database storage partitions. JavaScript support at the server side has a number of intrinsic advantages that can be utilized to build rich applications.
+      list-items:
+        - type: link
+          content: Docs
+          link: http://azure.github.io/azure-documentdb-js-server/
+        - type: link
+          content: Getting started
+          link: https://azure.microsoft.com/en-us/documentation/articles/documentdb-programming/
+    - name: DocumentDB Q Promises Wrapper
+      repo: https://github.com/Azure/azure-documentdb-node-q
+      blurbs:
+        - Provides a node module that makes it easy to interact with Azure DocumentDB via q promises.
+      list-items:
+        - type: link
+          content: Docs
+          link: http://azure.github.io/azure-documentdb-node-q/
+    - name: Mobile Services for Cordova
+      repo: https://github.com/Azure/azure-mobile-services-cordova
+      blurbs:
+        - With Microsoft Azure Mobile Services you can add a scalable backend to your connected client applications in minutes.
+      list-items:
+        - type: link
+          content: Readme
+          link: https://github.com/Azure/azure-mobile-services-cordova/blob/master/README.md
+        - type: link
+          content: Getting started
+          link: https://azure.microsoft.com/en-us/documentation/articles/mobile-services-javascript-backend-phonegap-get-started/
+    - name: Internet of Things (IoT) Hub
+      repo: https://github.com/Azure/azure-iot-sdks
+      blurbs:
+        - Contains both IoT device SDKs and IoT service SDKs. Device SDKs enable you connect client devices to Azure IoT Hub. Service SDKs enable you to manage your IoT Hub service instance.
+        - Visit <a href="http://azure.com/iotdev">http://azure.com/iotdev</a> to learn more about developing applications for Azure IoT.
+      list-items:
+        - type: link
+          content: Docs
+          link: https://github.com/Azure/azure-iot-sdks/blob/master/node/device/core/readme.md
+    - name: Kubernetes Visualizer
+      repo: https://github.com/Azure/azure-kubernetes-visualizer
+      blurbs:
+        - The demo application helps you visualize what is happening in your Kubernetes cluster by showing you where all of your workloads are being run. This both helps with understanding kubernetes, as well as visually demonstrating how its' scheduler works.
+      list-items:
+        - type: link
+          content: Readme
+          link: https://github.com/Azure/azure-kubernetes-visualizer/blob/master/README.md
+
+
+########################################################################################################################
+###
+###  Python Content
+###
+########################################################################################################################
+
+- name: Python
+  leads:
+    - If you are a pythonista, then these are the projects for you. These projects will help you unlock the power of Azure via Python powered applications and scripts.
+  projects:
+    - name: Azure Management SDK
+      repo: https://github.com/azure/azure-sdk-for-python
+      blurbs:
+        - The Azure Management SDK provides a set of libraries, which simplify the tasks of creating, updating, deleting and accessing Azure resources via Azure Resource Manager and Azure Service Management.
+      list-items:
+        - type: link
+          content: Docs
+          link: https://azure-sdk-for-python.readthedocs.org/en/latest/
+    - name: Storage
+      repo: https://github.com/Azure/azure-storage-python
+      blurbs:
+        - Provides a client library in Python that makes it easy to consume Microsoft Azure Storage services.
+      list-items:
+        - type: link
+          content: Docs
+          link: http://azure.github.io/azure-storage-python/
+    - name: DocumentDB
+      repo: https://github.com/Azure/azure-documentdb-python
+      blurbs:
+        - Python driver for Microsoft Azure DocumentDB
+      list-items:
+        - type: link
+          content: Readme
+          link: https://github.com/Azure/azure-documentdb-python/blob/master/README.md
+    - name: Machine Learing Client
+      repo: https://github.com/Azure/Azure-MachineLearning-ClientLibrary-Python
+      blurbs:
+        - Azure Machine Learning Python client library lets you access your Azure ML datasets from your local Python environment.
+        - You can download datasets that are available in your ML workspace, or intermediate datasets from experiments that were run. You can upload new datasets and update existing datasets. The data is optionally converted to/from a Pandas DataFrame.
+      list-items:
+        - type: link
+          content: Readme
+          link: https://github.com/Azure/Azure-MachineLearning-ClientLibrary-Python/blob/master/README.md
+    - name: Linux Extensions for Microsoft Azure IaaS
+      blurbs:
+        - Provides the source code of Linux extensions for Microsoft Azure IaaS. VM Extensions are injected components authored by Microsoft and Partners into Linux VM (IaaS) to enable software and configuration automation.
+      list-items:
+        - type: link
+          content: Readme
+          link: https://github.com/Azure/azure-linux-extensions/blob/master/README.md
+    - name: Microsoft Azure Linux Agent
+      repo: https://github.com/Azure/WALinuxAgent
+      blurbs:
+        - The Microsoft Azure Linux Agent (waagent) manages Linux & FreeBSD provisioning, and VM interaction with the Azure Fabric Controller.
+      list-items:
+        - type: link
+          content: Readme
+          link: https://github.com/Azure/WALinuxAgent/blob/2.0/README
+
+########################################################################################################################
+###
+###  Ruby Content
+###
+########################################################################################################################
+
+- name: Ruby
+  leads:
+    - When you see .rb in a project, does that get you hyped. Here are some projects that will help you to be more productive on Azure.
+  projects:
+    - name: Azure Management SDK
+      repo: https://github.com/azure/azure-sdk-for-ruby
+      blurbs:
+        - The Azure Management SDK provides a set of libraries, which simplify the tasks of creating, updating, deleting and accessing Azure resources via Azure Resource Manager and Azure Service Management.
+      list-items:
+        - type: link
+          content: Docs
+          link: https://github.com/Azure/azure-sdk-for-ruby/blob/master/README.md
+    - name: Storage
+      repo: https://github.com/Azure/azure-storage-ruby
+      blurbs:
+        - Provides a Ruby package that makes it easy to access and manage Microsoft Azure Storage Services.
+      list-items:
+        - type: link
+          content: Readme
+          link: https://github.com/Azure/azure-storage-ruby/blob/master/README.md
+    - name: Vagrant Azure
+      repo: https://github.com/Azure/vagrant-azure
+      blurbs:
+        - Enable Vagrant to manage virtual machines in Microsoft Azure
+      list-items:
+        - type: link
+          content: Readme
+          link: https://github.com/Azure/vagrant-azure/blob/master/README.md
+
+########################################################################################################################
+###
+###  Golang Content
+###
+########################################################################################################################
+
+- name: Golang
+  leads:
+    - Calling all gophers... This area is definitely for you. If so, Here are some projects to help you to be successful on Azure.
+  projects:
+    - name: Azure Management SDK
+      repo: https://github.com/azure/azure-sdk-for-go
+      blurbs:
+        - The Azure Management SDK provides a set of libraries, which simplify the tasks of creating, updating, deleting and accessing Azure resources via Azure Resource Manager and Azure Service Management.
+      list-items:
+        - type: link
+          content: Docs
+          link: https://godoc.org/github.com/Azure/azure-sdk-for-go
+    - name: Packer Azure
+      repo: https://github.com/Azure/packer-azure
+      blurbs:
+        - <a href="http://www.packer.io/intro/index.html">Packer</a> is an open source tool for creating identical machine images for multiple platforms from a single source configuration. This is an Azure plugin for Packer.io to enable Microsoft Azure users to build custom images given an Azure image.
+      list-items:
+        - type: link
+          content: Readme
+          link: https://github.com/Azure/packer-azure/blob/master/README.md
+    - name: Azure Docker Extension
+      repo: https://github.com/Azure/azure-docker-extension
+      blurbs:
+        - Docker VM Extension for Microsoft Azure
+      list-items:
+        - type: link
+          content: Readme
+          link: https://github.com/Azure/azure-docker-extension/blob/master/README.md
+    - name: Docker Volume Driver for Azure File Service
+      repo: https://github.com/Azure/azurefile-dockervolumedriver
+      blurbs:
+        - This is a Docker Volume Driver which uses <a href="http://blogs.msdn.com/b/windowsazurestorage/archive/2014/05/12/introducing-microsoft-azure-file-service.aspx">Azure Storage File Service</a> to mount file shares on the cloud to Docker containers as volumes. It uses network file sharing (<a href="https://msdn.microsoft.com/en-us/library/windows/desktop/aa365233(v=vs.85).aspx">SMB/CIFS protocols</a>) capabilities of Azure File Service.
+      list-items:
+        - type: link
+          content: Readme
+          link: https://github.com/Azure/azurefile-dockervolumedriver/blob/master/README.md

@@ -3,7 +3,6 @@ require 'tmpdir'
 
 require 'bundler/setup'
 require 'jekyll'
-require 'html/proofer'
 
 GITHUB_REPONAME = 'Azure/azure.github.io.git'
 
@@ -24,9 +23,7 @@ end
 
 desc 'Generate azure.github.io files'
 task :build do
-  Dir.chdir('jekyll') do
-    silent_interrupt { system 'jekyll build' }
-  end
+  silent_interrupt { system 'npm install && gulp build' }
 end
 
 task :serve do
@@ -42,9 +39,9 @@ task :test => [:build] do
 end
 
 desc 'Generate and publish blog to gh-pages'
-task :publish => [:test] do
+task :publish => [:build] do
   Dir.mktmpdir do |tmp|
-    cp_r './jekyll/_site/.', tmp
+    cp_r './_site/.', tmp
 
     Dir.chdir tmp do
       run('git init')

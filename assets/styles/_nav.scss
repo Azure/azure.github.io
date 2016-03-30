@@ -1,0 +1,54 @@
+.az-navbar {
+  border-radius: 0;
+  font-size: 87.5%;
+  background-color: #333;
+  padding-top: 0px;
+  padding-bottom: 0px;
+
+  .nav-link {
+    padding-top: 1.5rem;
+    padding-left: 1rem;
+    color: #EEE
+  }
+
+  .az-logo {
+    max-height: 4rem;
+  }
+
+  .az-icon {
+    max-height: 1.4rem;
+    margin-top: 1.3rem;
+  }
+
+  .az-icon-container {
+    min-height: 4rem;
+  }
+
+  .navbar-toggler-blue {
+    color: $blue-bright !important
+  }
+
+  @include media-breakpoint-down(xs) {
+    .nav-item {
+      display: block;
+      float:none;
+      text-align: left;
+
+      + .nav-item {
+        margin-left: 0;
+      }
+
+      ul {
+        margin-left: 1rem;
+      }
+
+      .nav-link {
+        padding: 0;
+        margin-bottom: 1rem;
+      }
+    }
+    .navbar-toggleable-xs{
+      float:none !important;
+    }
+  }
+}

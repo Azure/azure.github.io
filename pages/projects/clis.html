@@ -1,0 +1,88 @@
+---
+layout: default
+title: Azure Open Source Projects
+description: Microsoft Azure open source Command Lines and other related projects.
+permalink: /projects/clis/
+---
+
+<div class="clis-masthead">
+  <div class="container">
+    <pre>
+
+             _    _____   _ ___ ___
+            /_\  |_  / | | | _ \ __|
+      _ ___/ _ \__/ /| |_| |   / _|___ _ _
+    (___  /_/ \_\/___|\___/|_|_\___| _____)
+       (_______ _ _)         _ ______ _)_ _
+              (______________ _ )   (___ _ _)
+
+    Microsoft Azure: Microsoft's Cloud Platform
+
+    $ <span class="blinking-cursor">|</span>
+    </pre>
+  </div>
+</div>
+
+<div class="featurette odd">
+  <div class="container">
+    <div class="featurette-title">Azure CLI</div>
+    <p class="lead">Azure CLI is your command line for Microsoft Azure that you can use from anywhere.</p>
+    <p class="lead">With Azure CLI, you can create, manage, and delete services on the command line via cmd.exe, bash or
+      {your shell} on the operating system of your choice.</p>
+    <div class="col-md-6">
+      <a class="btn btn-az btn-outline disabled" href="/ref-docs/azure-cli">Documentation</a>
+    </div>
+    <div class="col-md-6">
+      <a class="btn btn-az btn-outline" href="https://github.com/azure/azure-xplat-cli"><img
+          src="/images/gh-mark-120px.png"/> /azure-cli</a>
+    </div>
+    <div class="clearfix"></div>
+    <hr class="internal-rule">
+    <div class="featurette-subtitle">Install</div>
+    <div class="col-md-4">
+      <h5>OSX</h5>
+      <pre>brew install azure-cli</pre>
+      <p>or</p>
+      <a class="btn btn-az btn-outline" href="http://aka.ms/mac-azure-cli">CLI.dmg</a>
+    </div>
+    <div class="col-md-4">
+      <!-- <img src="{{ site.baseurl }}/assets/img/devices.png" alt="Responsive across devices" class="img-fluid"> -->
+      <h5>Windows</h5>
+      <a class="btn btn-az btn-outline" href="http://aka.ms/webpi-azure-cli">WebPI Installer</a>
+    </div>
+    <div class="col-md-4">
+      <!-- <img src="{{ site.baseurl }}/assets/img/devices.png" alt="Responsive across devices" class="img-fluid"> -->
+      <h5>Linux</h5>
+      <pre>npm install -g azure-cli</pre>
+    </div>
+  </div>
+</div>
+
+<div class="featurette">
+  <div class="container">
+    <h2 class="featurette-title">Azure PowerShell</h2>
+    <p class="lead">Azure PowerShell brings full control of Microsoft Azure to your Windows PowerShell command line.</p>
+    <div class="col-md-6">
+      <a class="btn btn-az btn-outline" href="https://msdn.microsoft.com/en-us/library/jj156055.aspx">Documenation</a>
+    </div>
+    <div class="col-md-6">
+      <a class="btn btn-az btn-outline" href="https://github.com/azure/azure-powershell"><img
+          src="/images/gh-mark-120px.png"/> /azure-powershell</a>
+    </div>
+    <div class="clearfix"></div>
+    <hr class="internal-rule">
+    <div class="featurette-subtitle">Install</div>
+    <div class="col-md-6">
+      <a class="btn btn-az btn-outline" href="http://aka.ms/webpi-azps">WebPI Installer</a>
+    </div>
+    <div class="col-md-6">
+      <h5>PowerShell Gallery</h5>
+      {% highlight powershell %}
+      Install-Module AzureRM
+      AzureRM-Install
+
+      Install-Module Azure
+      {% endhighlight %}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,55 @@
+
+.blinking-cursor {
+  font-weight: 100;
+  color: $light-gray;
+  -webkit-animation: 1s cursor step-end infinite;
+  -moz-animation: 1s cursor step-end infinite;
+  -ms-animation: 1s cursor step-end infinite;
+  -o-animation: 1s cursor step-end infinite;
+  animation: 1s cursor step-end infinite;
+}
+
+@keyframes "cursor" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: $light-gray;
+  }
+}
+
+@-moz-keyframes cursor {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: $light-gray;
+  }
+}
+
+@-webkit-keyframes "cursor" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: $light-gray;
+  }
+}
+
+@-ms-keyframes "cursor" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: $light-gray;
+  }
+}
+
+@-o-keyframes "cursor" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: $light-gray;
+  }
+}

@@ -1,0 +1,103 @@
+---
+layout: default
+title: Azure Open Source Projects
+description: Microsoft Azure open source REST API specifications and related projects.
+permalink: /projects/apis/
+---
+
+<div class="apis-masthead">
+  <div class="container">
+    <h1>Azure REST APIs</h1>
+    <p class="lead">Azure Resource Manager REST APIs are the heart of interacting with Azure, and form the connecting
+      glue between your applications and Azure. They are described by specifications conforming to the <a
+          href="https://openapis.org/specification">OpenAPI Specification (formally known as Swagger 2.0)</a>. The
+      OpenAPI specification provides a standard, language-agnostic interface to REST APIs.</p>
+
+    <p class="lead">The Open API Initiative is part of the Linux Foundation and run under an open governence structure.
+      It is focused on creating, evolving and promotin a vendor neutral description format.</p>
+  </div>
+</div>
+
+<div class="clearfix">
+  <div class="container">
+  <div class="swagger-section">
+    <div id='header'>
+      <div class="swagger-ui-wrap">
+        <ul class="nav nav-pills">
+          {% for category in site.data.apis %}
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle btn btn-az btn-outline" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">{{category.name}}</a>
+            <div class="dropdown-menu">
+              {% for service in category.services %}
+              <a class="dropdown-item" onclick="loadSwagger('{{service.uri}}')">{{ service.name }} - {{service.version}}</a>
+              {% endfor %}
+            </div>
+          </li>
+          {% endfor %}
+          <li class="nav-item">
+            <div id='auth_container'></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="message-bar" class="swagger-ui-wrap" data-sw-translate>&nbsp;</div>
+    <div id="swagger-ui-container" class="swagger-ui-wrap"></div>
+  </div>
+  </div>
+</div>
+
+<script>
+  $('#auth_container').on('DOMNodeInserted', function(e) {
+    if ($(e.target.firstChild).is('.authorize__btn')) {
+      var authBtn = $(e.target.firstChild);
+      authBtn.addClass('btn');
+      authBtn.addClass('btn-az');
+      authBtn.addClass('btn-outline');
+    }
+  });
+  $(document).ready(function () {
+    var url = window.location.search.match(/url=([^&]+)/);
+    if (url && url.length > 1) {
+      url = decodeURIComponent(url[1]);
+    } else {
+      url = "/specs/arm-resources/resources/2016-02-01/swagger/resources.json";
+    }
+
+    window.swaggerUi = new SwaggerUi({
+      url: url,
+      dom_id: "swagger-ui-container",
+      supportedSubmitMethods: ['get', 'post', 'put', 'delete', 'patch'],
+      onComplete: function (swaggerApi, swaggerUi) {
+        if (typeof initOAuth == "function") {
+          initOAuth({
+            clientId: "fbfc7a71-256b-454a-bf27-12162f630e0a",
+            appName: "https://azure.github.io",
+            realm: "azure.github.io",
+            scopeSeparator: ",",
+            additionalQueryStringParams: {resource: "https://management.azure.com/", prompt: "login"}
+          });
+        }
+
+        if (window.SwaggerTranslator) {
+          window.SwaggerTranslator.translate();
+        }
+      },
+      onFailure: function (data) {
+        log("Unable to Load SwaggerUI");
+      },
+      docExpansion: "none",
+      jsonEditor: false,
+      apisSorter: "alpha",
+      defaultModelRendering: 'schema',
+      showRequestHeaders: false
+    });
+
+    window.swaggerUi.load();
+  });
+
+  function loadSwagger(uri){
+    window.swaggerUi.options.url = uri;
+    window.swaggerUi.load();
+  }
+</script>
