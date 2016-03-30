@@ -2,7 +2,8 @@ language: ruby
 cache: bundler
 rvm:
 - 2.2
-script: 
+script:
+  - 'npm install'
   - '[ "${TRAVIS_PULL_REQUEST}" = "false" ] && bundle exec rake publish || bundle exec rake build'
 branches:
   only:
