@@ -25,9 +25,7 @@ gulp.task('assets:styles', function () {
     }
     return gulp.src([
         './assets/styles/*.scss',
-        './node_modules/githubjs/src/github.css',
-        './node_modules/swagger-ui/dist/css/style.css',
-        './node_modules/swagger-ui/dist/css/screen.css'
+        './node_modules/githubjs/src/github.css'
     ]).pipe(sourcemaps.init())
         .pipe(sass(options).on('error', sass.logError))
         .pipe(concat('main.css'))

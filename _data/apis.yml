@@ -1,18 +1,62 @@
-- name: Azure Resource Manager
+- name: Azure Resource Manager APIs
   services:
+    - name: Resource Manager
+      version: 2016-02-01
+      uri: /specs/arm-resources/resources/2016-02-01/swagger/resources.json
+    - name: Subscriptions
+      version: 2015-11-01
+      uri: /specs/arm-resources/subscriptions/2015-11-01/swagger/subscriptions.json
+    - name: Resource Provider Features
+      version: 2015-12-01
+      uri: /specs/arm-resources/features/2015-12-01/swagger/features.json
+    - name: Management Locks
+      version: 2015-01-01
+      uri: /specs/arm-resources/locks/2015-01-01/swagger/locks.json
+    - name: Role Based Authorization
+      version: 2015-07-01
+      uri: /specs/arm-authorization/2015-07-01/swagger/authorization.json
     - name: Compute
-      api-versions:
-        - name: 2015-06-15
-          specs:
-            - name: compute.json
-              uri: https://raw.githubusercontent.com/Azure/azure-rest-api-specs/master/arm-compute/2015-06-15/swagger/compute.json
+      version: 2015-06-15
+      uri: /specs/arm-compute/2015-06-15/swagger/compute.json
+    - name: Network
+      version: 2016-03-30
+      uri: /specs/arm-network/2016-03-30/swagger/network.json
     - name: Storage
-      api-versions:
-        - name: 2015-06-15
-          specs:
-            - name: storage.json
-              uri: https://raw.githubusercontent.com/Azure/azure-rest-api-specs/master/arm-storage/2015-06-15/swagger/storage.json
-        - name: 2015-05-01-preview
-          specs:
-            - name: storage.json
-              uri: https://raw.githubusercontent.com/Azure/azure-rest-api-specs/master/arm-storage/2015-05-01-preview/swagger/storage.json
+      version: 2015-06-15
+      uri: /specs/arm-storage/2015-06-15/swagger/storage.json
+    - name: WebApps
+      version: 2015-08-01
+      uri: /specs/arm-web/2015-08-01/swagger/service.json
+    - name: CDN
+      version: 2015-06-01
+      uri: /specs/arm-cdn/2015-06-01/swagger/cdn.json
+    - name: DataLake Analytics Accounts
+      version: 2015-10-01-preview
+      uri: /specs/arm-datalake-analytics/account/2015-10-01-preview/swagger/account.json
+    - name: DataLake Store Accounts
+      version: 2015-10-01-preview
+      uri: /specs/arm-datalake-store/account/2015-10-01-preview/swagger/account.json
+    - name: DNS
+      version: 2015-05-04-preview
+      uri: /specs/arm-dns/2015-05-04-preview/swagger/dns.json
+    - name: Batch Apps
+      version: 2015-12-01
+      uri: /specs/arm-batch/2015-12-01/swagger/BatchManagement.json
+    - name: Logic Apps
+      version: 2015-02-01-preview
+      uri: /specs/arm-logic/2015-02-01-preview/swagger/logic.json
+    - name: Mobile Engagement
+      version: 2014-12-01
+      uri: /specs/arm-mobileengagement/2014-12-01/swagger/mobile-engagement.json
+    - name: NotificationHubs
+      version: 2014-09-01
+      uri: /specs/arm-notificationhubs/2014-09-01/swagger/notificationhubs.json
+    - name: Redis
+      version: 2015-08-01
+      uri: /specs/arm-redis/2015-08-01/swagger/redis.json
+    - name: Remote App
+      version: 2014-09-01
+      uri: /specs/arm-remoteapp/2014-09-01/swagger/remoteapp.json
+    - name: Scheduler
+      version: 2016-01-01
+      uri: /specs/arm-scheduler/2016-01-01/swagger/scheduler.json

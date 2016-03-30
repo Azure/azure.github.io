@@ -19,45 +19,49 @@ permalink: /projects/apis/
 </div>
 
 <div class="clearfix">
-  <!--  <div class="col-md-3">
-      {% for category in site.data.apis %}
-      <ul class="api-category">
-        {% for service in category.services %}
-        <li>{{ service.name }}</li>
-        <ul class="api-service">
-          {% for api-version in service.api-versions %}
-          <li>{{ api-version.name }}</li>
-          <ul>
-            {% for spec in api-version.specs %}
-            <li>{{ spec.name }}</li>
-            {% endfor %}
-          </ul>
-          {% endfor %}
-        </ul>
-        {% endfor %}
-      </ul>
-      {% endfor %}
-    </div>  -->
-
+  <div class="container">
   <div class="swagger-section">
     <div id='header'>
       <div class="swagger-ui-wrap">
-        <div id='auth_container'></div>
+        <ul class="nav nav-pills">
+          {% for category in site.data.apis %}
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle btn btn-az btn-outline" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">{{category.name}}</a>
+            <div class="dropdown-menu">
+              {% for service in category.services %}
+              <a class="dropdown-item" onclick="loadSwagger('{{service.uri}}')">{{ service.name }} - {{service.version}}</a>
+              {% endfor %}
+            </div>
+          </li>
+          {% endfor %}
+          <li class="nav-item">
+            <div id='auth_container'></div>
+          </li>
+        </ul>
       </div>
     </div>
 
     <div id="message-bar" class="swagger-ui-wrap" data-sw-translate>&nbsp;</div>
     <div id="swagger-ui-container" class="swagger-ui-wrap"></div>
   </div>
+  </div>
 </div>
 
 <script>
+  $('#auth_container').on('DOMNodeInserted', function(e) {
+    if ($(e.target.firstChild).is('.authorize__btn')) {
+      var authBtn = $(e.target.firstChild);
+      authBtn.addClass('btn');
+      authBtn.addClass('btn-az');
+      authBtn.addClass('btn-outline');
+    }
+  });
   $(document).ready(function () {
     var url = window.location.search.match(/url=([^&]+)/);
     if (url && url.length > 1) {
       url = decodeURIComponent(url[1]);
     } else {
-      url = "/test.json";
+      url = "/specs/arm-resources/resources/2016-02-01/swagger/resources.json";
     }
 
     window.swaggerUi = new SwaggerUi({
@@ -68,7 +72,7 @@ permalink: /projects/apis/
         if (typeof initOAuth == "function") {
           initOAuth({
             clientId: "fbfc7a71-256b-454a-bf27-12162f630e0a",
-            appName: "http://azure.github.io",
+            appName: "https://azure.github.io",
             realm: "azure.github.io",
             scopeSeparator: ",",
             additionalQueryStringParams: {resource: "https://management.azure.com/", prompt: "login"}
@@ -91,4 +95,9 @@ permalink: /projects/apis/
 
     window.swaggerUi.load();
   });
+
+  function loadSwagger(uri){
+    window.swaggerUi.options.url = uri;
+    window.swaggerUi.load();
+  }
 </script>

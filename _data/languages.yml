@@ -129,7 +129,7 @@
       list-items:
         - type: link
           content: Docs
-          link: https://github.com/Azure/azure-sdk-for-net/blob/master/README.md
+          link: https://azure.github.io/ref-docs/java
     - name: Storage
       repo: https://github.com/Azure/azure-storage-java
       blurbs:
@@ -357,7 +357,7 @@
       list-items:
         - type: link
           content: Docs
-          link: http://azure.github.io/ref-docs/ruby
+          link: https://github.com/Azure/azure-sdk-for-ruby/blob/master/README.md
     - name: Storage
       repo: https://github.com/Azure/azure-storage-ruby
       blurbs:
