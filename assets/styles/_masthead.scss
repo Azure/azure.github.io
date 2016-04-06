@@ -127,3 +127,23 @@
     background-position: 0px .7rem;
   }
 }
+
+.guidelines-masthead {
+  @extend .defaultMasthead;
+  @include media-breakpoint-up(sm) {
+    background-image: url('/images/hero-partners.png');
+  }
+  a {
+    color: #fff;
+    text-decoration: none;
+    &:hover {
+      color: $gray;
+    }
+  }
+  min-height: 300px;
+}
+
+.column-masthead {
+  padding-left: 0;
+  padding-right: 0;
+}

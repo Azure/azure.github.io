@@ -1,0 +1,60 @@
+- name: Node.js
+  contributors:
+    - name: Pato Jutard
+      gravatar: http://www.gravatar.com/avatar/1401a698056a8195d2d6c531740dec29
+      alt: Pato Jutard
+    - name: Einar Otto Stangvik
+      gravatar: http://www.gravatar.com/avatar/23b827c76b7eebbb1936f905a7ba2e24
+      alt: einaros
+    - name: Paul O'Fallon
+      gravatar: http://www.gravatar.com/avatar/1218bf32db6a37cf83f5076f108e86b1
+      alt: Paul O'Fallon
+    - name: Steve Marx
+      gravatar: http://www.gravatar.com/avatar/e79da0981ef1f312f9ba7d4331653992
+      alt: Steve Marx
+    - name: Anu Chandy
+      gravatar: http://www.gravatar.com/avatar/61127a51c8a1c90de6df67d2938477cb
+      alt: Anu Chandy
+- name: Azure CLI
+  contributors:
+    - name: Fredrik Kjellberg
+      alt: Fredrik Kjellberg
+      gravatar: http://www.gravatar.com/avatar/1be18159a55576072ee6bee198ec6369
+- name: Azure PowerShell
+  contributors:
+    - name: Tyler Doerksen
+      alt: Tyler D
+      gravatar: http://www.gravatar.com/avatar/675498c3aa57b42e40fb363ea596ea17
+- name: Python
+  contributors:
+    - name: Rafael Dohms
+      alt: Rafael Dohms
+      gravatar: http://www.gravatar.com/avatar/d9545121873fb2829737d5c385f62214
+- name: Java
+  contributors:
+    - name: Alex Rios
+      alt: Alex Rios
+      gravatar: http://www.gravatar.com/avatar/a802e6a13accb52de3a12c8c6fff18f8
+- name: Content, Site, Docs
+  contributors:
+    - name: Ben Wen, MongoLab
+      alt: Ben Wen
+      gravatar: http://www.gravatar.com/avatar/2f2c4af42881a0f6d10f1be200bbad88
+    - name: Eric Sedor, MongoLab
+      alt: Eric Sedor
+      gravatar: http://www.gravatar.com/avatar/e09c3b1e2c0b7c6327e9e70ac5cea94f
+    - name: Blitline
+      alt: Blitline
+      gravatar: http://www.gravatar.com/avatar/28ee191ede0a619e54cd0cbfcc142966
+    - name: Sam Goldstein, New Relic
+      alt: Sam Goldstein
+      gravatar: http://www.gravatar.com/avatar/539b52a31dd467468eb2b6902c9b090c
+    - name: Nick Floyd, New Relic
+      alt: Nick Floyd
+      gravatar: http://www.gravatar.com/avatar/0aa853005b1429319e4d06e5b75381bf
+    - name: Ben Lobaugh
+      alt: Ben Lobaugh
+      gravatar: http://www.gravatar.com/avatar/f25f324a47a1efdf7a745e0b2e3c878f
+    - name: jamespinch
+      alt: jamespinch
+      gravatar: http://www.gravatar.com/avatar/a6ad50b71a6347ff8575cf3b4bd9a950

@@ -49,7 +49,8 @@ gulp.task('assets:scripts', function () {
         './node_modules/swagger-ui/dist/lib/jsoneditor.min.js',
         './node_modules/swagger-ui/dist/lib/marked.js',
         './node_modules/swagger-ui/dist/lib/swagger-oauth.js',
-        './assets/scripts/*.js'
+        './assest/scripts/lib/*.js',
+        './assets/scripts/app.js'
     ]).pipe(sourcemaps.init())
         .pipe(concat('app.js'))
         .pipe(gulpIf(argv.prod, uglify()))

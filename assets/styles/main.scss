@@ -15,6 +15,8 @@ $light-gray: rgba(255, 255, 255, 0.85);
 @import "code";
 @import "api";
 @import "screen";
+@import "sidebar";
+@import "guidelines";
 
 body {
   @include media-breakpoint-up(sm) {
