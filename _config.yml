@@ -17,8 +17,10 @@ exclude:
   - "gulpfile.js"
   - "package.json"
   - "Rakefile"
-  - "README.md"
+  - "Readme.md"
+  - "LICENSE.txt"
   - "assets"
+  - "ignore"
 
 include:
   - .nojekyll

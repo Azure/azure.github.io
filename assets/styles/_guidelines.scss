@@ -1,0 +1,9 @@
+.centered-steps {
+  max-width: 40rem;
+  margin-left: auto;
+  margin-right: auto;
+  .nav-tabs .nav-link.active {
+    color: $blue-bright !important;
+    border-color: $blue-bright !important;
+  }
+}
