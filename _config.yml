@@ -26,3 +26,6 @@ include:
   - .nojekyll
 
 github_username:  azuresdkci
+
+gems:
+  - jekyll-redirect-from
