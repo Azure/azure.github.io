@@ -29,3 +29,4 @@ github_username:  azuresdkci
 
 gems:
   - jekyll-redirect-from
+  - jekyll-categories

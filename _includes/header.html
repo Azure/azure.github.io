@@ -11,7 +11,16 @@
   <div class="collapse navbar-toggleable-xs pull-xs-right" id="navbar-header">
     <ul class="nav navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" id="homeLink" rel="home" href="/">Home</a>
+        <a class="nav-link" id="blogsLink" href="#" data-toggle="collapse" data-target="#blogs-drop">Developer Blogs</a>
+        <div>
+          <ul id="blogs-drop" class="nav collapse">
+            {% for category in site.categories %}
+            <li>
+              <a class="nav-link" id="blogs{{category | first | downcase}}Link" href="/categories/{{category | first | downcase}}/">{{category | first}}</a>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
       </li>
       <li class="nav-item">
         <a class="nav-link" id="projectsLink" href="#" data-toggle="collapse" data-target="#projects-drop">Projects</a>
