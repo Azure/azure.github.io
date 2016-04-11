@@ -35,6 +35,7 @@ gulp.task('assets:styles', function () {
 
 gulp.task('assets:scripts', function () {
     return gulp.src([
+        './assest/scripts/polyfills/*.js',
         './node_modules/swagger-ui/dist/lib/lodash.min.js',
         './node_modules/bootstrap/dist/js/bootstrap.js',
         './node_modules/swagger-ui/dist/lib/jquery.ba-bbq.min.js',
@@ -49,11 +50,10 @@ gulp.task('assets:scripts', function () {
         './node_modules/swagger-ui/dist/lib/jsoneditor.min.js',
         './node_modules/swagger-ui/dist/lib/marked.js',
         './node_modules/swagger-ui/dist/lib/swagger-oauth.js',
-        './assest/scripts/lib/*.js',
         './assets/scripts/app.js'
     ]).pipe(sourcemaps.init())
         .pipe(concat('app.js'))
-        .pipe(gulpIf(argv.prod, uglify()))
+        .pipe(gulpIf(process.env.JEKYLL_ENV == 'production', uglify()))
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('./js'));
 });

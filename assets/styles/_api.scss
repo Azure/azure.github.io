@@ -10,6 +10,17 @@
   }
 }
 
+#alertdiv {
+  position: fixed;
+  top: 55px;
+  width: 100%;
+}
+
+#alertMessage {
+  margin-left:auto;
+  margin-right:auto;
+}
+
 .swagger-section #header a#logo {
   font-size: 1.5em;
   font-weight: bold;

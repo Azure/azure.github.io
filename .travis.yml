@@ -6,6 +6,7 @@ rvm:
 env:
   global:
     - TRAVIS_NODE_VERSION="5"
+    - JEKYLL_ENV=production
     - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
     - secure: tRd3NyctGOLnG3ECjWmhOXeMOffvzXQ8DR7Po9ixy8Z9PDctQhQLDSnwXY3MYONz3TiTR0uu9KSFXfYhVPX2Br1mE86RFTO7uZmS4kAOLBxyCfPSq5svZbVRk0CNj6+5zBOaSEHwwbGbnAZwhs/rp3bNEmyl1Pb4JluY7AxgdTw=
 
