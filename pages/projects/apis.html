@@ -18,24 +18,41 @@ permalink: /projects/apis/
   </div>
 </div>
 
+<div id="alertdiv" class="alert alert-dismissible" style="display:none;">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+  <span id="alertMessage"></span>
+</div>
+
 <div class="clearfix">
   <div class="container">
   <div class="swagger-section">
     <div id='header'>
       <div class="swagger-ui-wrap">
+
         <ul class="nav nav-pills">
           {% for category in site.data.apis %}
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle btn btn-az btn-outline" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">{{category.name}}</a>
             <div class="dropdown-menu">
               {% for service in category.services %}
-              <a class="dropdown-item" onclick="loadSwagger('{{service.uri}}')">{{ service.name }} - {{service.version}}</a>
+              <a class="dropdown-item" onclick="loadSwagger('{{service.uri}}', '{{service.version}}')">{{ service.name }} - {{service.version}}</a>
               {% endfor %}
             </div>
           </li>
           {% endfor %}
+          <li class="nav-item dropdown" id="subDropdown" style="display:none;">
+            <a class="nav-link dropdown-toggle btn btn-az btn-outline" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Select Subscription</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item">You see me</a>
+            </div>
+          </li>
           <li class="nav-item">
             <div id='auth_container'></div>
+          </li>
+          <li id="azLogout" class="nav-item" style="display:none;">
+            <a class="nav-link btn btn-az btn-outline" href="#" onclick="logout();" role="button">Logout</a>
           </li>
         </ul>
       </div>
@@ -56,12 +73,15 @@ permalink: /projects/apis/
       authBtn.addClass('btn-outline');
     }
   });
+
   $(document).ready(function () {
+
     var url = window.location.search.match(/url=([^&]+)/);
     if (url && url.length > 1) {
       url = decodeURIComponent(url[1]);
     } else {
       url = "/specs/arm-resources/resources/2016-02-01/swagger/resources.json";
+      window.azApiVersion = '2016-02-01';
     }
 
     window.swaggerUi = new SwaggerUi({
@@ -75,13 +95,47 @@ permalink: /projects/apis/
             appName: "https://azure.github.io",
             realm: "azure.github.io",
             scopeSeparator: ",",
-            additionalQueryStringParams: {resource: "https://management.azure.com/", prompt: "login"}
+            additionalQueryStringParams: {resource: "https://management.azure.com/"}
           });
         }
 
         if (window.SwaggerTranslator) {
           window.SwaggerTranslator.translate();
         }
+
+        if(window.swaggerUi && _.has(window.swaggerUi.api.clientAuthorizations.authz, 'azure_auth')){
+          azAuth = window.swaggerUi.api.clientAuthorizations.authz.azure_auth;
+          $.ajax({
+            url: 'https://management.azure.com/subscriptions?api-version=2015-01-01',
+            headers: {
+              Authorization: azAuth.value
+            }
+          }).done(function(data){
+            var subDropdown = $('#subDropdown');
+            var logout = $('#azLogout');
+            var authContainer = $('#auth_container');
+            var subMenu = subDropdown.find('.dropdown-menu');
+            subMenu.empty();
+            _.each(data.value, function(sub){
+              subMenu.append('<a class="dropdown-item" onclick="selectSubscription(\'' + sub.subscriptionId + '\', \'' + sub.displayName + '\')">' + sub.displayName + '</a>');
+            });
+            subDropdown.show();
+            logout.show();
+            authContainer.hide();
+            var first = _.head(data.value);
+            if(!window.azSubscription){
+              selectSubscription(first.subscriptionId, first.displayName);
+            } else {
+              selectSubscription(window.azSubscription.id, window.azSubscription.name, true);
+            }
+          });
+        } else {
+          var subDropdown = $('#subDropdown');
+          var logout = $('#azLogout');
+          subDropdown.hide();
+          logout.hide();
+        }
+        setApiVersion();
       },
       onFailure: function (data) {
         log("Unable to Load SwaggerUI");
@@ -90,14 +144,44 @@ permalink: /projects/apis/
       jsonEditor: false,
       apisSorter: "alpha",
       defaultModelRendering: 'schema',
-      showRequestHeaders: false
+      showRequestHeaders: true
     });
 
     window.swaggerUi.load();
   });
 
-  function loadSwagger(uri){
-    window.swaggerUi.options.url = uri;
-    window.swaggerUi.load();
+  function selectSubscription(id, name, quiet){
+    window.azSubscription = {id: id, name: name};
+    $("input[name='subscriptionId']").val(id);
+    setApiVersion();
+    if(!quiet){
+      showAlert('Selected subscription ' + name, 'alert-success');
+    }
+  }
+
+  function logout() {
+    window.location = 'https://login.windows.net/common/oauth2/logout?post_logout_redirect_uri=' + window.location;
+  }
+
+  function setApiVersion(){
+    if(window.azApiVersion){
+      $("input[name='api-version']").val(window.azApiVersion);
+    }
+  }
+
+  function showAlert(message, alertType) {
+    var alert = $('#alertdiv');
+    var alertMessage = $('#alertMessage');
+    alertMessage.text(message);
+    alert.removeClass('alert-warning alert-success alert-danger alert-info').addClass('alert alert-dismissible ' + alertType);
+    alert.fadeIn();
+    setTimeout(function() {
+      alert.fadeOut();
+    }, 2000);
+  }
+
+  function loadSwagger(uri, apiVersion){
+    window.azApiVersion = apiVersion;
+    window.swaggerUi.updateSwaggerUi({url: uri});
   }
 </script>
