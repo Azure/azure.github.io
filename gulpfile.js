@@ -35,7 +35,7 @@ gulp.task('assets:styles', function () {
 
 gulp.task('assets:scripts', function () {
     return gulp.src([
-        './assest/scripts/polyfills/*.js',
+        './assets/scripts/polyfills/*.js',
         './node_modules/swagger-ui/dist/lib/lodash.min.js',
         './node_modules/bootstrap/dist/js/bootstrap.js',
         './node_modules/swagger-ui/dist/lib/jquery.ba-bbq.min.js',
