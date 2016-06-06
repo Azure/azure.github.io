@@ -43,8 +43,8 @@
       version: 2015-12-01
       uri: /specs/arm-batch/2015-12-01/swagger/BatchManagement.json
     - name: DevTest Labs
-      version: 2015-05-21-preview
-      uri: /specs/arm-devtestlabs/2015-05-21-preview/swagger/DTL.json
+      version: 2016-05-15
+      uri: /specs/arm-devtestlabs/2016-05-15/swagger/DTL.json
     - name: Logic Apps
       version: 2015-02-01-preview
       uri: /specs/arm-logic/2015-02-01-preview/swagger/logic.json
