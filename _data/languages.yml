@@ -56,11 +56,19 @@
     - name: Mobile Apps Client
       repo: https://github.com/Azure/azure-mobile-apps-net-client
       blurbs:
-        - With Microsoft Azure Mobile Apps you can add a scalable backend to your connected client applications in minutes. To learn more, visit our <a href="http://azure.microsoft.com/en-us/develop/mobile">Developer Center</a>.
+        - The Azure Mobile Apps Client SDK allows you to develop connected mobile clients with Universal Windows and Xamarin apps. To learn more, visit our <a href="https://azure.microsoft.com/en-us/documentation/learning-paths/appservice-mobileapps/">Learning Path</a>.
       list-items:
         - type: link
           content: Docs
-          link: https://github.com/Azure/azure-mobile-apps-net-client/blob/master/README.md
+          link: https://azure.microsoft.com/en-us/documentation/articles/app-service-mobile-dotnet-how-to-use-client-library/
+    - name: Mobile Apps Server
+      repo: https://github.com/Azure/azure-mobile-apps-net-server
+      blurbs:
+        - Azure Mobile Apps Servers provide simplified OData access with offline sync support, push registration and built-in authentication capabilities.  It allows you to run a mobile-optimized backend on Azure App Service.  Learn more about <a href="https://azure.microsoft.com/en-us/documentation/learning-paths/appservice-mobileapps/">Learning Path</a> to learn more.
+    - list-items:
+        - type: link
+          content: Docs
+          link: https://azure.microsoft.com/en-us/documentation/articles/app-service-mobile-dotnet-backend-how-to-use-server-sdk/
     - name: ASP.NET Redis Providers
       repo: https://github.com/Azure/aspnet-redis-providers
       blurbs:
@@ -251,17 +259,25 @@
         - type: link
           content: Docs
           link: http://azure.github.io/azure-documentdb-node-q/
-    - name: Mobile Services for Cordova
-      repo: https://github.com/Azure/azure-mobile-services-cordova
+    - name: Mobile Apps for JavaScript
+      repo: https://github.com/Azure/azure-mobile-apps-js-client
       blurbs:
-        - With Microsoft Azure Mobile Services you can add a scalable backend to your connected client applications in minutes.
+        - Azure Mobile Apps allows you to develop cloud-connected apps with an Azure Mobile Apps backend.  This client supports JavaScript applications.  To learn more, see our <a href="https://azure.microsoft.com/en-us/documentation/articles/app-service-mobile-html-how-to-use-client-library/">our documentation</a>.
       list-items:
         - type: link
-          content: Readme
-          link: https://github.com/Azure/azure-mobile-services-cordova/blob/master/README.md
+          content: NPM
+          link: https://www.npmjs.com/package/azure-mobile-apps-client
         - type: link
-          content: Getting started
-          link: https://azure.microsoft.com/en-us/documentation/articles/mobile-services-javascript-backend-phonegap-get-started/
+          content: README
+          link: https://github.com/Azure/azure-mobile-apps-js-client/blob/master/README.md
+    - name: Mobile Apps for Cordova
+      repo: https://github.com/Azure/azure-mobile-apps-cordova-client
+      blurbs:
+        - Azure Mobile Apps allows you to develop cloud-connected apps with an Azure Mobile Apps backend.  This client supports Apache Cordova applications.  To learn more, see our <a href="https://azure.microsoft.com/en-us/documentation/articles/app-service-mobile-cordova-how-to-use-client-library/">our documentation</a>.
+      list-items:
+        - type: link
+          content: NPM
+          link: https://www.npmjs.com/package/cordova-plugin-ms-azure-mobile-apps
     - name: Internet of Things (IoT) Hub
       repo: https://github.com/Azure/azure-iot-sdks
       blurbs:
