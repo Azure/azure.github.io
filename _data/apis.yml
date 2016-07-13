@@ -30,12 +30,21 @@
     - name: CDN
       version: 2015-06-01
       uri: /specs/arm-cdn/2015-06-01/swagger/cdn.json
-    - name: DataLake Analytics Accounts
+    - name: Data Lake Analytics Accounts
       version: 2015-10-01-preview
       uri: /specs/arm-datalake-analytics/account/2015-10-01-preview/swagger/account.json
-    - name: DataLake Store Accounts
+    - name: Data Lake Analytics Job
+      version: 2016-03-20-preview
+      uri: /specs/arm-datalake-analytics/job/2016-03-20-preview/swagger/job.json
+    - name: Data Lake Analytics Catalog
+      version: 2015-10-01-preview
+      uri: /specs/arm-datalake-analytics/catalog/2015-10-01-preview/swagger/catalog.json
+    - name: Data Lake Store Accounts
       version: 2015-10-01-preview
       uri: /specs/arm-datalake-store/account/2015-10-01-preview/swagger/account.json
+    - name: Data Lake Store Filesystem
+      version: 2015-10-01-preview
+      uri: /specs/arm-datalake-store/filesystem/2015-10-01-preview/swagger/filesystem.json
     - name: DNS
       version: 2015-05-04-preview
       uri: /specs/arm-dns/2015-05-04-preview/swagger/dns.json
