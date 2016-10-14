@@ -41,7 +41,7 @@ gulp.task('assets:scripts', function () {
         './node_modules/swagger-ui/dist/lib/jquery.ba-bbq.min.js',
         './node_modules/swagger-ui/dist/lib/jquery.slideto.min.js',
         './node_modules/swagger-ui/dist/lib/jquery.wiggle.min.js',
-        './node_modules/swagger-ui/dist/lib/handlebars-2.0.0.js',
+        './node_modules/swagger-ui/dist/lib/handlebars-4.0.5.js',
         './node_modules/swagger-ui/dist/lib/backbone-min.js',
         './node_modules/swagger-ui/dist/lib/js-yaml.min.js',
         './node_modules/swagger-ui/dist/swagger-ui.js',
