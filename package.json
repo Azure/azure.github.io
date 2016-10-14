@@ -30,7 +30,7 @@
     "gulp-shell": "^0.5.1",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-uglify": "^1.5.1",
-    "swagger-ui": "swagger-api/swagger-ui",
+    "swagger-ui": "^2.2.5",
     "underscore": "^1.8.3",
     "yargs": "^3.31.0"
   }
