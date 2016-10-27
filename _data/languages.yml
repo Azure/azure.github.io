@@ -449,7 +449,7 @@
 
 - name: Scala
   leads:
-    - Get started with Azure quickly with a projects that help to take some of the complexity out of developing applicaitons built on Scala within Azure.
+    - Get started with Azure quickly with a projects that help to take some of the complexity out of developing applications built on Scala within Azure.
   projects:
     - name: IotHubReact
       repo: https://github.com/azure/toketi-iothubreact
