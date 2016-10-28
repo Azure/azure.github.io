@@ -14,7 +14,7 @@
   },
   "homepage": "https://github.com/azure/azure.github.io#readme",
   "devDependencies": {
-    "bootstrap": "^4.0.0-alpha.2",
+    "bootstrap": "4.0.0-alpha.4",
     "browser-sync": "^2.11.0",
     "del": "^2.2.0",
     "githubjs": "devigned/github-js#3682eab",
