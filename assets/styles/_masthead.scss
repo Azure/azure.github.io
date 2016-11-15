@@ -141,6 +141,11 @@
     }
   }
   min-height: 300px;
+  .container {
+    @include media-breakpoint-up(md) {
+      margin-left: 50px;
+    }
+  }
 }
 
 .column-masthead {
