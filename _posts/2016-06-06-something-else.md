@@ -1,12 +1,10 @@
 ---
 layout: post
-title: Deploying a Resource Manager Template
-subtitle: Building infrastructure with Ruby on Azure
-tags:
-  - Ruby
-  - IaaS
-bigimg:
-  - /images/hero-partners.png
+title: Using Azure is Awesome!!
+subtitle: Writing Java with fluent and builder pattern
+categories:
+  - Java
+author: David Justice
 ---
 
 Lorem ipsum dolor sit amet, ne nec oratio epicuri petentium. Quodsi 

@@ -1,12 +1,14 @@
 ---
 layout: post
-title: Deploying a Resource Manager Template
-subtitle: Building infrastructure with Ruby on Azure
-tags:
+title: So Much Wow So Little Time
+subtitle: We are building so much cool stuff right now that we just had to share!
+categories:
+  - CLI
+  - Python
   - Ruby
-  - IaaS
 bigimg:
-  - /images/hero-partners.png
+  - https://udemy-images.udemy.com/course/750x422/8082_e627_11.jpg
+  - https://images7.alphacoders.com/679/thumb-1920-679140.png
 ---
 
 Lorem ipsum dolor sit amet, ne nec oratio epicuri petentium. Quodsi 

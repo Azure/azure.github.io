@@ -17,6 +17,7 @@ $light-gray: rgba(255, 255, 255, 0.85);
 @import "screen";
 @import "sidebar";
 @import "guidelines";
+@import "blog";
 
 body {
   @include media-breakpoint-up(sm) {
