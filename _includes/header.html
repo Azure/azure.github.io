@@ -10,9 +10,11 @@
   </div>
   <div class="collapse navbar-toggleable-xs pull-xs-right" id="navbar-header">
     <ul class="nav navbar-nav">
+      {% if site.posts.size > 0 %}
       <li class="nav-item">
         <a class="nav-link" id="blogLink" href="/blog">OSS Blog</a>
       </li>
+      {% endif %}
       <li class="nav-item">
         <a class="nav-link" id="projectsLink" href="#" data-toggle="collapse" data-target="#projects-drop">Projects</a>
         <div>
