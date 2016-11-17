@@ -18,6 +18,43 @@ Cheers!
 ## Usage
 
 - To build the site, run `gulp`.
+- If you would like to see draft posts, you need to add `--drafts` [gulpfile.js](./gulpfile.js) line 73
+  - TODO: automatically show drafts locally
+
+## Authoring a Blog posts
+
+To create a new post, check out https://jekyllrb.com/docs/posts/. After reading the aforementioned link, you
+will have a better understanding of how to create a post, but not the FrontMatter yaml supported by default. 
+We support the following FrontMatter yaml by default:
+
+- title: is the title of the post and shown as the large header for the post
+- subtitle: is the subtitle of the post and shown as subtext to the main header
+- tags: an array of categories for the post. Each tag produces an index of tagged pages
+- bigimg: an array of images which will rotate behind the title of the post
+- comments: allow disqus comments on the post
+
+### Sample FrontMatter
+
+```yaml
+title: Deploying a Resource Manager Template
+subtitle: Building infrastructure with Ruby on Azure
+tags:
+  - Ruby
+  - IaaS
+bigimg:
+  - /images/hero-partners.png
+  - https://udemy-images.udemy.com/course/750x422/8082_e627_11.jpg
+  - https://images7.alphacoders.com/679/thumb-1920-679140.png
+comments: true
+```
+
+### Sample Draft
+
+You can find a sample draft in the [_drafts](./_drafts) folder.
+
+### Ready to Post?
+
+Open a pull request with your changes and upon merge, your post will be deployed to https://azure.github.io.
 
 ## Contributing
 

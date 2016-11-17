@@ -212,7 +212,7 @@
 ###
 ########################################################################################################################
 
-- name: JavaScript and Node.js
+- name: JavaScript
   leads:
     - Is JavaScript your language of choice, then these project are for you. Azure's Node.js and Javascript libraries will help to make you more productive developing applicaitons on Azure.
   projects:

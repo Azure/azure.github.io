@@ -32,6 +32,9 @@ GEM
       mercenary (~> 0.3.3)
       rouge (~> 1.7)
       safe_yaml (~> 1.0)
+    jekyll-categories (0.0.2)
+      jekyll (>= 0.10.0)
+    jekyll-paginate (1.1.0)
     jekyll-redirect-from (0.10.0)
       jekyll (>= 2.0)
     jekyll-sass-converter (1.4.0)
@@ -70,6 +73,8 @@ PLATFORMS
 DEPENDENCIES
   html-proofer
   jekyll
+  jekyll-categories
+  jekyll-paginate
   jekyll-redirect-from
   rake
 

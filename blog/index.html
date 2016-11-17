@@ -1,0 +1,66 @@
+---
+layout: default
+title: Azure OSS Blog
+description: Azure Open Source blog the place to learn about new and exciting open source work around Azure.
+---
+
+<div class="sdks-masthead">
+  <div class="container">
+    <h1>Azure OSS Blog</h1>
+    <p class="lead">Azure Open Source blog: the place to learn about new and exciting open source work around Azure.</p>
+  </div>
+</div>
+
+
+<div class="posts-list">
+  {% for post in paginator.posts %}
+
+  <div class="featurette">
+    <div class="featurette-title"><a href="{{post.url | prepend: site.baseurl}}">{{post.title}}</a></div>
+
+    {% if post.author %}
+    <small class="post-meta">Posted by {{post.author}} on {{ post.date | date: "%B %-d, %Y" }}</small>
+    {% else %}
+    <small class="post-meta">Posted on {{ post.date | date: "%B %-d, %Y" }}</small>
+    {% endif %}
+
+    {% if post.subtitle %}
+    <div class="lead">
+      {{ post.subtitle }}
+    </div>
+    {% endif %}
+
+    <div class="lead">
+      {{ post.excerpt | strip_html | xml_escape | truncatewords: site.excerpt_length }}
+      {% assign excerpt_word_count = post.excerpt | number_of_words %}
+      {% if post.content != post.excerpt or excerpt_word_count > site.excerpt_length %}
+      <a href="{{ post.url | prepend: site.baseurl }}" >...&nbsp;[Read&nbsp;More]</a>
+      {% endif %}
+    </div>
+
+    {% if post.tags.size > 0 %}
+    <div class="lead">
+      {% for tag in post.tags %}
+      <a class="btn btn-az btn-outline" href="{{ site.baseurl }}/tag/{{ tag }}">{{ tag }}</a>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+
+  {% endfor %}
+</div>
+
+{% if paginator.total_pages > 1 %}
+<div>
+  {% if paginator.previous_page %}
+  <div class="col-sm-2">
+    <a class="btn btn-az btn-outline" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
+  </div>
+  {% endif %}
+  {% if paginator.next_page %}
+  <div class="col-sm-2">
+    <a class="btn btn-az btn-outline" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
+  </div>
+  {% endif %}
+</div>
+{% endif %}

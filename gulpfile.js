@@ -2,7 +2,6 @@
 
 var gulp = require('gulp'),
     sass = require('gulp-sass'),
-    connect = require('gulp-connect'),
     rename = require('gulp-rename'),
     uglify = require('gulp-uglify'),
     shell = require('gulp-shell'),
@@ -91,8 +90,9 @@ gulp.task('serve', ['build'], function () {
             }
         }
     });
-    var watcher = gulp.watch(['./assets/**/*', './_posts/**/*', './_layouts/**/*', './_includes/**/*', './pages/**/*', './*.html', './*.json', './_data/**/*'], ['rebuild']);
-    watcher.on('change', function (evt) {
+    var watcher = gulp.watch(['./assets/**/*', './_posts/**/*', './_layouts/**/*', './_includes/**/*', './pages/**/*',
+        './*.html', './*.json', './_data/**/*', './blog/**/*'], ['rebuild']);
+    watcher.on(['change', 'added'], function (evt) {
         if (evt.type === 'deleted') {
             delete cache.caches['images'][evt.path];
             remember.forget('images', evt.path);
