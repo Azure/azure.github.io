@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="keywords" content="Microsoft, Azure, Management, Cloud, Reference, Docs, Documentation, Java, C#, JavaScript, Node, Ruby, Python, Golang, Open Source, Developer, .Net">
+  <meta name="author" content="Microsoft Corporation">
+
+  <title>Microsoft Azure Open Source Projects and SDKs</title>
+  <meta name="description"
+        content="Python and other libraries. We also provide information and guidelines for contributing to our open source projects on GitHub. All Azure open source projects have a flexible Apache 2.0 or MIT license.
+">
+  <link rel="canonical" href="https://azure.github.io/projects/sdks/">
+
+  <link rel="alternate" type="application/rss+xml" title="Open source cloud frameworks, SDKs and contribution guidelines - Microsoft Azure Open Source"
+        href="https://azure.github.io/feed.xml"/>
+
+  <link href="/css/main.css" rel="stylesheet">
+
+  <!-- <link rel="apple-touch-icon" href="/apple-touch-icon.png"> -->
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+</head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" integrity="sha384-8gBf6Y4YYq7Jx97PIqmTwLPin4hxIzQw5aDmUg/DDhul9fFpbbLcLh3nTIIDJKhx" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-migrate-1.3.0.js"></script>
+<script type="text/javascript">
+  var host = "azure.github.io";
+  if ((host == window.location.host) && (window.location.protocol != "https:"))
+    window.location.protocol = "https";
+</script>
+<body>
+  <nav class="navbar navbar-dark navbar-fixed-top az-navbar">
+  <button class="navbar-toggler navbar-toggler-blue hidden-sm-up" type="button" data-toggle="collapse" data-target="#navbar-header" aria-controls="navbar-header">
+    &#9776;
+  </button>
+  <div class="pull-xs-left hidden-xs-down hidden-md-up az-icon-container">
+    <a href="/"><img class="az-icon" src="/images/msft-icon.png" alt="Microsoft Logo"></a>
+  </div>
+  <div class="pull-xs-left hidden-sm-down">
+    <a href="/"><img class="az-logo" src="/images/logo-msft-dark@2x.png" alt="Microsoft Logo"></a>
+  </div>
+  <div class="collapse navbar-toggleable-xs pull-xs-right" id="navbar-header">
+    <ul class="nav navbar-nav">
+      
+      <li class="nav-item">
+        <a class="nav-link" id="projectsLink" href="#" data-toggle="collapse" data-target="#projects-drop">Projects</a>
+        <div>
+          <ul id="projects-drop" class="nav collapse">
+            <li><a class="nav-link" id="projectsclisLink" href="/projects/clis">CLIs</a></li>
+            <li><a class="nav-link" id="projectssdksLink" href="/projects/sdks">SDKs</a></li>
+            <li><a class="nav-link" id="projectsapisLink" href="/projects/apis">APIs</a></li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" id="guidelinesLink" href="/guidelines">Guidelines</a>
+      </li>
+      <!-- <li class="nav-item">
+        <a class="nav-link" id="contactLink" href="/contact">Contact</a>
+      </li> -->
+      <li class="nav-item">
+        <a class="nav-link" id="thanksLink" href="/thanks">Thanks!</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://azure.microsoft.com" target="_blank">Azure.com</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+  <div class="sdks-masthead">
+  <div class="container">
+    <h1>Azure SDKs</h1>
+    <p class="lead">These software development kits (SDKs) are actively developed by the Microsoft Azure team in
+      collaboration with our open source community and the .NET Foundation.</p>
+
+    <p class="lead">Together we are dedicated to creating the best possible experience for
+      developers who are creating amazing experiences built on the world-class
+      infrastructure, platforms and frameworks that make up Microsoft Azure.</p>
+  </div>
+</div>
+
+
+  <div class="featurette odd">
+    <h2 class="featurette-title">.NET</h2>
+    
+      <p class="lead">It is only natural for us to lead with .NET. If you are a .NET developer, then these projects are where you will start to build great applications on Azure.</p>
+    
+    <div class="container">
+      <div class="card-columns">
+        
+          <div class="card">
+            <h3 class="card-header"><a class="nav-link" href="https://github.com/azure/azure-sdk-for-net">
+              <img src="/images/gh-mark-120px.png"/>Azure Management SDK</a></h3>
+              
+                <div class="card-block">
+                  <p class="card-text">The Azure Management SDK provides a set of libraries, which simplify the tasks of creating, updating, deleting and accessing Azure resources via Azure Resource Manager and Azure Service Management.</p>
+                </div>
+              
+              
+                <ul class="list-group list-group-flush">
+                  
+                    
+                      <li class="list-group-item"><a class="nav-link" href="https://github.com/Azure/azure-sdk-for-net/blob/master/README.md">Docs</a></li>
+                    
+                  
+                </ul>
+              
+          </div>
+        
+          <div class="card">
+            <h3 class="card-header"><a class="nav-link" href="https://github.com/Azure/azure-storage-net">
+              <img src="/images/gh-mark-120px.png"/>Storage</a></h3>
+              
+                <div class="card-block">
+                  <p class="card-text">The Microsoft Azure Storage SDK for .NET allows you to build Azure applications that take advantage of scalable cloud computing resources.</p>
+                </div>
+              
+                <div class="card-block">
+                  <p class="card-text">This contains the open source subset of the .NET SDK. For documentation of the complete Azure SDK, please see the <a href="http://azure.microsoft.com/en-us/develop/net/">Microsoft Azure .NET Developer Center</a>.</p>
+                </div>
+              
+              
+                <ul class="list-group list-group-flush">
+                  
+                    
+                      <li class="list-group-item"><a class="nav-link" href="https://azure.microsoft.com/en-us/develop/net/">Docs</a></li>
+                    
+                  
+                    
+                      <li class="list-group-item"><a class="nav-link" href="https://azure.microsoft.com/en-us/documentation/articles/storage-getting-started-guide/">Getting started</a></li>
+                    
+                  
+                </ul>
+              
+          </div>
+        
+          <div class="card">
+            <h3 class="card-header"><a class="nav-link" href="https://github.com/Azure/azure-iot-sdks">
+              <img src="/images/gh-mark-120px.png"/>Internet of Things (IoT) Hub</a></h3>
+              
+                <div class="card-block">
+                  <p class="card-text">Contains both IoT device SDKs and IoT service SDKs. Device SDKs enable you connect client devices to Azure IoT Hub. Service SDKs enable you to manage your IoT Hub service instance.</p>
+                </div>
+              
+                <div class="card-block">
+                  <p class="card-text">Visit <a href="http://azure.com/iotdev">http://azure.com/iotdev</a> to learn more about developing applications for Azure IoT.</p>
+                </div>
+              
+              
+                <ul class="list-group list-group-flush">
+                  
+                    
+                      <li class="list-group-item"><a class="nav-link" href="https://github.com/Azure/azure-iot-sdks/blob/master/csharp/device/readme.md">Docs</a></li>
+                    
+                  
+                </ul>
+              
+          </div>
+        
+          <div class="card">
+            <h3 class="card-header"><a class="nav-link" href="https://github.com/Azure/azure-documentdb-dotnet">
+              <img src="/images/gh-mark-120px.png"/>DocumentDB</a></h3>
+              
+                <div class="card-block">
+                  <p class="card-text">Samples and utilities relating to the Azure DocumentDB SDK</p>
+                </div>
+              
+              
+                <ul class="list-group list-group-flush">
+                  
+                    
+                      <li class="list-group-item"><a class="nav-link" href="https://azure.microsoft.com/en-us/develop/net/">Docs</a></li>
+                    
+                  
+                </ul>
+              
+          </div>
+        
+          <div class="card">
+            <h3 class="card-header"><a class="nav-link" href="https://github.com/Azure/azure-sdk-for-media-services">
+              <img src="/images/gh-mark-120px.png"/>Media services</a></h3>
+              
+                <div class="card-block">
+                  <p class="card-text">Azure Media Services allows you to build a media distribution solution that can stream audio and video to Windows, iOS, Android, and other devices and platforms.To learn more, visit our <a href="http://www.windowsazure.com/en-us/develop/media-services/">Developer Center</a>.</p>
+                </div>
+              
+              
+                <ul class="list-group list-group-flush">
+                  
+                    
+                      <li class="list-group-item"><a class="nav-link" href="https://github.com/Azure/azure-sdk-for-media-services/blob/dev/Readme.md">Docs</a></li>
+                    
+                  
+                </ul>
+              
+          </div>
+        
+          <div class="card">
+            <h3 class="card-header"><a class="nav-link" href="https://github.com/Azure/azure-mobile-apps-net-client">
+              <img src="/images/gh-mark-120px.png"/>Mobile Apps Client</a></h3>
+              
+                <div class="card-block">
+                  <p class="card-text">The Azure Mobile Apps Client SDK allows you to develop connected mobile clients with Universal Windows and Xamarin apps. To learn more, visit our <a href="https://azure.microsoft.com/en-us/documentation/learning-paths/appservice-mobileapps/">Learning Path</a>.</p>
+                </div>
+              
+              
+                <ul class="list-group list-group-flush">
+                  
+                    
+                      <li class="list-group-item"><a class="nav-link" href="https://azure.microsoft.com/en-us/documentation/articles/app-service-mobile-dotnet-how-to-use-client-library/">Docs</a></li>
+                    
+                  
+                </ul>
+              
+          </div>
+        
+          <div class="card">
+            <h3 class="card-header"><a class="nav-link" href="https://github.com/Azure/azure-mobile-apps-net-server">
+              <img src="/images/gh-mark-120px.png"/>Mobile Apps Server</a></h3>
+              
+                <div class="card-block">
+                  <p class="card-text">Azure Mobile Apps Servers provide simplified OData access with offline sync support, push registration and built-in authentication capabilities.  It allows you to run a mobile-optimized backend on Azure App Service.  Learn more about <a href="https://azure.microsoft.com/en-us/documentation/learning-paths/appservice-mobileapps/">Learning Path</a> to learn more.</p>
+                </div>
+              
+              
+                <ul class="list-group list-group-flush">
+                  
+                </ul>
+              
+          </div>
+        
+          <div class="card">
+            <h3 class="card-header"><a class="nav-link" href="">
+              <img src="/images/gh-mark-120px.png"/></a></h3>
+              
+              
+                <ul class="list-group list-group-flush">
+                  
+                    
+                      <li class="list-group-item"><a class="nav-link" href="https://azure.microsoft.com/en-us/documentation/articles/app-service-mobile-dotnet-backend-how-to-use-server-sdk/">Docs</a></li>
+                    
+                  
+                </ul>
+              
+          </div>
+        
+          <div class="card">
+            <h3 class="card-header"><a class="nav-link" href="https://github.com/Azure/aspnet-redis-providers">
+              <img src="/images/gh-mark-120px.png"/>ASP.NET Redis Providers</a></h3>
+              
+                <div class="card-block">
+                  <p class="card-text">Azure Redis Cache provides a session state provider that you can use to store your session state in a cache rather than in-memory or in a SQL Server database. To use the caching session state provider, first configure your cache, and then configure your ASP.NET application for cache using the Redis Cache Session State NuGet package.</p>
+                </div>
+              
+              
+                <ul class="list-group list-group-flush">
+                  
+                    
+                      <li class="list-group-item"><a class="nav-link" href="https://azure.microsoft.com/en-us/documentation/articles/cache-asp.net-session-state-provider/">Docs</a></li>
+                    
+                  
+                </ul>
+              
+          </div>
+        
+          <div class="card">
+            <h3 class="card-header"><a class="nav-link" href="https://github.com/Azure/autorest">
+              <img src="/images/gh-mark-120px.png"/>AutoRest</a></h3>
+              
+                <div class="card-block">
+                  <p class="card-text">The AutoRest tool generates client libraries for accessing RESTful web services. Input to AutoRest is a spec that describes the REST API using the Swagger format.</p>
+                </div>
+              
+                <div class="card-block">
+                  <p class="card-text">AutoRest powers the code generation of the Azure management libraries in C#, Java, Node.js, Python, Ruby and Golang.</p>
+                </div>
+              
+              
+                <ul class="list-group list-group-flush">
+                  
+                    
+                      <li class="list-group-item"><a class="nav-link" href="https://github.com/Azure/autorest/blob/master/README.md">Docs</a></li>
+                    
+                  
+                </ul>
+              
+          </div>
+        
+          <div class="card">
+            <h3 class="card-header"><a class="nav-link" href="https://github.com/Azure/connectthedots">
+              <img src="/images/gh-mark-120px.png"/>Connect the Dots</a></h3>
+              
+                <div class="card-block">
+                  <p class="card-text">ConnectTheDots.io is an open source project created by Microsoft to help you get tiny devices connected to Microsoft Azure, and to implement great IoT solutions taking advantage of Microsoft Azure advanced analytic services such as Azure Stream Analytics and Azure Machine Learning.</p>
+                </div>
+              
+              
+                <ul class="list-group list-group-flush">
+                  
+                    
+                      <li class="list-group-item"><a class="nav-link" href="https://github.com/Azure/connectthedots/blob/master/readme.md">Docs</a></li>
+                    
+                  
+                </ul>
+              
+          </div>
+        
+          <div class="card">
+            <h3 class="card-header"><a class="nav-link" href="https://github.com/Azure/DotNetty">
+              <img src="/images/gh-mark-120px.png"/>DotNetty</a></h3>
+              
+                <div class="card-block">
+                  <p class="card-text">DotNetty is a port of Netty, asynchronous event-driven network application framework for rapid development of maintainable high performance protocol servers & clients.</p>
+                </div>
+              
+              
+                <ul class="list-group list-group-flush">
+                  
+                    
+                      <li class="list-group-item"><a class="nav-link" href="https://github.com/Azure/DotNetty/blob/dev/README.md">Docs</a></li>
+                    
+                  
+                </ul>
+              
+          </div>
+        
+          <div class="card">
+            <h3 class="card-header"><a class="nav-link" href="https://github.com/Azure/azure-webjobs-sdk">
+              <img src="/images/gh-mark-120px.png"/>WebJobs</a></h3>
+              
+                <div class="card-block">
+                  <p class="card-text">The Azure WebJobs SDK is a framework that simplifies the task of writing background processing code that runs in Azure. The Azure WebJobs SDK includes a declarative binding and trigger system that works with Azure Storage Blobs, Queues and Tables as well as Service Bus. The binding system makes it incredibly easy to write code that reads or writes Azure Storage objects. The trigger system automatically invokes a function in your code whenever any new data is received in a queue or blob.</p>
+                </div>
+              
+                <div class="card-block">
+                  <p class="card-text">The related repo <a href="https://github.com/Azure/azure-webjobs-sdk-extensions">azure-webjobs-sdk-extensions</a> demonstrates the extensibility model of the SDK and contains many useful trigger/binder extensions (e.g. WebHooks, SendGrid, Timer/Cron, Files), as well as samples showing how to use/create SDK extensions.</p>
+                </div>
+              
+              
+                <ul class="list-group list-group-flush">
+                  
+                    
+                      <li class="list-group-item"><a class="nav-link" href="https://github.com/Azure/azure-webjobs-sdk/wiki">Docs</a></li>
+                    
+                  
+                </ul>
+              
+          </div>
+        
+          <div class="card">
+            <h3 class="card-header"><a class="nav-link" href="https://github.com/Azure/amqpnetlite">
+              <img src="/images/gh-mark-120px.png"/>AMQP 1.0 Client Library</a></h3>
+              
+                <div class="card-block">
+                  <p class="card-text">AMQP.Net Lite is a lightweight AMQP 1.0 client library for the .Net Micro Framework, .Net Compact Framework, .Net Framework, and Windows Runtime platforms.</p>
+                </div>
+              
+              
+                <ul class="list-group list-group-flush">
+                  
+                    
+                      <li class="list-group-item"><a class="nav-link" href="https://github.com/Azure/amqpnetlite/blob/master/README.md">Docs</a></li>
+                    
+                  
+                </ul>
+              
+          </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="featurette even">
+    <h2 class="featurette-title">Java</h2>
+    
+      <p class="lead">Get started with Azure quickly with a projects that help to take some of the complexity out of developing applicaitons built on Java within Azure.</p>
+    
+    <div class="container">
+      <div class="card-columns">
+        
+          <div class="card">
+            <h3 class="card-header"><a class="nav-link" href="https://github.com/azure/azure-sdk-for-java">
+              <img src="/images/gh-mark-120px.png"/>Azure Management SDK</a></h3>
+              
+                <div class="card-block">
+                  <p class="card-text">The Azure Management SDK provides a set of libraries, which simplify the tasks of creating, updating, deleting and accessing Azure resources via Azure Resource Manager and Azure Service Management.</p>
+                </div>
+              
+              
+                <ul class="list-group list-group-flush">
+                  
+                    
+                      <li class="list-group-item"><a class="nav-link" href="https://azure.github.io/ref-docs/java">Docs</a></li>
+                    
+                  
+                </ul>
+              
+          </div>
+        
+          <div class="card">
+            <h3 class="card-header"><a class="nav-link" href="https://github.com/Azure/azure-storage-java">
+              <img src="/images/gh-mark-120px.png"/>Storage</a></h3>
+              
+                <div class="card-block">
+                  <p class="card-text">This project provides a client library in Java that makes it easy to consume Microsoft Azure Storage services. For documentation please see the Microsoft Azure <a href="http://azure.microsoft.com/en-us/develop/java/">Java Developer Center</a>.</p>
+                </div>
+              
+              
+                <ul class="list-group list-group-flush">
+                  
+                    
+                      <li class="list-group-item"><a class="nav-link" href="http://azure.github.io/azure-storage-java/">Docs</a></li>
+                    
+                  
+                </ul>
+              
+          </div>
+        
+          <div class="card">
+            <h3 class="card-header"><a class="nav-link" href="https://github.com/Azure/azure-storage-android">
+              <img src="/images/gh-mark-120px.png"/>Storage Android</a></h3>
+              
+                <div class="card-block">
+                  <p class="card-text">This project provides a client library for Android that makes it easy to consume Microsoft Azure Storage services.</p>
+                </div>
+              
+              
+                <ul class="list-group list-group-flush">
+                  
+                    
+                      <li class="list-group-item"><a class="nav-link" href="http://azure.github.io/azure-storage-android/">Docs</a></li>
+                    
+                  
+                </ul>
+              
+          </div>
+        
+          <div class="card">
+            <h3 class="card-header"><a class="nav-link" href="https://github.com/Azure/azure-iot-sdks">
+              <img src="/images/gh-mark-120px.png"/>Internet of Things (IoT) Hub</a></h3>
+              
+                <div class="card-block">
+                  <p class="card-text">Contains both IoT device SDKs and IoT service SDKs. Device SDKs enable you connect client devices to Azure IoT Hub. Service SDKs enable you to manage your IoT Hub service instance.</p>
+                </div>
+              
+                <div class="card-block">
+                  <p class="card-text">Visit <a href="http://azure.com/iotdev">http://azure.com/iotdev</a> to learn more about developing applications for Azure IoT.</p>
+                </div>
+              
+              
+                <ul class="list-group list-group-flush">
+                  
+                    
+                      <li class="list-group-item"><a class="nav-link" href="https://github.com/Azure/azure-iot-sdks/blob/master/java/device/readme.md">Docs</a></li>
+                    
+                  
+                </ul>
+              
+          </div>
+        
+          <div class="card">
+            <h3 class="card-header"><a class="nav-link" href="https://github.com/Azure/azure-documentdb-java">
+              <img src="/images/gh-mark-120px.png"/>DocumentDB</a></h3>
+              
+                <div class="card-block">
+                  <p class="card-text">This project provides a client library in Java that makes it easy to interact with Azure DocumentDB.</p>
+                </div>
+              
+              
+                <ul class="list-group list-group-flush">
+                  
+                    
+                      <li class="list-group-item"><a class="nav-link" href="http://azure.github.io/azure-documentdb-java/">Docs</a></li>
+                    
+                  
+                </ul>
+              
+          </div>
+        
+          <div class="card">
+            <h3 class="card-header"><a class="nav-link" href="https://github.com/Azure/azure-documentdb-hadoop">
+              <img src="/images/gh-mark-120px.png"/>DocumentDB Hadoop Connector</a></h3>
+              
+                <div class="card-block">
+                  <p class="card-text">Provides a client library in Java that allows Microsoft Azure DocumentDB to act as an input source or output sink for MapReduce, Hive and Pig jobs.</p>
+                </div>
+              
+              
+                <ul class="list-group list-group-flush">
+                  
+                    
+                      <li class="list-group-item"><a class="nav-link" href="https://github.com/Azure/azure-documentdb-hadoop/blob/master/README.md">Docs</a></li>
+                    
+                  
+                </ul>
+              
+          </div>
+        
+          <div class="card">
+            <h3 class="card-header"><a class="nav-link" href="https://github.com/Azure/azure-notificationhubs-java-backend">
+              <img src="/images/gh-mark-120px.png"/>Notification Hubs</a></h3>
+              
+                <div class="card-block">
+                  <p class="card-text">Java Back-end SDK for <a href="http://www.windowsazure.com/en-us/documentation/services/notification-hubs/">Microsoft Azure Notification Hubs</a>.</p>
+                </div>
+              
+                <div class="card-block">
+                  <p class="card-text">Implements most of the Notification Hubs REST operations to perform Hub CRUDs, registration/installation management and send notification.</p>
+                </div>
+              
+              
+                <ul class="list-group list-group-flush">
+                  
+                    
+                      <li class="list-group-item"><a class="nav-link" href="https://github.com/Azure/azure-notificationhubs-java-backend/blob/master/README.md">Docs</a></li>
+                    
+                  
+                </ul>
+              
+          </div>
+        
+          <div class="card">
+            <h3 class="card-header"><a class="nav-link" href="https://github.com/Azure/azure-websites-java-remote-debugging">
+              <img src="/images/gh-mark-120px.png"/>AppServices Remote Debugging</a></h3>
+              
+                <div class="card-block">
+                  <p class="card-text">Remotely debug your Java applications running on Azure AppServices.</p>
+                </div>
+              
+              
+                <ul class="list-group list-group-flush">
+                  
+                    
+                      <li class="list-group-item"><a class="nav-link" href="https://github.com/Azure/azure-websites-java-remote-debugging/blob/master/README.md">Docs</a></li>
+                    
+                  
+                </ul>
+              
+          </div>
+        
+          <div class="card">
+            <h3 class="card-header"><a class="nav-link" href="https://github.com/azure/toketi-iothubreact">
+              <img src="/images/gh-mark-120px.png"/>IotHubReact</a></h3>
+              
+                <div class="card-block">
+                  <p class="card-text">IoTHub React is an Akka Stream library that can be used to read data from Azure IoT Hub, via a reactive stream with asynchronous back pressure. Azure IoT Hub is a service used to connect thousands to millions of devices to the Azure cloud.</p>
+                </div>
+              
+              
+                <ul class="list-group list-group-flush">
+                  
+                    
+                      <li class="list-group-item"><a class="nav-link" href="https://github.com/Azure/toketi-iothubreact/blob/master/README.md">Docs</a></li>
+                    
+                  
+                </ul>
+              
+          </div>
+        
+          <div class="card">
+            <h3 class="card-header"><a class="nav-link" href="https://github.com/Azure/toketi-kafka-connect-iothub">
+              <img src="/images/gh-mark-120px.png"/>Kafka Connect for Azure IoT Hub</a></h3>
+              
+                <div class="card-block">
+                  <p class="card-text">Kafka Connect for Azure IoT Hub is a Kafka source connector for pumping data from Azure IoT Hub to Apache Kafka. This allows getting the telemetry data sent by Azure IoT Hub connected devices to your Kafka installation, so that it can then be consumed by Kafka consumers down the stream.</p>
+                </div>
+              
+              
+                <ul class="list-group list-group-flush">
+                  
+                    
+                      <li class="list-group-item"><a class="nav-link" href="https://github.com/Azure/toketi-kafka-connect-iothub/blob/master/README.md">Docs</a></li>
+                    
+                  
+                </ul>
+              
+          </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="featurette odd">
+    <h2 class="featurette-title">JavaScript</h2>
+    
+      <p class="lead">Is JavaScript your language of choice, then these project are for you. Azure's Node.js and Javascript libraries will help to make you more productive developing applicaitons on Azure.</p>
+    
+    <div class="container">
+      <div class="card-columns">
+        
+          <div class="card">
+            <h3 class="card-header"><a class="nav-link" href="https://github.com/azure/azure-sdk-for-node">
+              <img src="/images/gh-mark-120px.png"/>Azure Management SDK</a></h3>
+              
+                <div class="card-block">
+                  <p class="card-text">The Azure Management SDK provides a set of libraries, which simplify the tasks of creating, updating, deleting and accessing Azure resources via Azure Resource Manager and Azure Service Management.</p>
+                </div>
+              
+              
+                <ul class="list-group list-group-flush">
+                  
+                    
+                      <li class="list-group-item"><a class="nav-link" href="http://azure.github.io/azure-sdk-for-node">Docs</a></li>
+                    
+                  
+                </ul>
+              
+          </div>
+        
+          <div class="card">
+            <h3 class="card-header"><a class="nav-link" href="https://github.com/Azure/azure-storage-node">
+              <img src="/images/gh-mark-120px.png"/>Storage</a></h3>
+              
+                <div class="card-block">
+                  <p class="card-text">Provides a Node.js package that makes it easy to consume and manage Microsoft Azure Storage Services.</p>
+                </div>
+              
+              
+                <ul class="list-group list-group-flush">
+                  
+                    
+                      <li class="list-group-item"><a class="nav-link" href="http://azure.github.io/azure-storage-node/">Docs</a></li>
+                    
+                  
+                </ul>
+              
+          </div>
+        
+          <div class="card">
+            <h3 class="card-header"><a class="nav-link" href="https://github.com/Azure/azure-documentdb-node">
+              <img src="/images/gh-mark-120px.png"/>DocumentDB Node</a></h3>
+              
+                <div class="card-block">
+                  <p class="card-text">Provides a node module that makes it easy to interact with Azure DocumentDB.</p>
+                </div>
+              
+              
+                <ul class="list-group list-group-flush">
+                  
+                    
+                      <li class="list-group-item"><a class="nav-link" href="http://azure.github.io/azure-documentdb-node/">Docs</a></li>
+                    
+                  
+                </ul>
+              
+          </div>
+        
+          <div class="card">
+            <h3 class="card-header"><a class="nav-link" href="https://github.com/Azure/azure-documentdb-js">
+              <img src="/images/gh-mark-120px.png"/>DocumentDB JavaScript</a></h3>
+              
+                <div class="card-block">
+                  <p class="card-text">DocumentDB is a purpose built NoSQL JSON document database designed for modern mobile and web applications. DocumentDB supports rich queries over JSON data as well as, transactional execution of JavaScript based application logic. DocumentDB is built with a deep commitment to the JSON data model enabling it to offer differentiated query and data processing capabilities that scale to meet the needs of the most demanding modern applications.</p>
+                </div>
+              
+              
+                <ul class="list-group list-group-flush">
+                  
+                    
+                      <li class="list-group-item"><a class="nav-link" href="https://github.com/Azure/azure-documentdb-js/blob/master/README.md">Docs</a></li>
+                    
+                  
+                </ul>
+              
+          </div>
+        
+          <div class="card">
+            <h3 class="card-header"><a class="nav-link" href="https://github.com/Azure/azure-documentdb-js-server">
+              <img src="/images/gh-mark-120px.png"/>DocumentDB Server-Side JavaScript</a></h3>
+              
+                <div class="card-block">
+                  <p class="card-text">DocumentDB’s language integrated, transactional execution of JavaScript supports stored procedures, triggers and user defined functions (UDFs) written natively in JavaScript. This allows developers to write application logic which can be shipped and executed directly on the database storage partitions. JavaScript support at the server side has a number of intrinsic advantages that can be utilized to build rich applications.</p>
+                </div>
+              
+              
+                <ul class="list-group list-group-flush">
+                  
+                    
+                      <li class="list-group-item"><a class="nav-link" href="http://azure.github.io/azure-documentdb-js-server/">Docs</a></li>
+                    
+                  
+                    
+                      <li class="list-group-item"><a class="nav-link" href="https://azure.microsoft.com/en-us/documentation/articles/documentdb-programming/">Getting started</a></li>
+                    
+                  
+                </ul>
+              
+          </div>
+        
+          <div class="card">
+            <h3 class="card-header"><a class="nav-link" href="https://github.com/Azure/azure-documentdb-node-q">
+              <img src="/images/gh-mark-120px.png"/>DocumentDB Q Promises Wrapper</a></h3>
+              
+                <div class="card-block">
+                  <p class="card-text">Provides a node module that makes it easy to interact with Azure DocumentDB via q promises.</p>
+                </div>
+              
+              
+                <ul class="list-group list-group-flush">
+                  
+                    
+                      <li class="list-group-item"><a class="nav-link" href="http://azure.github.io/azure-documentdb-node-q/">Docs</a></li>
+                    
+                  
+                </ul>
+              
+          </div>
+        
+          <div class="card">
+            <h3 class="card-header"><a class="nav-link" href="https://github.com/Azure/azure-mobile-apps-js-client">
+              <img src="/images/gh-mark-120px.png"/>Mobile Apps for JavaScript</a></h3>
+              
+                <div class="card-block">
+                  <p class="card-text">Azure Mobile Apps allows you to develop cloud-connected apps with an Azure Mobile Apps backend.  This client supports JavaScript applications.  To learn more, see our <a href="https://azure.microsoft.com/en-us/documentation/articles/app-service-mobile-html-how-to-use-client-library/">our documentation</a>.</p>
+                </div>
+              
+              
+                <ul class="list-group list-group-flush">
+                  
+                    
+                      <li class="list-group-item"><a class="nav-link" href="https://www.npmjs.com/package/azure-mobile-apps-client">NPM</a></li>
+                    
+                  
+                    
+                      <li class="list-group-item"><a class="nav-link" href="https://github.com/Azure/azure-mobile-apps-js-client/blob/master/README.md">README</a></li>
+                    
+                  
+                </ul>
+              
+          </div>
+        
+          <div class="card">
+            <h3 class="card-header"><a class="nav-link" href="https://github.com/Azure/azure-mobile-apps-cordova-client">
+              <img src="/images/gh-mark-120px.png"/>Mobile Apps for Cordova</a></h3>
+              
+                <div class="card-block">
+                  <p class="card-text">Azure Mobile Apps allows you to develop cloud-connected apps with an Azure Mobile Apps backend.  This client supports Apache Cordova applications.  To learn more, see our <a href="https://azure.microsoft.com/en-us/documentation/articles/app-service-mobile-cordova-how-to-use-client-library/">our documentation</a>.</p>
+                </div>
+              
+              
+                <ul class="list-group list-group-flush">
+                  
+                    
+                      <li class="list-group-item"><a class="nav-link" href="https://www.npmjs.com/package/cordova-plugin-ms-azure-mobile-apps">NPM</a></li>
+                    
+                  
+                </ul>
+              
+          </div>
+        
+          <div class="card">
+            <h3 class="card-header"><a class="nav-link" href="https://github.com/Azure/azure-iot-sdks">
+              <img src="/images/gh-mark-120px.png"/>Internet of Things (IoT) Hub</a></h3>
+              
+                <div class="card-block">
+                  <p class="card-text">Contains both IoT device SDKs and IoT service SDKs. Device SDKs enable you connect client devices to Azure IoT Hub. Service SDKs enable you to manage your IoT Hub service instance.</p>
+                </div>
+              
+                <div class="card-block">
+                  <p class="card-text">Visit <a href="http://azure.com/iotdev">http://azure.com/iotdev</a> to learn more about developing applications for Azure IoT.</p>
+                </div>
+              
+              
+                <ul class="list-group list-group-flush">
+                  
+                    
+                      <li class="list-group-item"><a class="nav-link" href="https://github.com/Azure/azure-iot-sdks/blob/master/node/device/core/readme.md">Docs</a></li>
+                    
+                  
+                </ul>
+              
+          </div>
+        
+          <div class="card">
+            <h3 class="card-header"><a class="nav-link" href="https://github.com/Azure/azure-kubernetes-visualizer">
+              <img src="/images/gh-mark-120px.png"/>Kubernetes Visualizer</a></h3>
+              
+                <div class="card-block">
+                  <p class="card-text">The demo application helps you visualize what is happening in your Kubernetes cluster by showing you where all of your workloads are being run. This both helps with understanding kubernetes, as well as visually demonstrating how its' scheduler works.</p>
+                </div>
+              
+              
+                <ul class="list-group list-group-flush">
+                  
+                    
+                      <li class="list-group-item"><a class="nav-link" href="https://github.com/Azure/azure-kubernetes-visualizer/blob/master/README.md">Readme</a></li>
+                    
+                  
+                </ul>
+              
+          </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="featurette even">
+    <h2 class="featurette-title">Python</h2>
+    
+      <p class="lead">If you are a pythonista, then these are the projects for you. These projects will help you unlock the power of Azure via Python powered applications and scripts.</p>
+    
+    <div class="container">
+      <div class="card-columns">
+        
+          <div class="card">
+            <h3 class="card-header"><a class="nav-link" href="https://github.com/azure/azure-sdk-for-python">
+              <img src="/images/gh-mark-120px.png"/>Azure Management SDK</a></h3>
+              
+                <div class="card-block">
+                  <p class="card-text">The Azure Management SDK provides a set of libraries, which simplify the tasks of creating, updating, deleting and accessing Azure resources via Azure Resource Manager and Azure Service Management.</p>
+                </div>
+              
+              
+                <ul class="list-group list-group-flush">
+                  
+                    
+                      <li class="list-group-item"><a class="nav-link" href="https://azure-sdk-for-python.readthedocs.org/en/latest/">Docs</a></li>
+                    
+                  
+                </ul>
+              
+          </div>
+        
+          <div class="card">
+            <h3 class="card-header"><a class="nav-link" href="https://github.com/Azure/azure-storage-python">
+              <img src="/images/gh-mark-120px.png"/>Storage</a></h3>
+              
+                <div class="card-block">
+                  <p class="card-text">Provides a client library in Python that makes it easy to consume Microsoft Azure Storage services.</p>
+                </div>
+              
+              
+                <ul class="list-group list-group-flush">
+                  
+                    
+                      <li class="list-group-item"><a class="nav-link" href="http://azure.github.io/azure-storage-python/">Docs</a></li>
+                    
+                  
+                </ul>
+              
+          </div>
+        
+          <div class="card">
+            <h3 class="card-header"><a class="nav-link" href="https://github.com/Azure/azure-documentdb-python">
+              <img src="/images/gh-mark-120px.png"/>DocumentDB</a></h3>
+              
+                <div class="card-block">
+                  <p class="card-text">Python driver for Microsoft Azure DocumentDB</p>
+                </div>
+              
+              
+                <ul class="list-group list-group-flush">
+                  
+                    
+                      <li class="list-group-item"><a class="nav-link" href="https://github.com/Azure/azure-documentdb-python/blob/master/README.md">Readme</a></li>
+                    
+                  
+                </ul>
+              
+          </div>
+        
+          <div class="card">
+            <h3 class="card-header"><a class="nav-link" href="https://github.com/Azure/Azure-MachineLearning-ClientLibrary-Python">
+              <img src="/images/gh-mark-120px.png"/>Machine Learing Client</a></h3>
+              
+                <div class="card-block">
+                  <p class="card-text">Azure Machine Learning Python client library lets you access your Azure ML datasets from your local Python environment.</p>
+                </div>
+              
+                <div class="card-block">
+                  <p class="card-text">You can download datasets that are available in your ML workspace, or intermediate datasets from experiments that were run. You can upload new datasets and update existing datasets. The data is optionally converted to/from a Pandas DataFrame.</p>
+                </div>
+              
+              
+                <ul class="list-group list-group-flush">
+                  
+                    
+                      <li class="list-group-item"><a class="nav-link" href="https://github.com/Azure/Azure-MachineLearning-ClientLibrary-Python/blob/master/README.md">Readme</a></li>
+                    
+                  
+                </ul>
+              
+          </div>
+        
+          <div class="card">
+            <h3 class="card-header"><a class="nav-link" href="">
+              <img src="/images/gh-mark-120px.png"/>Linux Extensions for Microsoft Azure IaaS</a></h3>
+              
+                <div class="card-block">
+                  <p class="card-text">Provides the source code of Linux extensions for Microsoft Azure IaaS. VM Extensions are injected components authored by Microsoft and Partners into Linux VM (IaaS) to enable software and configuration automation.</p>
+                </div>
+              
+              
+                <ul class="list-group list-group-flush">
+                  
+                    
+                      <li class="list-group-item"><a class="nav-link" href="https://github.com/Azure/azure-linux-extensions/blob/master/README.md">Readme</a></li>
+                    
+                  
+                </ul>
+              
+          </div>
+        
+          <div class="card">
+            <h3 class="card-header"><a class="nav-link" href="https://github.com/Azure/WALinuxAgent">
+              <img src="/images/gh-mark-120px.png"/>Microsoft Azure Linux Agent</a></h3>
+              
+                <div class="card-block">
+                  <p class="card-text">The Microsoft Azure Linux Agent (waagent) manages Linux & FreeBSD provisioning, and VM interaction with the Azure Fabric Controller.</p>
+                </div>
+              
+              
+                <ul class="list-group list-group-flush">
+                  
+                    
+                      <li class="list-group-item"><a class="nav-link" href="https://github.com/Azure/WALinuxAgent/blob/2.0/README">Readme</a></li>
+                    
+                  
+                </ul>
+              
+          </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="featurette odd">
+    <h2 class="featurette-title">Ruby</h2>
+    
+      <p class="lead">When you see .rb in a project, does that get you hyped. Here are some projects that will help you to be more productive on Azure.</p>
+    
+    <div class="container">
+      <div class="card-columns">
+        
+          <div class="card">
+            <h3 class="card-header"><a class="nav-link" href="https://github.com/azure/azure-sdk-for-ruby">
+              <img src="/images/gh-mark-120px.png"/>Azure Management SDK</a></h3>
+              
+                <div class="card-block">
+                  <p class="card-text">The Azure Management SDK provides a set of libraries, which simplify the tasks of creating, updating, deleting and accessing Azure resources via Azure Resource Manager and Azure Service Management.</p>
+                </div>
+              
+              
+                <ul class="list-group list-group-flush">
+                  
+                    
+                      <li class="list-group-item"><a class="nav-link" href="https://github.com/Azure/azure-sdk-for-ruby/blob/master/README.md">Docs</a></li>
+                    
+                  
+                </ul>
+              
+          </div>
+        
+          <div class="card">
+            <h3 class="card-header"><a class="nav-link" href="https://github.com/Azure/azure-storage-ruby">
+              <img src="/images/gh-mark-120px.png"/>Storage</a></h3>
+              
+                <div class="card-block">
+                  <p class="card-text">Provides a Ruby package that makes it easy to access and manage Microsoft Azure Storage Services.</p>
+                </div>
+              
+              
+                <ul class="list-group list-group-flush">
+                  
+                    
+                      <li class="list-group-item"><a class="nav-link" href="https://github.com/Azure/azure-storage-ruby/blob/master/README.md">Readme</a></li>
+                    
+                  
+                </ul>
+              
+          </div>
+        
+          <div class="card">
+            <h3 class="card-header"><a class="nav-link" href="https://github.com/Azure/vagrant-azure">
+              <img src="/images/gh-mark-120px.png"/>Vagrant Azure</a></h3>
+              
+                <div class="card-block">
+                  <p class="card-text">Enable Vagrant to manage virtual machines in Microsoft Azure</p>
+                </div>
+              
+              
+                <ul class="list-group list-group-flush">
+                  
+                    
+                      <li class="list-group-item"><a class="nav-link" href="https://github.com/Azure/vagrant-azure/blob/master/README.md">Readme</a></li>
+                    
+                  
+                </ul>
+              
+          </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="featurette even">
+    <h2 class="featurette-title">Golang</h2>
+    
+      <p class="lead">Calling all gophers... This area is definitely for you. If so, Here are some projects to help you to be successful on Azure.</p>
+    
+    <div class="container">
+      <div class="card-columns">
+        
+          <div class="card">
+            <h3 class="card-header"><a class="nav-link" href="https://github.com/azure/azure-sdk-for-go">
+              <img src="/images/gh-mark-120px.png"/>Azure Management SDK</a></h3>
+              
+                <div class="card-block">
+                  <p class="card-text">The Azure Management SDK provides a set of libraries, which simplify the tasks of creating, updating, deleting and accessing Azure resources via Azure Resource Manager and Azure Service Management.</p>
+                </div>
+              
+              
+                <ul class="list-group list-group-flush">
+                  
+                    
+                      <li class="list-group-item"><a class="nav-link" href="https://godoc.org/github.com/Azure/azure-sdk-for-go">Docs</a></li>
+                    
+                  
+                </ul>
+              
+          </div>
+        
+          <div class="card">
+            <h3 class="card-header"><a class="nav-link" href="https://github.com/Azure/packer-azure">
+              <img src="/images/gh-mark-120px.png"/>Packer Azure</a></h3>
+              
+                <div class="card-block">
+                  <p class="card-text"><a href="http://www.packer.io/intro/index.html">Packer</a> is an open source tool for creating identical machine images for multiple platforms from a single source configuration. This is an Azure plugin for Packer.io to enable Microsoft Azure users to build custom images given an Azure image.</p>
+                </div>
+              
+              
+                <ul class="list-group list-group-flush">
+                  
+                    
+                      <li class="list-group-item"><a class="nav-link" href="https://github.com/Azure/packer-azure/blob/master/README.md">Readme</a></li>
+                    
+                  
+                </ul>
+              
+          </div>
+        
+          <div class="card">
+            <h3 class="card-header"><a class="nav-link" href="https://github.com/Azure/azure-docker-extension">
+              <img src="/images/gh-mark-120px.png"/>Azure Docker Extension</a></h3>
+              
+                <div class="card-block">
+                  <p class="card-text">Docker VM Extension for Microsoft Azure</p>
+                </div>
+              
+              
+                <ul class="list-group list-group-flush">
+                  
+                    
+                      <li class="list-group-item"><a class="nav-link" href="https://github.com/Azure/azure-docker-extension/blob/master/README.md">Readme</a></li>
+                    
+                  
+                </ul>
+              
+          </div>
+        
+          <div class="card">
+            <h3 class="card-header"><a class="nav-link" href="https://github.com/Azure/azurefile-dockervolumedriver">
+              <img src="/images/gh-mark-120px.png"/>Docker Volume Driver for Azure File Service</a></h3>
+              
+                <div class="card-block">
+                  <p class="card-text">This is a Docker Volume Driver which uses <a href="http://blogs.msdn.com/b/windowsazurestorage/archive/2014/05/12/introducing-microsoft-azure-file-service.aspx">Azure Storage File Service</a> to mount file shares on the cloud to Docker containers as volumes. It uses network file sharing (<a href="https://msdn.microsoft.com/en-us/library/windows/desktop/aa365233(v=vs.85).aspx">SMB/CIFS protocols</a>) capabilities of Azure File Service.</p>
+                </div>
+              
+              
+                <ul class="list-group list-group-flush">
+                  
+                    
+                      <li class="list-group-item"><a class="nav-link" href="https://github.com/Azure/azurefile-dockervolumedriver/blob/master/README.md">Readme</a></li>
+                    
+                  
+                </ul>
+              
+          </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="featurette odd">
+    <h2 class="featurette-title">Scala</h2>
+    
+      <p class="lead">Get started with Azure quickly with a projects that help to take some of the complexity out of developing applications built on Scala within Azure.</p>
+    
+    <div class="container">
+      <div class="card-columns">
+        
+          <div class="card">
+            <h3 class="card-header"><a class="nav-link" href="https://github.com/azure/toketi-iothubreact">
+              <img src="/images/gh-mark-120px.png"/>IotHubReact</a></h3>
+              
+                <div class="card-block">
+                  <p class="card-text">IoTHub React is an Akka Stream library that can be used to read data from Azure IoT Hub, via a reactive stream with asynchronous back pressure. Azure IoT Hub is a service used to connect thousands to millions of devices to the Azure cloud.</p>
+                </div>
+              
+              
+                <ul class="list-group list-group-flush">
+                  
+                    
+                      <li class="list-group-item"><a class="nav-link" href="https://github.com/Azure/toketi-iothubreact/blob/master/README.md">Docs</a></li>
+                    
+                  
+                </ul>
+              
+          </div>
+        
+      </div>
+    </div>
+  </div>
+
+
+  <div class="az-footer">
+  <div class="container">
+    <ul class="footer-links">
+      <li><a href="https://azure.microsoft.com/">Azure.com</a></li>
+      <li><a href="https://azure.microsoft.com/blog/">Azure Blog</a></li>
+      <li><a href="https://twitter.com/Azure">@Azure</a></li>
+      <li><a href="https://github.com/azure/">GitHub</a></li>
+      <li><a href="/thanks">Thank you!</a></li>
+    </ul>
+
+    <ul class="muted-footer-links">
+      <li>
+        <small>&copy; Microsoft</small>
+      </li>
+      <li>
+        <small><a href="http://go.microsoft.com/fwlink/p/?linkid=131004&clcid=0x409">Privacy and Cookies</a></small>
+      </li>
+      <li>
+        <small><a href="http://go.microsoft.com/fwlink/p/?linkid=222682&clcid=0x409">Trademarks</a></small>
+      </li>
+    </ul>
+  </div>
+</div>
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.1.1/js/tether.min.js" integrity="sha384-MWq1Lnqj72tmjGdOKuNBn3E0gj3vWfy/1EmR5TVL8d8nGvwgy32YkCpKpTUhwBVv" crossorigin="anonymous"></script>
+<script src="/js/app.js"></script>
+<script type="text/javascript">
+  var appInsights=window.appInsights||function(config){
+        function r(config){t[config]=function(){var i=arguments;t.queue.push(function(){t[config].apply(t,i)})}}var t={config:config},u=document,e=window,o="script",s=u.createElement(o),i,f;for(s.src=config.url||"//az416426.vo.msecnd.net/scripts/a/ai.0.js",u.getElementsByTagName(o)[0].parentNode.appendChild(s),t.cookie=u.cookie,t.queue=[],i=["Event","Exception","Metric","PageView","Trace"];i.length;)r("track"+i.pop());return r("setAuthenticatedUserContext"),r("clearAuthenticatedUserContext"),config.disableExceptionTracking||(i="onerror",r("_"+i),f=e[i],e[i]=function(config,r,u,e,o){var s=f&&f(config,r,u,e,o);return s!==!0&&t["_"+i](config,r,u,e,o),s}),t
+      }({
+        instrumentationKey:"b10e9e2e-dff6-45fb-b1c9-169564c8da05"
+      });
+
+  window.appInsights=appInsights;
+  appInsights.trackPageView('Microsoft Azure Open Source Projects and SDKs');
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-76264226-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</html>

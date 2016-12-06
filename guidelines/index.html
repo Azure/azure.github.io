@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="keywords" content="Microsoft, Azure, Management, Cloud, Reference, Docs, Documentation, Java, C#, JavaScript, Node, Ruby, Python, Golang, Open Source, Developer, .Net">
+  <meta name="author" content="Microsoft Corporation">
+
+  <title>Open Source Contribution Guidelines - Microsoft Azure Open Source</title>
+  <meta name="description"
+        content="Python and other libraries. We also provide information and guidelines for contributing to our open source projects on GitHub. All Azure open source projects have a flexible Apache 2.0 or MIT license.
+">
+  <link rel="canonical" href="https://azure.github.io/guidelines/">
+
+  <link rel="alternate" type="application/rss+xml" title="Open source cloud frameworks, SDKs and contribution guidelines - Microsoft Azure Open Source"
+        href="https://azure.github.io/feed.xml"/>
+
+  <link href="/css/main.css" rel="stylesheet">
+
+  <!-- <link rel="apple-touch-icon" href="/apple-touch-icon.png"> -->
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+</head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" integrity="sha384-8gBf6Y4YYq7Jx97PIqmTwLPin4hxIzQw5aDmUg/DDhul9fFpbbLcLh3nTIIDJKhx" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-migrate-1.3.0.js"></script>
+<script type="text/javascript">
+  var host = "azure.github.io";
+  if ((host == window.location.host) && (window.location.protocol != "https:"))
+    window.location.protocol = "https";
+</script>
+<body>
+  <nav class="navbar navbar-dark navbar-fixed-top az-navbar">
+  <button class="navbar-toggler navbar-toggler-blue hidden-sm-up" type="button" data-toggle="collapse" data-target="#navbar-header" aria-controls="navbar-header">
+    &#9776;
+  </button>
+  <div class="pull-xs-left hidden-xs-down hidden-md-up az-icon-container">
+    <a href="/"><img class="az-icon" src="/images/msft-icon.png" alt="Microsoft Logo"></a>
+  </div>
+  <div class="pull-xs-left hidden-sm-down">
+    <a href="/"><img class="az-logo" src="/images/logo-msft-dark@2x.png" alt="Microsoft Logo"></a>
+  </div>
+  <div class="collapse navbar-toggleable-xs pull-xs-right" id="navbar-header">
+    <ul class="nav navbar-nav">
+      
+      <li class="nav-item">
+        <a class="nav-link" id="projectsLink" href="#" data-toggle="collapse" data-target="#projects-drop">Projects</a>
+        <div>
+          <ul id="projects-drop" class="nav collapse">
+            <li><a class="nav-link" id="projectsclisLink" href="/projects/clis">CLIs</a></li>
+            <li><a class="nav-link" id="projectssdksLink" href="/projects/sdks">SDKs</a></li>
+            <li><a class="nav-link" id="projectsapisLink" href="/projects/apis">APIs</a></li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" id="guidelinesLink" href="/guidelines">Guidelines</a>
+      </li>
+      <!-- <li class="nav-item">
+        <a class="nav-link" id="contactLink" href="/contact">Contact</a>
+      </li> -->
+      <li class="nav-item">
+        <a class="nav-link" id="thanksLink" href="/thanks">Thanks!</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://azure.microsoft.com" target="_blank">Azure.com</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+  <div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-3 col-md-2 hidden-md-down">
+      <div class="sidebar">
+        <ul class="nav nav-sidebar">
+          <li>
+            <a href="#waystocontribute"><i class="icon-chevron-right"></i>Ways to contribute</a>
+          </li>
+        </ul>
+
+        <h4>Community member</h4>
+        <ul class="nav nav-sidebar">
+          <li><a href="#source">Source code</a></li>
+          <li><a href="#forums">Q&amp;A forums</a></li>
+          <li><a href="#issues">Opening issues</a></li>
+          <li><a href="#features">Feature requests</a></li>
+        </ul>
+
+        <h4>OSS Development</h4>
+        <ul class="nav nav-sidebar">
+          <li class="nav-item"><a href="#contributing">Contributing code</a></li>
+          <li class="nav-item"><a href="#cla">Legal / CLA</a></li>
+          <li class="nav-item"><a href="#stepbystep">Step-by-step</a></li>
+          <li class="nav-item"><a href="#codereviews">Code reviews</a></li>
+          <li class="nav-item"><a href="#contact">Contact the team</a></li>
+          <li class="nav-item"><a href="#thanks">Our contributors</a></li>
+        </ul>
+
+        <h4>Join our team</h4>
+        <ul class="nav nav-sidebar">
+          <li><a href="#jobs">Azure is hiring</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-xs-12 col-lg-10 offset-lg-2 column-masthead">
+      <div class="guidelines-masthead">
+        <div class="container">
+          <h1>Let's work together.</h1>
+          <p class="lead">If you would like to become involved in the development of Microsoft Azure SDKs and Tools
+            there are
+            many different ways in which you can contribute. We strongly value your feedback, questions, bug reports,
+            and
+            feature requests.</p>
+        </div>
+      </div>
+      <div id="waystocontribute" class="featurette">
+        <div class="container">
+          <div class="featurette-title">Ways to contribute</div>
+          <p class="lead">Consider these options</p>
+          <div class="container">
+            <div class="card text-xs-left centered-steps">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item"><a href="//www.windowsazure.com/en-us/develop/downloads/">Use the
+                  products</a></li>
+                <li class="list-group-item">Submit a
+                  <a href="//github.com/azure/">GitHub issue</a>
+                  to the appropriate repo (for a guide on submitting good
+                  bug reports, read
+                  <a href="http://www.joelonsoftware.com/articles/fog0000000029.html">Painless Bug Tracking</a>).
+                </li>
+                <li class="list-group-item">Verify fixes for bugs.</li>
+                <li class="list-group-item">Submit a code fix for a bug.</li>
+                <li class="list-group-item">Submit a new feature request (as a GitHub issue).</li>
+                <li class="list-group-item">Help answer questions on forums such as StackOverflow.</li>
+                <li class="list-group-item">Submit a unit test.</li>
+                <li class="list-group-item">Submit another unit test.</li>
+                <li class="list-group-item">Code review pending pull requests and bug fixes.</li>
+                <li class="list-group-item">Tell others about these projects.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="source" class="featurette">
+        <div class="featurette-title">Get the source code</div>
+
+        <p class="lead">
+          Our source is developed &amp; published on GitHub.com
+          (<a href="//help.github.com/">learn more</a>). If you are
+          new to <a href="//git-scm.com/">Git</a>,
+          check out the
+          <a href="//progit.org/book/">Pro Git Book</a> online or at
+          your bookseller of choice.
+        </p>
+
+        <p class="lead">
+          We have based our development process for moving code
+          around on the now-classic
+          <a href="http://nvie.com/posts/a-successful-git-branching-model/">Successful Git Branching Model</a>
+          as well as using GitHub pull requests and forks between the
+          central organization repository and developer accounts.
+        </p>
+
+        <p class="lead">
+          From any of the Microsoft Azure code repositories on GitHub,
+          you can &quot;Fork&quot; the code to your own account.
+        </p>
+
+        <p class="lead">
+          To get the source on your local development machine,
+          simply clone the repo using Git:<br/>
+          <code>git clone https://github.com/USERNAME/PROJECT.git<br/>
+            git checkout dev</code>
+        </p>
+
+        <p class="lead">
+          Each repository has a README that should be helpful to
+          learn more about the specifics of the language, project
+          and its development environment.
+        </p>
+
+      </div>
+
+      <div id="forums" class="featurette">
+        <div class="featurette-title">Q&amp;A forums</div>
+
+        <p class="lead">
+          The easiest way to ask questions is to use the <a
+            href="http://www.windowsazure.com/en-us/support/forums/">Microsoft Azure SDK and Tools forums</a>
+          on StackOverflow and MSDN. If your target language is .NET
+          the most appropriate forums for discussion are on MSDN.
+
+          For all other languages please use StackOverflow.
+        </p>
+
+        <div class="centered-steps">
+          <table class="table">
+            <thead>
+            <th colspan="2">Forum Provider</th>
+            <th>Tags</th>
+            <th>Notes</th>
+            </thead>
+            <tbody>
+            <tr>
+              <td style="min-width: 83px"><a href="//stackoverflow.com/questions/tagged/azure"><img
+                  src="/images/stackoverflow.png" alt="StackOverflow" title="StackOverflow"
+                  style="width: 83px;height: 82px"/></a>
+              </td>
+              <td><a href="//stackoverflow.com/questions/tagged/azure"><h2>StackOverflow</h2></a></td>
+              <td><a href="//stackoverflow.com/questions/tagged/azure">azure</a></td>
+              <td>A friendly, open and fun community of developers.</td>
+            </tr>
+            <tr>
+              <td><a style="width: 83px"
+                     href="http://social.msdn.microsoft.com/Forums/en-US/category/windowsazureplatform,azuremarketplace,windowsazureplatformctp"><img
+                  src="/images/microsoftforums.png" alt="Microsoft Forums for Windows Azure"
+                  title="Microsoft forums" style=""/></a></td>
+              <td><a
+                  href="http://social.msdn.microsoft.com/Forums/en-US/category/windowsazureplatform,azuremarketplace,windowsazureplatformctp">
+                <h2>Microsoft forums</h2></a></td>
+              <td></td>
+              <td>A good place for support and feedback on Microsoft Azure features
+                and services like Web Sites, Mobile Services, etc.
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+
+      <div id="issues" class="featurette">
+        <div class="featurette-title">Reporting bugs &amp; issues</div>
+
+        <p class="lead">
+          Issues and feature requests are submitted through the project's
+          Issues section on GitHub. Please use the following guidelines when
+          you submit issues and feature requests:<br>
+        </p>
+
+        <div class="container">
+          <div class="card text-xs-left centered-steps">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                Make sure the issue is not already reported by searching
+                through the list of issues
+              </li>
+              <li class="list-group-item">
+                Provide detailed description of the issue including the
+                following information:
+                <ul>
+                  <li class="list-group-item">Which feature the issue appears in</li>
+                  <li class="list-group-item">Under what circumstances the issue appears</li>
+                  <li class="list-group-item">What is desired behavior</li>
+                  <li class="list-group-item">What is breaking</li>
+                  <li class="list-group-item">
+                    What is the impact (things like loss or corruption of data,
+                    compromizing security, disruption of service etc.)
+                  </li>
+                  <li class="list-group-item">Any code that will be helpful to reproduce the issue</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <p class="lead">
+          Issues are regularly reviewed and updated with additional
+          information by the core team. Sometimes the core team may have
+          questions about particular issue that might need clarifications
+          so, please be ready to provide additional information.
+        </p>
+      </div>
+
+      <div id="features" class="featurette">
+        <div class="featurette-title">Feature requests</div>
+
+        <p class="lead">
+          Feature requests and Design Change Requests (DCRs) are an important part of
+          the lifecycle of any software project. Please log these as Issues in the
+          appropriate GitHub repository.
+        </p>
+
+        <p class="lead">
+          Although the team will consider any opened issues, please keep in mind
+          that there is an extremely high bar when it comes to expanding the scope
+          and functionality of a core product such as an SDK for Microsoft Azure.
+        </p>
+
+        <p class="lead">
+          When opening any feature requests, consider including as much information
+          as possible, including:
+        </p>
+        <div class="container">
+          <div class="card text-xs-left centered-steps">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Detailed scenarios enabled by the feature or DCR.</li>
+              <li class="list-group-item">Information about your use case or additional value your
+                business or site will see from the feature.
+              </li>
+              <li class="list-group-item">Any design tips or estimation ideas you may have considered already.</li>
+              <li class="list-group-item">Make note of whether you are opening an issue you would
+                like the Microsoft team or another community member to work on <em>or</em>
+                if you are looking to design &amp; develop the feature
+                yourself.
+              </li>
+              <li class="list-group-item">Any potential caveats or concerns you may have already
+                thought about.
+              </li>
+              <li class="list-group-item">A miniature test plan or list of test scenarios is always
+                helpful.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="alert alert-info centered-steps">
+          <!-- <a class="close">&times;</a> -->
+          <strong>Note:</strong> A Contribution Legal Agreement (CLA) is
+          required before the team can consider your contributions &amp;
+          pull requests. Please read this entire page carefully.
+        </div>
+      </div>
+
+      <div id="contributing" class="featurette">
+        <div class="featurette-title">Contributing code</div>
+
+        <p class="lead">
+          From an engineering standpoint, please make sure that you can
+          build and test the code. Familiarize yourself with our
+          project guidelines and coding conventions.
+        </p>
+
+        <p class="lead">
+          The SDK team also recommends that you read these great
+          posts about open source:
+        </p>
+
+        <div class="container">
+          <div class="card text-xs-left centered-steps">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><a href="http://tirania.org/blog/archive/2010/Dec-31.html">Open Source
+                Contribution Etiquette</a> by
+                Miguel
+                de Icaza
+              </li>
+              <li class="list-group-item"><a href="http://www.igvita.com/2011/12/19/dont-push-your-pull-requests/">Don't
+                &quot;Push&quot; Your
+                Pull
+                Requests</a> by Ilya Grigorik
+              </li>
+              <li class="list-group-item"><a href="http://nvie.com/posts/a-successful-git-branching-model/">A Successful
+                Git Branching Model</a>
+                by
+                Vincent Driessen
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="lead"><em>
+          If you have ever considered contributing to the <a
+            href="http://aspnetwebstack.codeplex.com/wikipage?title=Contributing">ASP.NET Web Stack</a>,
+          we have modeled much of this process on that project.</em></p>
+
+        <p class="lead">
+          Before you start working on a feature or substantial code
+          contribution please <a href="/contact/">discuss it</a> with
+          the team and ensure it is an appropriate addition to the core
+          product.
+        </p>
+
+        <p class="lead">
+          Note that code submissions will be rigorously reviewed and
+          tested by the Microsoft Azure SDK Team (or the appropriate
+          Azure service owners), and only contributions that meet
+          an extremely high bar for both quality and design/roadmap
+          appropriateness will be merged into the source.</p>
+
+        <p class="lead">
+          In some situations Microsoft employees may engage with you
+          to review design decisions and mitigate issues as part of
+          the contribution process. Understand that in some situations,
+          developers inside Microsoft may decide to decline your
+          pull request and instead log the issue for a future
+          product milestone or bug fix. The team will provide
+          information in the pull in these situations and still
+          thank you for your contribution.
+        </p>
+
+        <p class="lead">
+          For bug fixes, simply start a conversation in the related
+          GitHub issue to notify the team and chat about the design of
+          the fix if needed.</p>
+
+        <p class="lead">
+          There are many opportunities to build value-add services and
+          frameworks that do not need to direct alterations to the
+          SDKs and products: NuGet packages for .NET or NPM modules
+          for Node.js devs can easily take a dependency on the core
+          SDK components, for example.
+        </p>
+
+
+        <div class="container">
+          <div class="card text-xs-left centered-steps">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">You have properly documented any new functionality using the
+                documentation standards for the language (this includes clasees,
+                methods and functions, properties etc.)
+              </li>
+              <li class="list-group-item">For any change you make proper inline documentation is
+                included<br>
+              </li>
+              <li class="list-group-item">For any new functionality you have written complete unit tests</li>
+              <li class="list-group-item">You have ran all unit tests and they pass</li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="lead">
+          In order to speed up the process of accepting your contributions, you
+          should try to make your checkins as small as possible, avoid any unnecessary
+          deltas and the need to rebase.
+        </p>
+      </div>
+
+      <div id="cla" class="featurette">
+        <div class="featurette-title">Contribution License Agreement (CLA)</div>
+
+        <p class="lead">In order to become a contributor to the Microsoft Azure
+          open source projects on GitHub you must follow some
+          legal requirements.</p>
+
+        <p class="lead">Until you meet the legal requirements your pull requests / source
+          contributions will not be considered or reviewed.</p>
+
+        <div class="centered-steps">
+          <ul class="nav nav-tabs" role="tablist">
+            <li class="active nav-item"><a class="nav-link" href="#standardcla" data-toggle="tab" role="tab">Community
+              Member</a></li>
+            <li class="nav-item"><a class="nav-link" href="#ftecla" data-toggle="tab" role="tab">Microsoft FTE</a></li>
+            <li class="nav-item"><a class="nav-link" href="#msftcla" data-toggle="tab" role="tab">Microsoft Partner
+              Team</a></li>
+          </ul>
+          <div class="tab-content">
+
+            <div class="tab-pane active" id="standardcla">
+
+
+              <p class="lead">As a community member you must sign the Contribution License Agreement (CLA)
+                before you can contribute to Microsoft open source projects.</p>
+
+              <p class="lead">You only need complete and submit the documentation once. Please
+                carefully review the document; you may also need to have your
+                employer sign the document.</p>
+
+              <p class="lead">Signing the Contribution License Agreement (CLA) does not grant
+                you rights to commit to the main repository but it does mean that
+                the Microsoft Azure team will be able to review and consider your
+                contributions and you will get credit if we do.</p>
+
+              <p class="lead">The Contribution License Agreement (CLA) is available at:
+                <a href="https://cla.azure.com/" title="Azure Contribution License Agreement">https://cla.azure.com/</a>.
+              </p>
+
+              <p class="lead"><a href="https://cla.azure.com/" title="Azure Contribution License Agreement"
+                                 class="btn btn-az btn-outline">
+                Azure Contribution License Agreement (CLA)</a><br/>
+              </p>
+            </div>
+
+            <div class="tab-pane" id="ftecla">
+
+              <p class="lead">If you are currently employed as an active Full-Time Employee (FTE)
+                at Microsoft you may be able to contribute through your job to
+                the SDK without signing a CLA.</p>
+
+              <p class="lead">You will need to clearly identify yourself as a Microsoft employee
+                in your GitHub profile. You should also include your alias in any
+                pull requests.</p>
+
+              <p class="lead">As a courtesy you should have a conversation about contributing
+                to the Azure open source projects with your manager, and remember
+                to follow your business group's guidelines and policies.</p>
+
+            </div>
+
+            <div class="tab-pane" id="msftcla">
+
+              <p class="lead">If your Microsoft team is looking to partner with the
+                Azure SDK team to ship new bits, create new
+                open source projects &amp; meet your shipping
+                criteria, please start engaging the Microsoft Azure SDK
+                triad early.</p>
+
+              <p class="lead">Our SharePoint site contains plenty of information on
+                the onboarding process, timelines and contacts.</p>
+
+              <p class="lead"><a href="https://microsoft.sharepoint.com/teams/azuresdk/"
+                                 class="btn btn-az btn-outline"><i class="icon-lock icon-white"></i>
+                Open Azure SDK SharePoint</a><br/>
+                <small>Requires corporate credentials</small>
+              </p>
+
+            </div>
+          </div>
+        </div>
+
+
+        <p class="lead">
+          Active contributors might be asked to join the core team or
+          help with feature development. The ability to merge pull
+          requests typically remains with the SDK team to ensure
+          that contributions to master are thoroughly reviewed.
+        </p>
+
+        <p class="lead">
+          Please configure your Git client with a name and email
+          address to use for your commits. This will also help the
+          team validate your CLA status:
+        <pre>git config user.name Your Name </br>git config user.email YourAlias@YourEmailDomain</pre>
+        </p>
+
+      </div>
+
+      <div id="stepbystep" class="featurette">
+        <div class="featurette-title">Step-by-step guide</div>
+
+        <div class="featurette-subtitle">Checkout the latest code</div>
+
+        <p class="lead">In order to obtain the source code you need to become familiar
+          with Git (see <a href="http://progit.org/book/">http://progit.org/book/</a>)
+          and Github (see <a href="http://help.github.com/">http://help.github.com/</a>)
+          and you need to have Git installed on your local machine. You can
+          obtain the source code from Github and start a contributor environment by
+          following the these steps on your local machine:
+        </p>
+
+        <div class="container">
+          <div class="card text-xs-left centered-steps">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Go to https://github.com/Azure/[PROJECT]</li>
+              <li class="list-group-item">Select <img src="/images/button-fork.jpg" alt="fork"/> and choose your own
+                Github account as target
+              </li>
+              <li class="list-group-item">Clone the repository on your local machine with the following
+                Git command: <br>
+                <code>git clone git@github.com:[USERNAME]/[PROJECT]</code></li>
+              <li class="list-group-item">When you clone the repository you should see, at least, 2 branches: dev and
+                master. dev is the
+                branch where the team does all the day to day development while master is the branch that is always
+                up to date with the latest release. This means, before starting any work, you should switch to the
+                dev branch. You can do so with the following command:<br><code>git checkout dev</code>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="featurette-subtitle">Create bug fixes and features</div>
+
+        <p class="lead">You can then start to make modifications to the code in your local Git repository.
+          This can be done in your local dev branch or, if you prefer, in a branch out of dev.
+          In the simplest scenario, working directly on dev, you can commit your work
+          with following commands:<br/>
+        </p>
+        <div class="container">
+          <div class="card text-xs-left centered-steps">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Add and commit your local changes<br/>
+                <code>git commit -a</code>
+              </li>
+              <li class="list-group-item">Push your changes from your local repository to your github fork<br/>
+                <code>git push</code>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="lead">Once your code is in your github fork, you can then submit a pull request
+          for the team's review. You can do so with the following commands:<br/>
+        </p>
+
+        <div class="container">
+          <div class="card text-xs-left centered-steps">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">In GitHub click on the Pull
+                Request button <img src="/images/button-pull-request.jpg" alt="pull request"></li>
+              <li class="list-group-item">In the pull request select your fork as source and
+                Azure/[PROJECT] as destination for the request
+              </li>
+              <li class="list-group-item">Write detailed message describing the changes in the pull
+                request
+              </li>
+              <li class="list-group-item">Submit the pull request for consideration by the Core Team</li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="lead">If there are conflicts between your fork and the main project one, github
+          will warn you that the pull request cannot be merged. If that's the case,
+          you can do the following:
+        </p>
+
+        <div class="container">
+          <div class="card text-xs-left centered-steps">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Add remote to your local repository using the following Git
+                commands<br>
+                <code>git remote add upstream -f
+                  git@github.com:Azure/[PROJECT]</code><br>
+              </li>
+              <li class="list-group-item">Update your local repository with the changes from the remote
+                repository by using the following Git commands (make sure you're in
+                the branch you're submitting the code from)<br>
+                <code>git merge upstream/dev</code></li>
+              <li class="list-group-item">Resolve any conflicts locally and finally do another push with the
+                command<br/>
+                <code>git push</code>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="lead">Please keep in mind that not all requests will be approved.
+          Requests are reviewed by the Core Team on a regular basis and will
+          be updated with the status at each review. If your request is
+          accepted you will receive information about the next steps and
+          when the request will be integrated in the main branch. If your
+          request is rejected you will receive information about the reasons
+          why it was rejected.<br>
+        </p>
+      </div>
+
+      <div id="codereviews" class="featurette">
+        <div class="featurette-title">Code Reviews</div>
+
+        <p class="lead">
+          The Microsoft Azure SDK team has an active Microsoft discussion
+          group used for submitting code reviews and discussing design
+          changes, best practices, and other important topics.
+        </p>
+
+        <p class="lead">
+          Part of the code review process involves using a code review
+          tool, and for most open source projects, the team uses the
+          built-in Pull Request functionality on GitHub for enabling
+          annotations and comments on code before accepting the pull
+          request/s.
+        </p>
+
+        <p class="lead">
+          Expect a good amount of feedback as part of any pull request:
+          not only which branch to merge to and from, but also
+          consistency guidelines, matching existing code, and
+          making targeted, smart changes when fixing bugs.
+        </p>
+
+        <div class="featurette-subtitle">Community code reviews</div>
+
+        <p class="lead">
+          The SDK team is considering allowing for community code
+          reviews as well. If you watch a repository of interest,
+          you can make comments on any public pull request. The
+          best time for providing feedback is during dev branch
+          pulls into the primary Azure GitHub organization.
+        </p>
+
+      </div>
+
+      <div id="contact" class="featurette">
+        <div class="featurette-title">Contact the team</div>
+
+        <p class="lead">The best way to get in touch with the team regarding feature ideas,
+          developer designs amd communicating about bug fixes is to use the Issues system
+          built in to GitHub.</p>
+
+        <p class="lead">If you are looking for support or to provide feedback, there are a lot of
+          places to do this.</p>
+
+        <p class="lead"><a class="btn btn-az btn-outline" href="/contact/">Detailed support and contact
+          information &raquo;</a></p>
+
+      </div>
+
+
+      <div id="thanks" class="featurette">
+        <div class="featurette-title">Thank you!</div>
+
+        <p class="lead">
+          Huge thanks go to the contributors from the community who
+          have been actively working with the Microsoft Azure SDK team.
+        </p>
+
+        <p class="lead">You can find a <a href="/thanks/">list of contributors here</a>.
+      </div>
+
+      <div id="jobs" class="featurette">
+        <div class="featurette-title">Jobs</div>
+
+        <p class="lead">Microsoft is always hiring bright and talented students &amp;
+          professionals. Please consider submitting your resume and
+          applying for open positions at
+          <a href="//careers.microsoft.com/">//careers.microsoft.com</a>.</p>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  <div class="az-footer">
+  <div class="container">
+    <ul class="footer-links">
+      <li><a href="https://azure.microsoft.com/">Azure.com</a></li>
+      <li><a href="https://azure.microsoft.com/blog/">Azure Blog</a></li>
+      <li><a href="https://twitter.com/Azure">@Azure</a></li>
+      <li><a href="https://github.com/azure/">GitHub</a></li>
+      <li><a href="/thanks">Thank you!</a></li>
+    </ul>
+
+    <ul class="muted-footer-links">
+      <li>
+        <small>&copy; Microsoft</small>
+      </li>
+      <li>
+        <small><a href="http://go.microsoft.com/fwlink/p/?linkid=131004&clcid=0x409">Privacy and Cookies</a></small>
+      </li>
+      <li>
+        <small><a href="http://go.microsoft.com/fwlink/p/?linkid=222682&clcid=0x409">Trademarks</a></small>
+      </li>
+    </ul>
+  </div>
+</div>
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.1.1/js/tether.min.js" integrity="sha384-MWq1Lnqj72tmjGdOKuNBn3E0gj3vWfy/1EmR5TVL8d8nGvwgy32YkCpKpTUhwBVv" crossorigin="anonymous"></script>
+<script src="/js/app.js"></script>
+<script type="text/javascript">
+  var appInsights=window.appInsights||function(config){
+        function r(config){t[config]=function(){var i=arguments;t.queue.push(function(){t[config].apply(t,i)})}}var t={config:config},u=document,e=window,o="script",s=u.createElement(o),i,f;for(s.src=config.url||"//az416426.vo.msecnd.net/scripts/a/ai.0.js",u.getElementsByTagName(o)[0].parentNode.appendChild(s),t.cookie=u.cookie,t.queue=[],i=["Event","Exception","Metric","PageView","Trace"];i.length;)r("track"+i.pop());return r("setAuthenticatedUserContext"),r("clearAuthenticatedUserContext"),config.disableExceptionTracking||(i="onerror",r("_"+i),f=e[i],e[i]=function(config,r,u,e,o){var s=f&&f(config,r,u,e,o);return s!==!0&&t["_"+i](config,r,u,e,o),s}),t
+      }({
+        instrumentationKey:"b10e9e2e-dff6-45fb-b1c9-169564c8da05"
+      });
+
+  window.appInsights=appInsights;
+  appInsights.trackPageView('Open Source Contribution Guidelines - Microsoft Azure Open Source');
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-76264226-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</html>

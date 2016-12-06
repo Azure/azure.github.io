@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="keywords" content="Microsoft, Azure, Management, Cloud, Reference, Docs, Documentation, Java, C#, JavaScript, Node, Ruby, Python, Golang, Open Source, Developer, .Net">
+  <meta name="author" content="Microsoft Corporation">
+
+  <title>Test Drive Azure REST APIs</title>
+  <meta name="description"
+        content="Python and other libraries. We also provide information and guidelines for contributing to our open source projects on GitHub. All Azure open source projects have a flexible Apache 2.0 or MIT license.
+">
+  <link rel="canonical" href="https://azure.github.io/projects/apis/">
+
+  <link rel="alternate" type="application/rss+xml" title="Open source cloud frameworks, SDKs and contribution guidelines - Microsoft Azure Open Source"
+        href="https://azure.github.io/feed.xml"/>
+
+  <link href="/css/main.css" rel="stylesheet">
+
+  <!-- <link rel="apple-touch-icon" href="/apple-touch-icon.png"> -->
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+</head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" integrity="sha384-8gBf6Y4YYq7Jx97PIqmTwLPin4hxIzQw5aDmUg/DDhul9fFpbbLcLh3nTIIDJKhx" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-migrate-1.3.0.js"></script>
+<script type="text/javascript">
+  var host = "azure.github.io";
+  if ((host == window.location.host) && (window.location.protocol != "https:"))
+    window.location.protocol = "https";
+</script>
+<body>
+  <nav class="navbar navbar-dark navbar-fixed-top az-navbar">
+  <button class="navbar-toggler navbar-toggler-blue hidden-sm-up" type="button" data-toggle="collapse" data-target="#navbar-header" aria-controls="navbar-header">
+    &#9776;
+  </button>
+  <div class="pull-xs-left hidden-xs-down hidden-md-up az-icon-container">
+    <a href="/"><img class="az-icon" src="/images/msft-icon.png" alt="Microsoft Logo"></a>
+  </div>
+  <div class="pull-xs-left hidden-sm-down">
+    <a href="/"><img class="az-logo" src="/images/logo-msft-dark@2x.png" alt="Microsoft Logo"></a>
+  </div>
+  <div class="collapse navbar-toggleable-xs pull-xs-right" id="navbar-header">
+    <ul class="nav navbar-nav">
+      
+      <li class="nav-item">
+        <a class="nav-link" id="projectsLink" href="#" data-toggle="collapse" data-target="#projects-drop">Projects</a>
+        <div>
+          <ul id="projects-drop" class="nav collapse">
+            <li><a class="nav-link" id="projectsclisLink" href="/projects/clis">CLIs</a></li>
+            <li><a class="nav-link" id="projectssdksLink" href="/projects/sdks">SDKs</a></li>
+            <li><a class="nav-link" id="projectsapisLink" href="/projects/apis">APIs</a></li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" id="guidelinesLink" href="/guidelines">Guidelines</a>
+      </li>
+      <!-- <li class="nav-item">
+        <a class="nav-link" id="contactLink" href="/contact">Contact</a>
+      </li> -->
+      <li class="nav-item">
+        <a class="nav-link" id="thanksLink" href="/thanks">Thanks!</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://azure.microsoft.com" target="_blank">Azure.com</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+  <div class="apis-masthead">
+  <div class="container">
+    <h1>Azure REST APIs</h1>
+    <p class="lead">Azure Resource Manager REST APIs are the heart of interacting with Azure, and form the connecting
+      glue between your applications and Azure. They are described by specifications conforming to the <a
+          href="https://openapis.org/specification">OpenAPI Specification (formally known as Swagger 2.0)</a>. The
+      OpenAPI specification provides a standard, language-agnostic interface to REST APIs.</p>
+
+    <p class="lead">The Open API Initiative is part of the Linux Foundation and run under an open governence structure.
+      It is focused on creating, evolving and promotin a vendor neutral description format.</p>
+  </div>
+</div>
+
+<div id="alertdiv" class="alert alert-dismissible" style="display:none;">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+  <span id="alertMessage"></span>
+</div>
+
+<div class="clearfix">
+  <div class="featurette">
+    <div class="container">
+      <h2 class="featurette-title">Test Drive Azure REST APIs</h2>
+      <p class="lead">Select the Azure management API, Click Authorize, and start interacting with the management APIs.</p>
+      <p class="lead">When you execute each API, you will see all of the HTTP details used.
+        You'll even get a curl command you can execute from your shell. Thank you to
+        <a href="https://github.com/swagger-api/swagger-ui">SwaggerUI</a> and
+        <a href="https://openapis.org">OpenAPI Initiative</a>.
+      </p>
+    </div>
+  </div>
+
+  <div class="container">
+  <div class="swagger-section">
+    <div id='header'>
+      <div class="swagger-ui-wrap">
+
+        <ul class="nav nav-pills">
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle btn btn-az btn-outline" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Azure Resource Manager APIs</a>
+            <div class="dropdown-menu">
+              
+              <a class="dropdown-item" onclick="loadSwagger('/specs/arm-resources/resources/2016-02-01/swagger/resources.json', '2016-02-01')">Resource Manager - 2016-02-01</a>
+              
+              <a class="dropdown-item" onclick="loadSwagger('/specs/arm-resources/subscriptions/2015-11-01/swagger/subscriptions.json', '2015-11-01')">Subscriptions - 2015-11-01</a>
+              
+              <a class="dropdown-item" onclick="loadSwagger('/specs/arm-resources/features/2015-12-01/swagger/features.json', '2015-12-01')">Resource Provider Features - 2015-12-01</a>
+              
+              <a class="dropdown-item" onclick="loadSwagger('/specs/arm-resources/locks/2015-01-01/swagger/locks.json', '2015-01-01')">Management Locks - 2015-01-01</a>
+              
+              <a class="dropdown-item" onclick="loadSwagger('/specs/arm-authorization/2015-07-01/swagger/authorization.json', '2015-07-01')">Role Based Authorization - 2015-07-01</a>
+              
+              <a class="dropdown-item" onclick="loadSwagger('/specs/arm-compute/2015-06-15/swagger/compute.json', '2015-06-15')">Compute - 2015-06-15</a>
+              
+              <a class="dropdown-item" onclick="loadSwagger('/specs/arm-network/2016-03-30/swagger/network.json', '2016-03-30')">Network - 2016-03-30</a>
+              
+              <a class="dropdown-item" onclick="loadSwagger('/specs/arm-storage/2015-06-15/swagger/storage.json', '2015-06-15')">Storage - 2015-06-15</a>
+              
+              <a class="dropdown-item" onclick="loadSwagger('/specs/arm-web/2015-08-01/swagger/service.json', '2015-08-01')">WebApps - 2015-08-01</a>
+              
+              <a class="dropdown-item" onclick="loadSwagger('/specs/arm-cdn/2015-06-01/swagger/cdn.json', '2015-06-01')">CDN - 2015-06-01</a>
+              
+              <a class="dropdown-item" onclick="loadSwagger('/specs/arm-datalake-analytics/account/2015-10-01-preview/swagger/account.json', '2015-10-01-preview')">Data Lake Analytics Accounts - 2015-10-01-preview</a>
+              
+              <a class="dropdown-item" onclick="loadSwagger('/specs/arm-datalake-analytics/job/2016-03-20-preview/swagger/job.json', '2016-03-20-preview')">Data Lake Analytics Job - 2016-03-20-preview</a>
+              
+              <a class="dropdown-item" onclick="loadSwagger('/specs/arm-datalake-analytics/catalog/2015-10-01-preview/swagger/catalog.json', '2015-10-01-preview')">Data Lake Analytics Catalog - 2015-10-01-preview</a>
+              
+              <a class="dropdown-item" onclick="loadSwagger('/specs/arm-datalake-store/account/2015-10-01-preview/swagger/account.json', '2015-10-01-preview')">Data Lake Store Accounts - 2015-10-01-preview</a>
+              
+              <a class="dropdown-item" onclick="loadSwagger('/specs/arm-datalake-store/filesystem/2015-10-01-preview/swagger/filesystem.json', '2015-10-01-preview')">Data Lake Store Filesystem - 2015-10-01-preview</a>
+              
+              <a class="dropdown-item" onclick="loadSwagger('/specs/arm-dns/2015-05-04-preview/swagger/dns.json', '2015-05-04-preview')">DNS - 2015-05-04-preview</a>
+              
+              <a class="dropdown-item" onclick="loadSwagger('/specs/arm-batch/2015-12-01/swagger/BatchManagement.json', '2015-12-01')">Batch Apps - 2015-12-01</a>
+              
+              <a class="dropdown-item" onclick="loadSwagger('/specs/arm-devtestlabs/2016-05-15/swagger/DTL.json', '2016-05-15')">DevTest Labs - 2016-05-15</a>
+              
+              <a class="dropdown-item" onclick="loadSwagger('/specs/arm-logic/2015-02-01-preview/swagger/logic.json', '2015-02-01-preview')">Logic Apps - 2015-02-01-preview</a>
+              
+              <a class="dropdown-item" onclick="loadSwagger('/specs/arm-mobileengagement/2014-12-01/swagger/mobile-engagement.json', '2014-12-01')">Mobile Engagement - 2014-12-01</a>
+              
+              <a class="dropdown-item" onclick="loadSwagger('/specs/arm-notificationhubs/2014-09-01/swagger/notificationhubs.json', '2014-09-01')">NotificationHubs - 2014-09-01</a>
+              
+              <a class="dropdown-item" onclick="loadSwagger('/specs/arm-redis/2015-08-01/swagger/redis.json', '2015-08-01')">Redis - 2015-08-01</a>
+              
+              <a class="dropdown-item" onclick="loadSwagger('/specs/arm-remoteapp/2014-09-01/swagger/remoteapp.json', '2014-09-01')">Remote App - 2014-09-01</a>
+              
+              <a class="dropdown-item" onclick="loadSwagger('/specs/arm-scheduler/2016-01-01/swagger/scheduler.json', '2016-01-01')">Scheduler - 2016-01-01</a>
+              
+            </div>
+          </li>
+          
+          <li class="nav-item dropdown" id="subDropdown" style="display:none;">
+            <a class="nav-link dropdown-toggle btn btn-az btn-outline" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Select Subscription</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item">You see me</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <div id='auth_container'></div>
+          </li>
+          <li id="azLogout" class="nav-item" style="display:none;">
+            <a class="nav-link btn btn-az btn-outline" href="#" onclick="logout();" role="button">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="message-bar" class="swagger-ui-wrap" data-sw-translate>&nbsp;</div>
+    <div id="swagger-ui-container" class="swagger-ui-wrap"></div>
+  </div>
+  </div>
+</div>
+
+<script>
+  $('#auth_container').on('DOMNodeInserted', function(e) {
+    if ($(e.target.firstChild).is('.authorize__btn')) {
+      var authBtn = $(e.target.firstChild);
+      authBtn.addClass('btn');
+      authBtn.addClass('btn-az');
+      authBtn.addClass('btn-outline');
+    }
+  });
+
+  $(document).ready(function () {
+
+    var url = window.location.search.match(/url=([^&]+)/);
+    if (url && url.length > 1) {
+      url = decodeURIComponent(url[1]);
+    } else {
+      url = "/specs/arm-resources/resources/2016-02-01/swagger/resources.json";
+      window.azApiVersion = '2016-02-01';
+    }
+
+    window.swaggerUi = new SwaggerUi({
+      url: url,
+      dom_id: "swagger-ui-container",
+      supportedSubmitMethods: ['get', 'post', 'put', 'delete', 'patch'],
+      onComplete: function (swaggerApi, swaggerUi) {
+        if (typeof initOAuth == "function") {
+          initOAuth({
+            clientId: "fbfc7a71-256b-454a-bf27-12162f630e0a",
+            appName: "https://azure.github.io",
+            realm: "azure.github.io",
+            scopeSeparator: ",",
+            additionalQueryStringParams: {resource: "https://management.azure.com/"}
+          });
+        }
+
+        if (window.SwaggerTranslator) {
+          window.SwaggerTranslator.translate();
+        }
+
+        if(window.swaggerUi && _.has(window.swaggerUi.api.clientAuthorizations.authz, 'azure_auth')){
+          azAuth = window.swaggerUi.api.clientAuthorizations.authz.azure_auth;
+          $.ajax({
+            url: 'https://management.azure.com/subscriptions?api-version=2015-01-01',
+            headers: {
+              Authorization: azAuth.value
+            }
+          }).done(function(data){
+            var subDropdown = $('#subDropdown');
+            var logout = $('#azLogout');
+            var authContainer = $('#auth_container');
+            var subMenu = subDropdown.find('.dropdown-menu');
+            subMenu.empty();
+            _.each(data.value, function(sub){
+              subMenu.append('<a class="dropdown-item" onclick="selectSubscription(\'' + sub.subscriptionId + '\', \'' + sub.displayName + '\')">' + sub.displayName + '</a>');
+            });
+            subDropdown.show();
+            logout.show();
+            authContainer.hide();
+            var first = _.head(data.value);
+            if(!window.azSubscription){
+              selectSubscription(first.subscriptionId, first.displayName);
+            } else {
+              selectSubscription(window.azSubscription.id, window.azSubscription.name, true);
+            }
+          });
+        } else {
+          var subDropdown = $('#subDropdown');
+          var logout = $('#azLogout');
+          subDropdown.hide();
+          logout.hide();
+        }
+        setApiVersion();
+      },
+      onFailure: function (data) {
+        log("Unable to Load SwaggerUI");
+      },
+      docExpansion: "none",
+      jsonEditor: false,
+      apisSorter: "alpha",
+      defaultModelRendering: 'schema',
+      showRequestHeaders: true
+    });
+
+    window.swaggerUi.load();
+  });
+
+  function selectSubscription(id, name, quiet){
+    window.azSubscription = {id: id, name: name};
+    $("input[name='subscriptionId']").val(id);
+    setApiVersion();
+    if(!quiet){
+      showAlert('Selected subscription ' + name, 'alert-success');
+    }
+  }
+
+  function logout() {
+    window.location = 'https://login.windows.net/common/oauth2/logout?post_logout_redirect_uri=' + window.location;
+  }
+
+  function setApiVersion(){
+    if(window.azApiVersion){
+      $("input[name='api-version']").val(window.azApiVersion);
+    }
+  }
+
+  function showAlert(message, alertType) {
+    var alert = $('#alertdiv');
+    var alertMessage = $('#alertMessage');
+    alertMessage.text(message);
+    alert.removeClass('alert-warning alert-success alert-danger alert-info').addClass('alert alert-dismissible ' + alertType);
+    alert.fadeIn();
+    setTimeout(function() {
+      alert.fadeOut();
+    }, 2000);
+  }
+
+  function loadSwagger(uri, apiVersion){
+    window.azApiVersion = apiVersion;
+    window.swaggerUi.updateSwaggerUi({url: uri});
+  }
+</script>
+
+  <div class="az-footer">
+  <div class="container">
+    <ul class="footer-links">
+      <li><a href="https://azure.microsoft.com/">Azure.com</a></li>
+      <li><a href="https://azure.microsoft.com/blog/">Azure Blog</a></li>
+      <li><a href="https://twitter.com/Azure">@Azure</a></li>
+      <li><a href="https://github.com/azure/">GitHub</a></li>
+      <li><a href="/thanks">Thank you!</a></li>
+    </ul>
+
+    <ul class="muted-footer-links">
+      <li>
+        <small>&copy; Microsoft</small>
+      </li>
+      <li>
+        <small><a href="http://go.microsoft.com/fwlink/p/?linkid=131004&clcid=0x409">Privacy and Cookies</a></small>
+      </li>
+      <li>
+        <small><a href="http://go.microsoft.com/fwlink/p/?linkid=222682&clcid=0x409">Trademarks</a></small>
+      </li>
+    </ul>
+  </div>
+</div>
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.1.1/js/tether.min.js" integrity="sha384-MWq1Lnqj72tmjGdOKuNBn3E0gj3vWfy/1EmR5TVL8d8nGvwgy32YkCpKpTUhwBVv" crossorigin="anonymous"></script>
+<script src="/js/app.js"></script>
+<script type="text/javascript">
+  var appInsights=window.appInsights||function(config){
+        function r(config){t[config]=function(){var i=arguments;t.queue.push(function(){t[config].apply(t,i)})}}var t={config:config},u=document,e=window,o="script",s=u.createElement(o),i,f;for(s.src=config.url||"//az416426.vo.msecnd.net/scripts/a/ai.0.js",u.getElementsByTagName(o)[0].parentNode.appendChild(s),t.cookie=u.cookie,t.queue=[],i=["Event","Exception","Metric","PageView","Trace"];i.length;)r("track"+i.pop());return r("setAuthenticatedUserContext"),r("clearAuthenticatedUserContext"),config.disableExceptionTracking||(i="onerror",r("_"+i),f=e[i],e[i]=function(config,r,u,e,o){var s=f&&f(config,r,u,e,o);return s!==!0&&t["_"+i](config,r,u,e,o),s}),t
+      }({
+        instrumentationKey:"b10e9e2e-dff6-45fb-b1c9-169564c8da05"
+      });
+
+  window.appInsights=appInsights;
+  appInsights.trackPageView('Test Drive Azure REST APIs');
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-76264226-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</html>
