@@ -204,6 +204,15 @@
         - type: link
           content: Docs
           link: https://github.com/Azure/toketi-iothubreact/blob/master/README.md
+    - name: Kafka Connect for Azure IoT Hub
+      repo: https://github.com/Azure/toketi-kafka-connect-iothub
+      blurbs:
+        - Kafka Connect for Azure IoT Hub is a Kafka source connector for pumping data from Azure IoT Hub to Apache Kafka. This allows getting the telemetry data sent by Azure IoT Hub connected devices to your Kafka installation, so that it can then be consumed by Kafka consumers down the stream.
+      list-items:
+        - type: link
+          content: Docs
+          link: https://github.com/Azure/toketi-kafka-connect-iothub/blob/master/README.md
+
 
 
 ########################################################################################################################
