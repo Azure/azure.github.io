@@ -25,35 +25,28 @@ permalink: /projects/clis/
 
 <div class="featurette odd">
   <div class="container">
-    <div class="featurette-title">Azure CLI</div>
-    <p class="lead">Azure CLI is your command line for Microsoft Azure that you can use from anywhere.</p>
-    <p class="lead">With Azure CLI, you can create, manage, and delete services on the command line via cmd.exe, bash or
+    <div class="featurette-title">Azure CLI 2.0</div>
+    <p class="lead">Azure CLI 2.0 is your command line for Microsoft Azure that you can use from anywhere.</p>
+    <p class="lead">With Azure CLI 2.0, you can create, manage, and delete services on the command line via cmd.exe, bash or
       {your shell} on the operating system of your choice.</p>
     <div class="col-md-6">
-      <a class="btn btn-az btn-outline" href="https://docs.microsoft.com/en-us/azure/virtual-machines/azure-cli-arm-commands">Documentation</a>
+      <a class="btn btn-az btn-outline" href="https://docs.microsoft.com/en-us/cli/azure/overview">Documentation</a>
     </div>
     <div class="col-md-6">
-      <a class="btn btn-az btn-outline" href="https://github.com/azure/azure-xplat-cli"><img
+      <a class="btn btn-az btn-outline" href="https://github.com/Azure/azure-cli"><img
           src="/images/gh-mark-120px.png"/> /azure-cli</a>
     </div>
     <div class="clearfix"></div>
     <hr class="internal-rule">
     <div class="featurette-subtitle">Install</div>
     <div class="col-md-4">
-      <h5>OSX</h5>
-      <pre>brew install azure-cli</pre>
-      <p>or</p>
-      <a class="btn btn-az btn-outline" href="http://aka.ms/mac-azure-cli">CLI.dmg</a>
+      <h5>OSX and Linux</h5>
+      <pre>curl -L https://aka.ms/InstallAzureCli | bash</pre>
     </div>
     <div class="col-md-4">
       <!-- <img src="{{ site.baseurl }}/assets/img/devices.png" alt="Responsive across devices" class="img-fluid"> -->
       <h5>Windows</h5>
-      <a class="btn btn-az btn-outline" href="http://aka.ms/webpi-azure-cli">WebPI Installer</a>
-    </div>
-    <div class="col-md-4">
-      <!-- <img src="{{ site.baseurl }}/assets/img/devices.png" alt="Responsive across devices" class="img-fluid"> -->
-      <h5>Linux</h5>
-      <pre>npm install -g azure-cli</pre>
+      <pre>pip install --user azure-cli</pre>
     </div>
   </div>
 </div>
@@ -79,7 +72,6 @@ permalink: /projects/clis/
       <h5>PowerShell Gallery</h5>
       {% highlight powershell %}
       Install-Module AzureRM
-      AzureRM-Install
 
       Install-Module Azure
       {% endhighlight %}
