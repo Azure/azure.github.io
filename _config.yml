@@ -31,6 +31,7 @@ exclude:
 
 include:
   - .nojekyll
+  - robots.txt
 
 github_username:  azuresdkci
 
