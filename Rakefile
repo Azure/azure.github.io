@@ -23,13 +23,11 @@ end
 
 desc 'Generate azure.github.io files'
 task :build do
-  silent_interrupt { system 'npm install && gulp build' }
+  silent_interrupt { system 'npm install && npm run gulp build' }
 end
 
 task :serve do
-  Dir.chdir('jekyll') do
-    silent_interrupt { system 'jekyll serve' }
-  end
+  silent_interrupt { system 'npm run gulp serve' }
 end
 
 task :test => [:build] do

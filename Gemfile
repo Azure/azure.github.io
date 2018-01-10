@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'jekyll'
+gem 'jekyll',               "~>3.1.2"
 gem 'rake'
 gem 'html-proofer'
 gem 'jekyll-redirect-from'
