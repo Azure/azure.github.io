@@ -32,5 +32,8 @@
     "swagger-ui": "^2.2.5",
     "underscore": "^1.8.3",
     "yargs": "^3.31.0"
+  },
+  "scripts": {
+    "gulp": "gulp"
   }
 }
