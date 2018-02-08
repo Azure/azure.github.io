@@ -28,15 +28,15 @@
         - type: link
           content: Getting started
           link: https://azure.microsoft.com/en-us/documentation/articles/storage-getting-started-guide/
-    - name: Internet of Things (IoT) Hub
-      repo: https://github.com/Azure/azure-iot-sdks
+    - name: IoT Hub SDK for .NET
+      repo: https://github.com/Azure/azure-iot-sdk-csharp
       blurbs:
-        - Contains both IoT device SDKs and IoT service SDKs. Device SDKs enable you connect client devices to Azure IoT Hub. Service SDKs enable you to manage your IoT Hub service instance.
+        - Contains both IoT device and service client SDKs. The Device client SDK enables connecting devices to Azure IoT Hub. The Service client SDK enables you to manage your IoT Hub service instance.
         - Visit <a href="http://azure.com/iotdev">http://azure.com/iotdev</a> to learn more about developing applications for Azure IoT.
       list-items:
         - type: link
           content: Docs
-          link: https://github.com/Azure/azure-iot-sdks/blob/master/csharp/device/readme.md
+          link: https://docs.microsoft.com/en-us/azure/iot-hub/
     - name: DocumentDB
       repo: https://github.com/Azure/azure-documentdb-dotnet
       blurbs:
@@ -154,15 +154,15 @@
         - type: link
           content: Docs
           link: http://azure.github.io/azure-storage-android/
-    - name: Internet of Things (IoT) Hub
-      repo: https://github.com/Azure/azure-iot-sdks
+    - name: IoT Hub SDK for Java
+      repo: https://github.com/Azure/azure-iot-sdk-java
       blurbs:
-        - Contains both IoT device SDKs and IoT service SDKs. Device SDKs enable you connect client devices to Azure IoT Hub. Service SDKs enable you to manage your IoT Hub service instance.
+        - Contains both IoT device and service client SDKs. The Device client SDK enables connecting devices to Azure IoT Hub. The Service client SDK enables you to manage your IoT Hub service instance.
         - Visit <a href="http://azure.com/iotdev">http://azure.com/iotdev</a> to learn more about developing applications for Azure IoT.
       list-items:
         - type: link
           content: Docs
-          link: https://github.com/Azure/azure-iot-sdks/blob/master/java/device/readme.md
+          link: https://docs.microsoft.com/en-us/azure/iot-hub/
     - name: DocumentDB
       repo: https://github.com/Azure/azure-documentdb-java
       blurbs:
@@ -295,15 +295,15 @@
         - type: link
           content: NPM
           link: https://www.npmjs.com/package/cordova-plugin-ms-azure-mobile-apps
-    - name: Internet of Things (IoT) Hub
-      repo: https://github.com/Azure/azure-iot-sdks
+    - name: IoT Hub SDK for Node.js
+      repo: https://github.com/Azure/azure-iot-sdk-node
       blurbs:
-        - Contains both IoT device SDKs and IoT service SDKs. Device SDKs enable you connect client devices to Azure IoT Hub. Service SDKs enable you to manage your IoT Hub service instance.
+        - Contains both IoT device and service client SDKs. The Device client SDK enables connecting devices to Azure IoT Hub. The Service client SDK enables you to manage your IoT Hub service instance.
         - Visit <a href="http://azure.com/iotdev">http://azure.com/iotdev</a> to learn more about developing applications for Azure IoT.
       list-items:
         - type: link
           content: Docs
-          link: https://github.com/Azure/azure-iot-sdks/blob/master/node/device/core/readme.md
+          link: https://docs.microsoft.com/en-us/azure/iot-hub/
     - name: Kubernetes Visualizer
       repo: https://github.com/Azure/azure-kubernetes-visualizer
       blurbs:
@@ -357,6 +357,15 @@
         - type: link
           content: Readme
           link: https://github.com/Azure/Azure-MachineLearning-ClientLibrary-Python/blob/master/README.md
+    - name: IoT Hub SDK for Python
+      repo: https://github.com/Azure/azure-iot-sdk-python
+      blurbs:
+        - Contains both IoT device and service client SDKs. The Device client SDK enables connecting devices to Azure IoT Hub. The Service client SDK enables you to manage your IoT Hub service instance.
+        - Visit <a href="http://azure.com/iotdev">http://azure.com/iotdev</a> to learn more about developing applications for Azure IoT.
+      list-items:
+        - type: link
+          content: Docs
+          link: https://docs.microsoft.com/en-us/azure/iot-hub/
     - name: Linux Extensions for Microsoft Azure IaaS
       blurbs:
         - Provides the source code of Linux extensions for Microsoft Azure IaaS. VM Extensions are injected components authored by Microsoft and Partners into Linux VM (IaaS) to enable software and configuration automation.
@@ -450,6 +459,7 @@
         - type: link
           content: Readme
           link: https://github.com/Azure/azurefile-dockervolumedriver/blob/master/README.md
+
 ########################################################################################################################
 ###
 ###  Scala Content
@@ -468,3 +478,24 @@
         - type: link
           content: Docs
           link: https://github.com/Azure/toketi-iothubreact/blob/master/README.md
+
+########################################################################################################################
+###
+###  C and C++ Content
+###
+########################################################################################################################
+
+- name: C and C++
+  leads:
+    - If you want or have to go with native, you can use C and C++ to work with Azure.
+  projects:
+    - name: IoT Hub SDK for C
+      repo: https://github.com/Azure/azure-iot-sdk-c
+      blurbs:
+        - Contains both IoT device and service client SDKs. The Device client SDK enables connecting devices to Azure IoT Hub. The Service client SDK enables you to manage your IoT Hub service instance.
+        - Visit <a href="http://azure.com/iotdev">http://azure.com/iotdev</a> to learn more about developing applications for Azure IoT.
+      list-items:
+        - type: link
+          content: Docs
+          link: https://docs.microsoft.com/en-us/azure/iot-hub/
+
