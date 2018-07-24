@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Thanks to http://davidensinger.com/2013/11/building-a-better-sitemap-xml-with-jekyll/ -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+
+  
+  
+  
+
+  
+  <url>
+    <loc>https://azure.github.io/projects/apis/</loc>
+    
+    <lastmod>2018-07-24T21:59:00+00:00</lastmod>
+    
+    
+    <changefreq>daily</changefreq>
+    
+    
+    <priority>0.3</priority>
+    
+  </url>
+  
+  
+  
+  
+
+  
+  <url>
+    <loc>https://azure.github.io/projects/clis/</loc>
+    
+    <lastmod>2018-07-24T21:59:00+00:00</lastmod>
+    
+    
+    <changefreq>monthly</changefreq>
+    
+    
+    <priority>0.3</priority>
+    
+  </url>
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  <url>
+    <loc>https://azure.github.io/guidelines/</loc>
+    
+    <lastmod>2018-07-24T21:59:00+00:00</lastmod>
+    
+    
+    <changefreq>monthly</changefreq>
+    
+    
+    <priority>0.3</priority>
+    
+  </url>
+  
+  
+  
+  
+
+  
+  <url>
+    <loc>https://azure.github.io</loc>
+    
+    <lastmod>2018-07-24T21:59:00+00:00</lastmod>
+    
+    
+    <changefreq>monthly</changefreq>
+    
+    
+    <priority>0.3</priority>
+    
+  </url>
+  
+  
+  
+  
+
+  
+  <url>
+    <loc>https://azure.github.io</loc>
+    
+    <lastmod>2018-07-24T21:59:00+00:00</lastmod>
+    
+    
+    <changefreq>monthly</changefreq>
+    
+    
+    <priority>0.3</priority>
+    
+  </url>
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  <url>
+    <loc>https://azure.github.io/projects/sdks/</loc>
+    
+    <lastmod>2018-07-24T21:59:00+00:00</lastmod>
+    
+    
+    <changefreq>monthly</changefreq>
+    
+    
+    <priority>0.3</priority>
+    
+  </url>
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  <url>
+    <loc>https://azure.github.io/thanks/</loc>
+    
+    <lastmod>2018-07-24T21:59:00+00:00</lastmod>
+    
+    
+    <changefreq>monthly</changefreq>
+    
+    
+    <priority>0.3</priority>
+    
+  </url>
+  
+  
+  
+  
+
+  
+  <url>
+    <loc>https://azure.github.io/guidelines.html</loc>
+    
+    <lastmod>2018-07-24T21:59:00+00:00</lastmod>
+    
+    
+    <changefreq>monthly</changefreq>
+    
+    
+    <priority>0.3</priority>
+    
+  </url>
+  
+  
+  
+  
+
+  
+  <url>
+    <loc>https://azure.github.io/thanks.html</loc>
+    
+    <lastmod>2018-07-24T21:59:00+00:00</lastmod>
+    
+    
+    <changefreq>monthly</changefreq>
+    
+    
+    <priority>0.3</priority>
+    
+  </url>
+  
+  
+
+  
+  
+  
+</urlset>
