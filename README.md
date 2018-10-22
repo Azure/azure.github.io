@@ -7,7 +7,7 @@ Cheers!
 
 ## Get Started
 
-- Install Ruby and the Ruby DevKit on your system of choice.
+- Install [Ruby](https://www.ruby-lang.org/en/downloads/) and the [Ruby DevKit](https://rubyinstaller.org/add-ons/devkit.html) on your system of choice.
 
     **Note** If you're running Ruby on a Windows machine, make sure your DevKit path variables are setup using the Dev Kit [quickstart instructions](https://github.com/oneclick/rubyinstaller/wiki/development-kit#quick-start).
 - Install Node/NPM
